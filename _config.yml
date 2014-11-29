@@ -1,6 +1,6 @@
 name: Tidal
 permalink: /:categories/:title.html
-baseurl: "/"
+baseurl: ""
 markdown: redcarpet
 redcarpet:
   smart: true

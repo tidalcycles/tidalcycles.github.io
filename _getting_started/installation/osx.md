@@ -52,13 +52,14 @@ __Note:__ If Homebrew's installation of Jack fails with a `make` error, you can 
 Get the sourcecode for the Dirt synth:
 
 ```bash
+cd ~
 git clone https://github.com/yaxu/Dirt.git
 ```
 
 Compile dirt:
 
 ```bash
-cd Dirt
+cd ~/Dirt
 make clean; make
 ```
 
@@ -159,6 +160,7 @@ jackd -d coreaudio &
 Then start dirt:
 
 ```bash
+cd ~/Dirt
 ./dirt &
 ```
 

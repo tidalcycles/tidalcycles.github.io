@@ -4,20 +4,12 @@ category: compositions
 ---
 
 ~~~~{haskell}
-spin :: Double n -> Pattern a -> Pattern a
+spin :: Int n -> Pattern a -> Pattern a
 ~~~~
 
-`spin` is similar to `jux` in that it creates strange stereo interaction, but it can do so with
-more than just two channels. It will "spin" a pattern around multiple channels. 
-On a two-channel setup (e.g. left and right), use Double values between 0 and 1 to 
-notice an effect. For setups with more than two channels, a Double value greater 
-than 1 will produce a noticeable result.
+`spin` will "spin" a layer up a pattern the given number of times, with each successive layer offset by (1/n) of a cycle, and panned by (1/n). The result is a pattern that seems to spin around. This function works best on multichannel systems.
 
 ~~~~{haskell}
-# effective on two channels
-d1 $ spin 0.75 $ sound "bd*2 bd [~ bd] bd*4"
-
-# effective on more than two channels
-d1 $ spin 1.5 $ sound "bd*2 bd [~ bd] bd*4"
+d1 $ slow 3 $ spin 4 $ sound "drum*3 tabla:4 [arpy:2 ~ arpy] [can:2 can:3]"
 ~~~~
 

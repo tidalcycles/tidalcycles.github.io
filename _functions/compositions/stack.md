@@ -14,7 +14,7 @@ playing all of the patterns in the list simultaneously.
 d1 $ stack [ 
   sound "bd bd*2", 
   sound "hh*2 [sn cp] cp future*4", 
-  sound (samples "arpy*8", (run 16))
+  sound (samples "arpy*8" (run 16))
 ]
 ~~~~
 
@@ -25,6 +25,6 @@ stack:
 d1 $ whenmod 5 3 (striate 3) $ stack [ 
   sound "bd bd*2", 
   sound "hh*2 [sn cp] cp future*4", 
-  sound (samples "arpy*8", (run 16))
+  sound (samples "arpy*8" (run 16))
 ] |+| speed "[[1 0.8], [1.5 2]*2]/3"
 ~~~~

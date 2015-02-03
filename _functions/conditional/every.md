@@ -5,19 +5,24 @@ category: conditional
 
 ~~~~ {haskell}
 every :: Int -> (Pattern a -> Pattern a) -> Pattern a -> Pattern a
+every' :: [Int] -> (Pattern a -> Pattern a) -> Pattern a -> Pattern a
 ~~~~
 
-(The above means `every` is a function that is given an integer number, a
-function which transforms a pattern, and an actual pattern, and
-returns a pattern of the same type.)
-
-Transform the given pattern using the given function, but only every
-given number of repetitions.
+`every` transforms a pattern with a function, but only for the given number of repetitions.
 
 Example:
 
 ~~~~ {haskell}
-d1 $ sound (every 3 (density 2) "bd sn kurt")
+d1 $ every 3 (density 2) $ sound "bd sn kurt"
+~~~~
+
+`every'` does the same, except a list of repetition numbers is given:
+
+~~~~ {haskell}
+d1 $ every' [3, 4, 5] (density 2) $ sound "bd sn kurt"
+
+-- this is equal to:
+d1 $ every 3 (density 2) $ every 4 (density 2) $ every 5 (density 2) $ sound "bd sn kurt"
 ~~~~
 
 Also, see `whenmod`.

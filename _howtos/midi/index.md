@@ -4,6 +4,8 @@ weight: -9
 ---
 A special Haskell module named `tidal-midi` allows you to send MIDI pattern messages to external devices.
 
+It is in its infancy and there is just one module for the [Volca Keys](http://www.korg.com/us/products/dj/volca_keys/), however it will trigger notes on other synths and more experienced programmers can use it as an example for making a module for another synth (please contribute it back!).
+
 # Install
 
 Just run this at a console:

@@ -6,6 +6,8 @@ A special Haskell module named `tidal-midi` allows you to send MIDI pattern mess
 
 It is in its infancy and there is just one module for the [Volca Keys](http://www.korg.com/us/products/dj/volca_keys/), however it will trigger notes on other synths and more experienced programmers can use it as an example for making a module for another synth (please contribute it back!).
 
+This is all a little experimental and things may well change in the future.
+
 # Install
 
 Just run this at a console:
@@ -85,8 +87,30 @@ Now you are ready to play some MIDI notes. Type and evaluate the following to pl
 You can create patterns of MIDI notes just like with Dirt:
 
 ~~~~
-k $ note "40 [32 34] 36*2 42*3"
+k $ note "40 [32 34] 36*2 42*3" |+| detune (slow 4 sine1)
 k $ note "[[32 34], [36 38]]"
 k $ every 3 (density 2) $ every 4 (palindrome) $ note "{50 52 54}%8"
 ~~~~
 
+Here is the full list of parameters available for the volca keys:
+
+~~~~
+note
+dur
+portamento
+expression
+octave
+voice
+detune
+vcoegint
+kcutoff
+vcfegint
+lforate
+lfopitchint
+lfocutoffint
+attack
+decay
+sustain
+dtime
+dfeedback
+~~~~

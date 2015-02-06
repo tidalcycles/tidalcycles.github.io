@@ -30,6 +30,8 @@
       title: "Multi-channel"
     - name: multi_laptop
       title: "Multi-laptop"
+    - name: midi
+      title: "MIDI"
     - name: live
       title: Playing live
 - name: publications

@@ -70,8 +70,7 @@ To get MIDI to work, type this in Emacs and evaluate it:
 
 But replace `16:0` with the specific device ID and number that you noted earlier.
 
-The value "100000" is a latency value will need to be adjusted for your specific environment. Change it as you need, although you will need to restart 
-Emacs and Tidal to do this.
+The value "100000" is a latency value will need to be adjusted for your specific environment. Change it as you need, although you will currently need to reboot Tidal each time (in emacs you do this with `ctrl-c ctrl-q` to quit tidal, and `ctrl-c ctrl-s` to start it again).
 
 Next, type and evaluate:
 

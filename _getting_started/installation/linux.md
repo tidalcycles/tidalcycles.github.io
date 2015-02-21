@@ -60,6 +60,11 @@ If you have problems with jack, try enabling realtime audio, and
 adjusting the settings by installing and using the "qjackctl"
 software. Some more info is here: <https://help.ubuntu.com/community/HowToJACKConfiguration>
 
+You will have to start dirt every time you want to run Tidal,
+otherwise there will be no sound. 
+
+Now you need to install and configure an editor, following the
+instructions below. For beginners, the Atom editor is recommended.
 
 ## Tidal
 

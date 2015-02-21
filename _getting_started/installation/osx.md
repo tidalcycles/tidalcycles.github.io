@@ -24,13 +24,13 @@ Tidal. A homebrew 'recipe' for dirt does exist, but that doesn't come
 with any sounds to play with, so for now it's probably easiest just
 download it all from github and compile it as follows.
 
-Install the liblo library, which the Dirt synth needs to compile:
+Install some libraries which the Dirt synth needs to compile:
 
 ```bash
-brew install liblo
+brew install liblo libsndfile libsamplerate 
 ```
 
-Install the "jack audio connection kit", Dirt needs it too:
+Install the 'jack audio connection kit' which Dirt also needs:
 
 ```bash
 brew install jack
@@ -56,18 +56,6 @@ cd ~/Dirt
 make clean; make
 ```
 
-If you get errors for sndfile.h and samplerate.h, install libsndfile and libsamplerate via homebrew.
-
-```bash
-brew install libsndfile
-```
-
-then,
-
-```bash
-brew install libsamplerate
-```
-
 {% capture dirtcompile %}
 **Note:** If Dirt fails to compile after using the JackOSX installer as above, you may need to add flags to the Makefile to specify the appropriate paths:
 
@@ -88,7 +76,7 @@ Or you might get it from homebrew (this takes a while)
 brew install haskell-platform
 ```
 
-Install Tidal (yeah!)
+Install Tidal itself:
 
 ```bash
 cabal update

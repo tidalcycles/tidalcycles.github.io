@@ -23,3 +23,6 @@ and then `Tidal` -> `boot tidal`.
 You can then run a Tidal pattern by putting the cursor on it and
 pressing `command-enter` (the `command` key is the 'windows' key on a
 pc, and `⌘` on a mac). You can run a single line with `shift-enter`.
+
+To see error messages from Tidal, open the developer tools with the
+shortcut `ctrl-shift-I`.

@@ -19,13 +19,6 @@ Initialise homebrew:
 brew doctor
 ```
 
-Install emacs, and make it appear in your applications folder:
-
-```bash
-brew install emacs --cocoa
-brew linkapps
-```
-
 Install Dirt, a synth (well, more of a sampler) made to work with
 Tidal. A homebrew 'recipe' for dirt does exist, but that doesn't come
 with any sounds to play with, so for now it's probably easiest just
@@ -102,56 +95,8 @@ cabal update
 cabal install tidal
 ```
 
-Ok now time to configure emacs.. Do the following:
-
-```bash
-mkdir ~/tidal
-cd ~/tidal
-curl -L https://raw.githubusercontent.com/yaxu/Tidal/master/tidal.el > tidal.el
-```
-
-Then create a file in your home folder called .emacs (unless it exists already), then open the file in a text editor and insert the following lines:
-
-```emacs
-(require 'package)
-(add-to-list 'package-archives 
-    '("marmalade" .
-      "http://marmalade-repo.org/packages/"))
-(package-initialize)
-(setq load-path (cons "~/tidal/" load-path))
-(require 'tidal)
-(setq tidal-interpreter "/usr/local/bin/ghci")
-```
-
-The above ensures that emacs has access to the extensions in the 'marmalade' repository (in particular, haskell-mode), that the tidal.el file you downloaded earlier is is loaded, and that tidal can find the haskell interpreter.
-
-{% capture haskellplatform %}
-**Note:** If you have already installed Haskell using the [Haskell Platform](http://www.haskell.org/platform/) installer, make the following change to the above:
-
-```emacs
-(setq tidal-interpreter "/usr/bin/ghci")
-```
-{% endcapture %}
-{% include alert.html content=haskellplatform %}
-
-Now start emacs (or if it's already loaded, restart it to make sure .emacs is read), it should be in your Applications folder (if you start it from the terminal it'll probably load an old version). Once emacs has started, press `alt-x` (i.e. hold down `alt` while pressing `x`) and type:
-
-```emacs
-package-refresh-contents
-```
-Then do `alt-x` again and type:
-
-```emacs
-package-install
-```
-
-and then:
-
-```emacs
-haskell-mode
-```
-
-Ok everything should be pretty much ready to go. Now you just have to start jack audio, start jack and then get things going in emacs. So back in a terminal window, start jack:
+Now you have to start dirt, the synthesiser/sampler, before getting a
+code editor going. So back in a terminal window, start jack:
 
 ```bash
 jackd -d coreaudio &
@@ -164,21 +109,8 @@ cd ~/Dirt
 ./dirt &
 ```
 
-Then back in emacs, open a file called something ending with .tidal, such as test.tidal
+You will have to start dirt every time you want to run Tidal,
+otherwise there will be no sound. 
 
-Then you start up tidal, by doing `ctrl-c` followed by `ctrl-s`
-
-Then type something like
-
-```haskell
-d1 $ sound "bd sn/2"
-```
-
-And finally do `ctrl-c` `ctrl-c`
-
-Hopefully at this point you will hear a kick drum - snare! Make sure
-your volume is up.
-
-If all is well, join these instructions to continue exploring Tidal:
-
-<https://github.com/yaxu/Tidal/blob/master/doc/tidal.md>
+Now you need to install and configure an editor, following the
+instructions below. For beginners, the Atom editor is recommended.

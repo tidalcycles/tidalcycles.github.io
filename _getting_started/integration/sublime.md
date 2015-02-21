@@ -3,9 +3,11 @@ title: Sublime Text
 category: integration
 ---
 
-Though for Tidal users this seems rather esoteric, it is possible to do live coding within [Sublime Text](http://www.sublimetext.com/).
+[Sublime Text](http://www.sublimetext.com/) is a popular
+cross-platform text editor. It is closed source and costs 70 USD.
 
-To do so, install the package [Sublime REPL](https://github.com/wuub/SublimeREPL) via Package Control. 
+To do live coding in Sublime Text, install the package [Sublime
+REPL](https://github.com/wuub/SublimeREPL) via Package Control.
 
 To avoid fiddling with the existing Haskell REPL supplied by Sublime REPL simply clone this modified version of it:
 

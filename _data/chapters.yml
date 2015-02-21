@@ -2,9 +2,9 @@
   title: Getting started
   sections:
     - name: installation
-      title: Installation 
+      title: Installing Tidal
     - name: integration
-      title: Editor integration 
+      title: Installing an Editor
 - name: patterns
   title: Patterns
   sections:

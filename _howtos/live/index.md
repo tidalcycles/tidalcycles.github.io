@@ -16,10 +16,10 @@ Monitoring - Even if you have stereo sound, you might not be able to hear it, be
 
 If you just have your onboard laptop sound, then make sure you bring something like a "3.5mm Stereo Mini Jack to Twin RCA Phono Cable Lead", or a "1/8 inch TRS to Dual 1/4 Inch TS Cable". A couple of metres long and of reasonable quality, but don't get ripped off - it's just a wire. Here are a couple of suggestions:
 
-* http://www.amazon.com/Hosa-CMP153-Cable-Inch-Dual/dp/B000068O3C
-* http://www.amazon.co.uk/gp/product/B007KN28BY/ref=pd_lpo_sbs_dp_ss_2/277-0257037-9317524
+  * [amazon.com: Hosa CMP153 Y Cable](http://www.amazon.com/Hosa-CMP153-Cable-Inch-Dual/dp/B000068O3C)
+  * [amazon.com: 3.5mm Mini Jack Stereo to Twin RCA](http://www.amazon.co.uk/gp/product/B007KN28BY/ref=pd_lpo_sbs_dp_ss_2/277-0257037-9317524)
 
-If you have terrible onboard sound, or generally want pro quality with nice balanced 1/4" jack outputs, consider a sound module such as a Focusrite Scarlett (http://www.amazon.com/Focusrite-2i2-USB-Recording-Interface/dp/B005OZE9SA/ref=sr_1_2).
+If you have terrible onboard sound, or generally want pro quality with nice balanced 1/4" jack outputs, consider a sound module such as a [Focusrite Scarlett] (http://www.amazon.com/Focusrite-2i2-USB-Recording-Interface/dp/B005OZE9SA/ref=sr_1_2).
 
 # Hum
 

@@ -92,7 +92,7 @@ LDFLAGS += -lm -L/usr/local/lib -llo -lsndfile -lsamplerate -ljack
 
 {% capture dirtcompileport %}
 As macports installs all libs on /opt/local/
-edit the Makefile to point the right direction of `libsndfile` and 'libsamplerate`
+edit the Makefile to point the right direction of `libsndfile` and `libsamplerate`
 
 ```make
 CFLAGS += -g -I/opt/local/include -Wall -O3 -std=gnu99

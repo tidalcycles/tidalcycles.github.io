@@ -1,3 +1,3 @@
 <div class="alert alert-{% if include.type == null %}info{% else %}{{include.type}}{% endif %}">
-  {{ include.content | markdownify }}
+  {% capture content %} {% if include.caption != null %}__{{ include.caption }}:__{% endif %} {{ include.content }} {% endcapture %} {{ content | markdownify}}
 </div>

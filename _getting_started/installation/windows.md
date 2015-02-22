@@ -5,12 +5,12 @@ layout: default
 weight: 100
 ---
 
-This is a rough set of instructions based on information from the Tidal 
+This is a rough set of instructions based on information from the Tidal
 mailing list.
 
 
 ## Cygwin
-First, install Cygwin from https://www.cygwin.com. In Cygwin, make sure the
+First, install [Cygwin](https://www.cygwin.com). In Cygwin, make sure the
 following packages are installed:
 
 ~~~~
@@ -37,9 +37,9 @@ where you unpacked Portaudio and then run:
 
 ## Liblo
 
-Download Liblo from http://liblo.sourceforge.net.
+Download [Liblo](http://liblo.sourceforge.net).
 In Cygwin, unpack Liblo with `tar fxvz`, then in Cygwin go to the directory where you
-unpakced Liblo and then run:
+unpacked Liblo and then run:
 
 ~~~~bash
 ./configure && make && make install
@@ -60,13 +60,13 @@ cd Dirt
 make dirt-pa
 ~~~~
 
-Then you get a dirt-pa.exe that works. Maybe this even works on any
-windows system without having to compile.. You'd need cygwin1.dll at
+Then you get a `dirt-pa.exe` that works. Maybe this even works on any
+windows system without having to compile. You'd need `cygwin1.dll` at
 least though.
 
 ## Haskell
 
-Download and install the haskell platform from https://www.haskell.org/platform/.
+[Download and install the haskell platform](https://www.haskell.org/platform/).
 
 *You will then either need to restart Cygwin or reload your Cygwin profile to re-load `cabal` on your path.*
 
@@ -76,4 +76,3 @@ Then back in Cygwin:
 cabal update
 cabal install tidal
 ~~~~
-

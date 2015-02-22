@@ -91,7 +91,7 @@ LDFLAGS += -lm -L/usr/local/lib -llo -lsndfile -lsamplerate -ljack
 {% include alert.html content=dirtcompile caption="Homebrew users" %}
 
 {% capture dirtcompileport %}
-As macports installs all libs on /opt/local/
+As MacPorts installs all libs on `/opt/local/`
 edit the Makefile to point the right direction of `libsndfile` and `libsamplerate`
 
 ```make

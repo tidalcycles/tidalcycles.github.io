@@ -35,4 +35,4 @@ Or it might be worth getting the latter in advance, e.g. the Behringer ultra di2
 
 There are a lot of videos on YouTube about how to coil cables so they don't break, *definitely* worth a watch.
 
-https://www.youtube.com/watch?v=pEd7ru24Vx0
+{% include youtube.html id="pEd7ru24Vx0" %}

@@ -1,6 +1,6 @@
 ---
 title: jux
-category: compositions
+category: pattern_transformers
 ---
 
 The `jux` function creates strange stereo effects, by applying a

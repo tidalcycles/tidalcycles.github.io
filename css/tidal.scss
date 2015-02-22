@@ -112,7 +112,7 @@ section {
     }
 
     article {
-        h1 { 
+        h1 {
             font-size: $font-size-h2;
             color: $text-color;
         }
@@ -140,11 +140,15 @@ section {
         color: #fff;
     }
 }
- 
+
 .tidal-teaser {
     border: none;
     background-color: $body-bg;
     box-shadow: none;
+
+    .btn {
+      margin-bottom: $line-height-computed / 2;
+    }
 }
 
 .tidal-sidebar {

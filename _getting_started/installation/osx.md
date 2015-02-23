@@ -5,9 +5,16 @@ category: installation
 weight: 20
 ---
 
+Installing Tidal's dependencies on Mac OS X can be done via homebrew or MacPorts, but choose only one to avoid conflicts with duplicate system libraries.
+
 Unless otherwise specified, the below commands should be typed or pasted into a terminal window.
 
-Install homebrew:
+## Dirt
+
+### Installing dependencies via Homebrew
+[Homebrew](http://brew.sh) is a package manager for OS X. It lives side by side with the native libraries and tools that ship with the operating system.
+
+To install homebrew:
 
 ```bash
 ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
@@ -27,7 +34,7 @@ download it all from github and compile it as follows.
 Install some libraries which the Dirt synth needs to compile:
 
 ```bash
-brew install liblo libsndfile libsamplerate 
+brew install liblo libsndfile libsamplerate
 ```
 
 Install the 'jack audio connection kit' which Dirt also needs:
@@ -42,7 +49,24 @@ __Note:__ If Homebrew's installation of Jack fails with a `make` error, you can 
 {% include alert.html content=jackosx %}
 
 
-Get the sourcecode for the Dirt synth:
+### Alternative: Installing dependencies via Mac Ports
+[MacPorts](https://www.macports.org/) is another package manager for OS X.
+If you already installed dependencies via homebrew, skip ahead to build Dirt.  
+Otherwise if you happen to already use MacPorts, here's a list of steps in order to get all dependencies:
+
+```bash
+sudo port install libsndfile libsamplerate
+```
+
+also for jack
+
+```bash
+sudo port install jack
+```
+
+### Building Dirt from source
+
+Get the source code for the Dirt synth:
 
 ```bash
 cd ~
@@ -57,19 +81,30 @@ make clean; make
 ```
 
 {% capture dirtcompile %}
-**Note:** If Dirt fails to compile after using the JackOSX installer as above, you may need to add flags to the Makefile to specify the appropriate paths:
+If Dirt fails to compile after using the JackOSX installer as above, you may need to add flags to the Makefile to specify the appropriate paths:
 
 ```make
 CFLAGS += -g -I/usr/local/include -Wall -O3 -std=gnu99 -DCHANNELS=2
 LDFLAGS += -lm -L/usr/local/lib -llo -lsndfile -lsamplerate -ljack
 ```
 {% endcapture %}
-{% include alert.html content=dirtcompile %}
+{% include alert.html content=dirtcompile caption="Homebrew users" %}
 
-Install Haskell from the binaries served at:
+{% capture dirtcompileport %}
+As MacPorts installs all libs on `/opt/local/`
+edit the Makefile to point the right direction of `libsndfile` and `libsamplerate`
 
-[https://www.haskell.org/platform/mac.html](https://www.haskell.org/platform/mac.html)
+```make
+CFLAGS += -g -I/opt/local/include -Wall -O3 -std=gnu99
+LDFLAGS += -lm -L/opt/local/lib  -llo -lsndfile -lsamplerate
+```
+{% endcapture %}
+{% include alert.html content=dirtcompileport caption="MacPorts users" %}
 
+
+## Haskell
+
+get the binary installer for [the haskell platform](https://www.haskell.org/platform/mac.html).  
 Or you might get it from homebrew (this takes a while)
 
 ```bash
@@ -98,7 +133,7 @@ cd ~/Dirt
 ```
 
 You will have to start dirt every time you want to run Tidal,
-otherwise there will be no sound. 
+otherwise there will be no sound.
 
 Now you need to install and configure an editor, following the
 instructions below. For beginners, the Atom editor is recommended.

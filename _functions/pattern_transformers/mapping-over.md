@@ -1,6 +1,6 @@
 ---
 title: Mapping over patterns
-category: docs
+category: pattern_transformers
 layout: default
 
 ---

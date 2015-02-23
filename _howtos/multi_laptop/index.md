@@ -6,14 +6,14 @@ Dirt supports multiple Tidal connections. To do this, one laptop will run `dirt`
 
 ## Step 1: sync computer clocks
 
-Ensure that the system clocks of all the computers are already in sync, 
+Ensure that the system clocks of all the computers are already in sync,
 via something like `ntpd`, or preferably `ptpd`.
 
 ## Step 2: sync to tempo clock
 
 On the remote Tidal computer, sync the host's tempo clock by setting an environment variable, e.g.:
 
-````
+````bash
 TIDAL_TEMPO_IP=<HOST IP ADDRESS> emacs &
 ````
 

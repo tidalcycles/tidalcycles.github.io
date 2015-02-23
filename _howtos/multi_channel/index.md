@@ -16,7 +16,7 @@ $ ./dirt --channels 4 --no-dirty-compressor
 
 From Tidal, you address the different channels with the `pan` synth parameter, for example, this would play on each of the four speakers:
 
-```
+```haskell
 sound "numbers:0 numbers:1 numbers:2 numbers:3"
   |+| pan "0 0.25 0.5 0.75"
 ```

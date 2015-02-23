@@ -58,10 +58,10 @@ And finally you should be able to start dirt with this:
 
 If you have problems with jack, try enabling realtime audio, and
 adjusting the settings by installing and using the "qjackctl"
-software. Some more info is here: <https://help.ubuntu.com/community/HowToJACKConfiguration>
+software. Some more info can be found in the [Ubuntu Community page for JACK configuration](https://help.ubuntu.com/community/HowToJACKConfiguration)
 
 You will have to start dirt every time you want to run Tidal,
-otherwise there will be no sound. 
+otherwise there will be no sound.
 
 Now you need to install and configure an editor, following the
 instructions below. For beginners, the Atom editor is recommended.
@@ -76,7 +76,7 @@ itself. Under debian, you'd install haskell like this:
 sudo apt-get install ghc6 zlib1g-dev cabal-install
 ~~~~
 
-Or otherwise you could grab it from <http://www.haskell.org/platform/>
+Or otherwise could grab the [haskell platform](http://www.haskell.org/platform/)
 
 Once Haskell is installed, you can install tidal like this:
 

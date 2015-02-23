@@ -84,3 +84,9 @@ Once Haskell is installed, you can install tidal like this:
 cabal update
 cabal install tidal
 ~~~~
+
+You will have to start dirt every time you want to run Tidal,
+otherwise there will be no sound. 
+
+Now you need to install and configure an editor, following the
+instructions below. For beginners, the Atom editor is recommended.

@@ -1,5 +1,5 @@
 ---
-title: Tidal - Home
+title: Home
 layout: default
 category: homepage
 ---

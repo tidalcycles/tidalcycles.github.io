@@ -80,7 +80,7 @@
                     <h1>{{ page.title }}</h1>
                 </div>
 
-                {{ content }} {% for section_meta in sections %} {% assign section = grps | where: "name", section_meta.name | first %} {% assign docs = section.items | sort: "weight", "last" %}
+                {{ content }} {% for section_meta in sections %} {% assign section = grps | where: "name", section_meta.name | first %} {% assign docs = section.items | sort: "weight", "last" | sort: "title" %}
                 <section>
                     <header>
                         <h1 id="{{section_meta.name}}" class="tidal-toc-heading">{{section_meta.title}}</h1>
@@ -104,7 +104,7 @@
             <div class="col-md-3">
                 <div class="tidal-sidebar">
                     <ul class="nav affix">
-                        {% for section_meta in sections %} {% assign section = grps | where: "name", section_meta.name | first %} {% assign docs = section.items | sort: "weight", "last" %}
+                        {% for section_meta in sections %} {% assign section = grps | where: "name", section_meta.name | first %} {% assign docs = section.items | sort: "weight", "last" | sort: "title" %}
                         <li>
                             <a href="#{{section_meta.name}}">
                                 <h4>{{section_meta.title}}</h4>

@@ -39,4 +39,3 @@ By the way, "0 1 2 3 4" in the above could be replaced with the
 pattern generator `run 5`.
 
 In the following sections contain functions for various applications, some will transform the pattern itself (make slower, faster), change the samples within the pattern (chop them in to tiny bits) and others will combine two patterns into a new one.
-

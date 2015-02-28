@@ -23,6 +23,8 @@
       title: Conditional Transformers
     - name: compositions
       title: Compositions
+    - name: synth_parameters
+      title: Synth Parameters
 - name: howtos
   title: HowTos
   sections:

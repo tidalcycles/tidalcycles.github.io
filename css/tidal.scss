@@ -92,6 +92,10 @@ body {
     padding-top: 44px;
 }
 
+.main-content {
+  margin-bottom: 5em;
+}
+
 section {
     header {
         position: relative;
@@ -247,4 +251,8 @@ section {
     pre, code {
         background-color: fade-out($code-bg, 0.65);
     }
+}
+
+.tidal-synth-example-wrapper {
+  margin-bottom: 73px;
 }

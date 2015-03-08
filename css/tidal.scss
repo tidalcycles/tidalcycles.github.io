@@ -99,6 +99,7 @@ body {
 section {
     header {
         position: relative;
+        z-index: -1;
         &::before {
             content: "»";
             display: block;

@@ -25,6 +25,13 @@
       title: Compositions
     - name: synth_parameters
       title: Synth Parameters
+- name: videos
+  title: Videos
+  sections:
+    - name: tutorials
+      title: Tutorials and demos
+    - name: performances
+      title: Performances
 - name: howtos
   title: HowTos
   sections:

@@ -4,7 +4,7 @@ category: integration
 ---
 
 Atom is a free, modern and cross-platform code editor, created by the
-people behind github. It is the recommended option for beginners.
+people behind github.
 
 To install Atom, download it and follow the simple instructions from
 here:

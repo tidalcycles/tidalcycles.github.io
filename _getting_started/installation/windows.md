@@ -50,7 +50,7 @@ unpacked Liblo and then run:
 In Cygwin:
 
 ~~~~bash
-git clone http://github.com/yaxu/Dirt.git
+git clone http://github.com/tidalcycles/Dirt.git
 ~~~~
 
 Then:
@@ -74,5 +74,16 @@ Then back in Cygwin:
 
 ~~~~bash
 cabal update
+~~~~
+
+At this point, you may be notified to update `cabal-install`. You can do so by typing:
+
+~~~~bash
+cabal install cabal-install
+~~~~
+
+Then finally, install the Tidal package:
+
+~~~~bash
 cabal install tidal
 ~~~~

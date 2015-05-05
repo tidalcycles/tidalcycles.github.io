@@ -14,11 +14,10 @@ First, install [Cygwin](https://www.cygwin.com). In Cygwin, make sure the
 following packages are installed:
 
 ~~~~
-emacs
 git
-gcc
+gcc-core
 make
-g++
+gcc-g++
 libsndfile
 libsndfile-devel
 libsamplerate

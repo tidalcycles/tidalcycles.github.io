@@ -5,8 +5,10 @@ layout: default
 weight: 100
 ---
 
-This is a rough set of instructions based on information from the Tidal
-mailing list.
+This is a rough set of instructions based on information from the
+Tidal mailing list. There is a [fine youtube
+video](https://www.youtube.com/watch?v=KPCRUuYsb5M) that takes you
+through this process step-by-step.
 
 
 ## Cygwin

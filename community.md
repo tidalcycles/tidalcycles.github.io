@@ -38,6 +38,7 @@ other things..), in alphabetical order:
 * [Kindohm](http://kindohm.com/) (Minneapolis, US)
 * [Lysuc](http://lysuc888.blogspot.co.uk/) (Northern Argentina, AR)
 * [munshkr + x/q](https://vimeo.com/119715458) (Buenos Aires, AR)
+* [Nullish](http://nullish.org/) (Sheffield, UK)
 * [Polinski](http://www.paulwolinski.co.uk/) (Manchester, UK)
 * [tristeTren](http://cargocollective.com/tristeTren) (Mexico City, MX)
 * [Yaxu](http://yaxu.org/music/) + also in [Canute](http://canute.lurk.org/)

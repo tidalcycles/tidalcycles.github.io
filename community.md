@@ -37,7 +37,7 @@ other things..), in alphabetical order:
 * [Cybernetic Orchestra](http://esp.mcmaster.ca/?page_id=502) (Hamilton, CA)
 * [Kindohm](http://kindohm.com/) (Minneapolis, US)
 * [Lysuc](http://lysuc888.blogspot.co.uk/) (Northern Argentina, AR)
-* [munshkr + x/q](https://vimeo.com/119715458) (Buenos Aires, AR)
+* [munshkr + x/q](http://ikag.github.io/) (Buenos Aires, AR)
 * [Nullish](http://nullish.org/) (Sheffield, UK)
 * [Polinski](http://www.paulwolinski.co.uk/) (Manchester, UK)
 * [tristeTren](http://cargocollective.com/tristeTren) (Mexico City, MX)

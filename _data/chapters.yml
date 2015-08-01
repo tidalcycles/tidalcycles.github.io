@@ -50,3 +50,5 @@
       title: Recent
     - name: historic
       title: Archive
+- name: community
+  title: Community

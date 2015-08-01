@@ -40,5 +40,5 @@ other things..), in alphabetical order:
 * [munshkr + x/q](https://vimeo.com/119715458) (Buenos Aires, AR)
 * [Polinski](http://www.paulwolinski.co.uk/) (Manchester, UK)
 * [tristeTren](http://cargocollective.com/tristeTren) (Mexico City, MX)
-* [Yaxu](http://yaxu.org/) + also in [Canute](http://canute.lurk.org/)
+* [Yaxu](http://yaxu.org/music/) + also in [Canute](http://canute.lurk.org/)
   and [Slub](http://slub.org/) etc (Sheffield, UK)

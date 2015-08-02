@@ -32,7 +32,7 @@ also have a lurk forum called
 Some people who make/have made music with Tidal (sometimes amongst
 other things..), in alphabetical order:
 
-* [Annyfm](https://soundcloud.com/anny-fm) (London, UK)
+* [Anny](http://anny.audio) (London, UK)
 * [Alexandra Cardenas](http://cargocollective.com/tiemposdelruido/Alexandra-Cardenas) (Berlin, DE)
 * [Cybernetic Orchestra](http://esp.mcmaster.ca/?page_id=502) (Hamilton, CA)
 * [Kindohm](http://kindohm.com/) (Minneapolis, US)

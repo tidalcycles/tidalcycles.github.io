@@ -41,6 +41,7 @@ other things..), in alphabetical order:
 * [munshkr + x/q](http://ikag.github.io/) (Buenos Aires, AR)
 * [Nullish](http://nullish.org/) (Sheffield, UK)
 * [Polinski](http://www.paulwolinski.co.uk/) (Manchester, UK)
+* [Spednar](https://soundcloud.com/spednar) (Pittsburgh, US)
 * [tristeTren](http://cargocollective.com/tristeTren) (Mexico City, MX)
 * [Yaxu](http://yaxu.org/music/) + also in [Canute](http://canute.lurk.org/)
   and [Slub](http://slub.org/) etc (Sheffield, UK)

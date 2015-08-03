@@ -10,9 +10,11 @@ Tidal starts with nine connections to the dirt synthesiser, named from
 d1 $ sound "bd"
 ~~~~
 
-In the above, `sound` tells us we're making a pattern of sounds, and
-`"bd"` is a pattern that contains a single sound. `bd` is a sample of
-a bass drum. To run the code, use `Ctrl-C` then `Ctrl-C`.
+In the above, `sound` tells us we're making a pattern of sound
+samples, and `"bd"` is a pattern that contains a single sound. `bd` is
+a sample of a bass drum. To run the code, make sure the cursor is on
+it somewhere, then hold down ctrl and press enter. You'll need to make
+sure there are blank lines above and below the pattern you're running.
 
 {% capture dollarop %}
 In case you're wondering, the `$` character in the above is Haskell syntax, which just means _give the result of the right to the function on the left_. An alternative would have been to do without the `$` by wrapping everything on the right in parenthesis: `d1 (sound "bd")`
@@ -28,6 +30,12 @@ number, for example this picks the fourth bass drum (it counts from
 d1 $ sound "bd:3"
 ~~~~
 
+{% capture samples %}
+You can find (and if you like, add to) the samples in the `samples` folder inside the Dirt folder. They're in 'wav' format.
+{% endcapture %}
+
+{% include alert.html content=samples %}
+
 Putting things in quotes actually defines a sequence. For example, the
 following gives you a pattern of bass drum then snare:
 
@@ -35,12 +43,11 @@ following gives you a pattern of bass drum then snare:
 d1 $ sound "bd sn"
 ~~~~
 
-When you do `Ctrl-C Ctrl-C` on the above, you are replacing the
-previous pattern with another one on-the-fly. Congratulations, you're
-live coding.
+When you run the above, you are replacing the previous pattern with
+another one on-the-fly. Congratulations, you're live coding.
 
 The `sound` function in the above is just one possible parameter that
-we can send to the synth. Below show a couple more, `pan` and `vowel`:
+we can send to the synth. Below shows a couple more, `pan` and `vowel`:
 
 ~~~~ {haskell}
 d1 $ sound "bd sn sn"
@@ -49,7 +56,9 @@ d1 $ sound "bd sn sn"
 ~~~~
 
 {% capture multiline %}
-__Note:__ `Ctrl-C Ctrl-C` won't work on the above, because it goes over more than one line. Instead, do `Ctrl-C Ctrl-E` to run the whole block. However, note that there must be blank lines surrounding the block (which also means that patterns cannot contain blank lines).
+__Note:__ There will be a different key combination for running a
+single line vs a multi-line pattern, if the effects aren't working try
+a different one. `ctrl-enter` works in both atom and emacs.
 {% endcapture %}
 {% include alert.html content=multiline %}
 

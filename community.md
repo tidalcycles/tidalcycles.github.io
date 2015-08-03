@@ -32,13 +32,13 @@ also have a lurk forum called
 Some people who make/have made music with Tidal (sometimes amongst
 other things..), in alphabetical order:
 
-* [Annyfm](https://soundcloud.com/anny-fm) (London, UK)
+* [Anny](http://anny.audio) (London, UK)
 * [Alexandra Cardenas](http://cargocollective.com/tiemposdelruido/Alexandra-Cardenas) (Berlin, DE)
 * [Cybernetic Orchestra](http://esp.mcmaster.ca/?page_id=502) lead by [David Ogborn](http://www.d0kt0r0.net/) (Hamilton, CA)
 * [Tanya Goncalves](http://tanyamgoncalves.com/)
 * [Kindohm](http://kindohm.com/) (Minneapolis, US)
 * [Lysuc](http://lysuc888.blogspot.co.uk/) (Northern Argentina, AR)
-* [munshkr + x/q](https://vimeo.com/119715458) (Buenos Aires, AR)
+* [munshkr + x/q](http://ikag.github.io/) (Buenos Aires, AR)
 * [Nullish](http://nullish.org/) (Sheffield, UK)
 * [Polinski](http://www.paulwolinski.co.uk/) (Manchester, UK)
 * [tristeTren](http://cargocollective.com/tristeTren) (Mexico City, MX)

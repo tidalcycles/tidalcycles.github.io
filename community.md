@@ -34,7 +34,8 @@ other things..), in alphabetical order:
 
 * [Annyfm](https://soundcloud.com/anny-fm) (London, UK)
 * [Alexandra Cardenas](http://cargocollective.com/tiemposdelruido/Alexandra-Cardenas) (Berlin, DE)
-* [Cybernetic Orchestra](http://esp.mcmaster.ca/?page_id=502) (Hamilton, CA)
+* [Cybernetic Orchestra](http://esp.mcmaster.ca/?page_id=502) lead by [David Ogborn](http://www.d0kt0r0.net/) (Hamilton, CA)
+* [Tanya Goncalves](http://tanyamgoncalves.com/)
 * [Kindohm](http://kindohm.com/) (Minneapolis, US)
 * [Lysuc](http://lysuc888.blogspot.co.uk/) (Northern Argentina, AR)
 * [munshkr + x/q](https://vimeo.com/119715458) (Buenos Aires, AR)

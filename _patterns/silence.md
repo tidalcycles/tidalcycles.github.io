@@ -1,6 +1,6 @@
 ---
 title: Silence
-category: Silence
+category: docs
 layout: default
 ---
 

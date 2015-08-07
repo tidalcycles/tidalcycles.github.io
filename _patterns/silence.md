@@ -1,5 +1,5 @@
 ---
-category: silence
+category: patterns
 layout: default
 ---
 

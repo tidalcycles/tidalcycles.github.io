@@ -1,5 +1,5 @@
 ---
-category: patterns
+category: docs
 layout: default
 ---
 

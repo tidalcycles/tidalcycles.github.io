@@ -12,8 +12,6 @@
       title: Sequences
     - name: continuous
       title: Continuous Patterns
-    - name: silence
-      title: Silence
 - name: functions
   title: Reference
   sections:

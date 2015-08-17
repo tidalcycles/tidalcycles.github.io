@@ -33,6 +33,8 @@
       title: Compositions
     - name: synth_parameters
       title: Synth Parameters
+    - name: utility
+      title: Utility
 - name: videos
   title: Videos
   sections:

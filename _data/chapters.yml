@@ -1,17 +1,25 @@
 - name: getting_started
-  title: Getting started
+  title: Installation
   sections:
     - name: installation
       title: Installing Tidal
     - name: integration
       title: Installing an Editor
 - name: patterns
-  title: Patterns
+  title: Creating Patterns
   sections:
     - name: sequences
       title: Sequences
     - name: continuous
       title: Continuous Patterns
+    - name: transformation
+      title: Transforming Patterns
+    - name: bjorklund
+      title: Bjorklund and Euclid Patterns
+    - name: silence
+      title: Silence
+    - name: tempo
+      title: Tempo
 - name: functions
   title: Reference
   sections:

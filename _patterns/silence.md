@@ -1,5 +1,5 @@
 ---
-category: docs
+category: silence
 layout: default
 ---
 

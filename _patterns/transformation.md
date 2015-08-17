@@ -1,6 +1,5 @@
 ---
-title: Transforming patterns
-category: docs 
+category: transformation 
 layout: default
 ---
 

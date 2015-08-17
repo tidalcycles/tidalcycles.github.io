@@ -1,6 +1,5 @@
 ---
-title: Tempo
-category: docs
+category: tempo
 layout: default
 ---
 

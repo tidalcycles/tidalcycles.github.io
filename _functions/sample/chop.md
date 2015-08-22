@@ -7,8 +7,7 @@ category: sample
 chop :: Int -> OscPattern -> OscPattern
 ~~~~
 
-`chop` granualizes every sample in place as it is played. Use an integer
-value to specify how manu granules each sample is chopped into:
+`chop` granualizes every sample in place as it is played, turning a pattern of samples into a pattern of sample parts. Use an integer value to specify how many granules each sample is chopped into:
 
 ~~~~ {haskell}
 d1 $ chop 16 $ sound "arpy arp feel*4 arpy*4"

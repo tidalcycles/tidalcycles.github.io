@@ -3,7 +3,7 @@ title: irand
 category: utility
 ---
 
-`irand n` generates a pattern of random integers from `0` to `n-1`. Notably used to pick a random
+`irand n` generates a pattern of (pseudo-)random integers between `0` to `n-1` inclusive. Notably used to pick a random
 samples from a folder:
 
 ~~~~{haskell}

@@ -55,14 +55,10 @@ If you already installed dependencies via homebrew, skip ahead to build Dirt.
 Otherwise if you happen to already use MacPorts, here's a list of steps in order to get all dependencies:
 
 ```bash
-sudo port install libsndfile libsamplerate
+sudo port install liblo libsndfile libsamplerate
 ```
 
-also for jack
-
-```bash
-sudo port install jack
-```
+Download and install jack2 [Jack Download Page](http://jackaudio.org/downloads/). Jack 2 has better OS X integration [Jack Comparison](https://github.com/jackaudio/jackaudio.github.com/wiki/Q_difference_jack1_jack2).
 
 ### Building Dirt from source
 
@@ -111,19 +107,30 @@ Or you might get it from homebrew (this takes a while)
 brew install haskell-platform
 ```
 
+Or, if using MacPorts:
+
+```bash
+sudo port install haskell-platform
+```
+
 Install Tidal itself:
 
 ```bash
 cabal update
+cabal install cabal-install
 cabal install tidal
 ```
 
-Now you have to start dirt, the synthesiser/sampler, before getting a
+Now you have to start dirt, the synthesizer/sampler, before getting a
 code editor going. So back in a terminal window, start jack:
 
 ```bash
 jackd -d coreaudio &
 ```
+
+Or, if you downloaded Jack 2, then start the JackPilot at:
+/Applications/Jack/JackPilot.app
+Click __start__ button.
 
 Then start dirt:
 

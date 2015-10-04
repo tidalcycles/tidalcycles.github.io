@@ -2,7 +2,7 @@
 category: midi
 weight: -9
 ---
-A special Haskell module named `tidal-midi` allows you to send MIDI pattern messages to external devices.
+A special Haskell module named `tidal-midi` allows you to send MIDI pattern messages to external devices and software synths.
 
 It is in its infancy and there is just one module for the [Volca Keys](http://www.korg.com/us/products/dj/volca_keys/), however it will trigger notes on other synths and more experienced programmers can use it as an example for making a module for another synth (please contribute it back!).
 
@@ -85,6 +85,33 @@ k <- keyStream
 Now you are ready to play some MIDI notes. Type and evaluate the following to play MIDI note #40:
 
 `k $ note "40"`
+
+# Talk MIDI to GarageBand, SimpleSynth, etc
+
+## OS X
+Open JackPilot from 
+/Applications/Jack/JackPilot.app
+Click _Stop_ if it's running. Then open the menu option JackPilot->Preferences. Check the Activate MIDI box. Save. Click _Start_ button. 
+
+Open Audio MIDI Setup from menu options in JackPilot. JackPilot->Open Audio MIDI Setup. Double-click the IAC Driver to open it's settings. Check the Device is on-line box. Close. Quit Audio MIDI Setup.  
+
+You won't need Dirt running to talk MIDI to Jack. 
+
+Open a MIDI software synth endpoint. I found [SimpleSynth](http://notahat.com/simplesynth) to be especially lightweight and easy to use. Once it's open, set MIDI Source to _IAC Driver Bus 1_
+
+For GarageBand, open an empty project. 
+
+From Tidal, this is the minimum needed to hear the MIDI synth. Note that location in quotes matches that of the SimpleSynth and Audio MIDI Setup. 
+
+```haskell
+import Sound.Tidal.MIDI.Output
+import Sound.Tidal.SimpleSynth
+
+keyStreams <- midiproxy 1 "IAC Driver Bus 1" [(keys, 1)]
+
+[k1] <- sequence keyStreams
+k1 $ note "50"
+```
 
 # Making MIDI patterns
 

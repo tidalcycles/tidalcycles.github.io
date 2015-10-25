@@ -14,7 +14,7 @@ Example:
 
 ~~~~ {haskell}
 d1 $ sound (density 2 "bd sn kurt")
-   |+| density 3 (vowel "a e o")
+   # density 3 (vowel "a e o")
 ~~~~
 
 Also, see `slow`.

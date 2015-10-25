@@ -53,7 +53,7 @@ by the `$` symbol, you can put them inside the pattern, for example:
 
 ~~~~ {haskell}
 d1 $ sound (every 4 (density 4) "bd*2 [bd [sn sn*2 sn] sn]")
-   |+| pan sinewave1
+   # pan sinewave1
 ~~~~
 
 In the above example the transformation is applied inside the `sound`
@@ -65,7 +65,7 @@ around `every` and its parameters before passing to its function
 
 ~~~~ {haskell}
 d1 $ sound (every 4 (density 4) "bd*2 [bd [sn sn*2 sn] sn]")
-   |+| pan (slow 16 sinewave1)
+   # pan (slow 16 sinewave1)
 ~~~~
 
 In the above, the sinewave pan has been slowed down, so that the

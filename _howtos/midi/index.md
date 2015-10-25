@@ -118,7 +118,7 @@ k1 $ note "50"
 You can create patterns of MIDI notes just like with Dirt:
 
 ~~~~{haskell}
-k $ note "40 [32 34] 36*2 42*3" |+| detune (slow 4 sine1)
+k $ note "40 [32 34] 36*2 42*3" # detune (slow 4 sine1)
 k $ note "[[32 34], [36 38]]"
 k $ every 3 (density 2) $ every 4 (palindrome) $ note "{50 52 54}%8"
 ~~~~

@@ -17,5 +17,5 @@ example this both reverses and halves the playback speed of the
 pattern in the righthand channel:
 
 ~~~~ {haskell}
-d1 $ slow 32 $ jux ((|+| speed "0.5") . rev) $ striate' 32 (1/16) $ sound "bev"
+d1 $ slow 32 $ jux ((# speed "0.5") . rev) $ striate' 32 (1/16) $ sound "bev"
 ~~~~

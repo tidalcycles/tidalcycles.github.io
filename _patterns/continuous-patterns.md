@@ -11,8 +11,8 @@ distortion) which are patterns of numbers.
 
 ~~~~ {haskell}
 d1 $ sound "[bd bd] [bd [sn [sn sn] sn] sn]"
-   |+| pan sinewave1
-   |+| shape sinewave1
+   # pan sinewave1
+   # shape sinewave1
 ~~~~
 
 The above uses the pattern `sinewave1` to continuously pan between the

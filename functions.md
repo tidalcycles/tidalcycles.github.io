@@ -13,7 +13,7 @@ multiplying the numbers inside them together, like this:
 
 ~~~~ {haskell}
 d1 $ (brak (sound "bd sn:2 bd sn"))
-   |+| pan ((*) <$> sinewave1 <*> (slow 8 $ "0 0.25 0.75"))
+   # pan ((*) <$> sinewave1 <*> (slow 8 $ "0 0.25 0.75"))
 ~~~~
 
 In the above, the `sinewave1` and the `(slow 8 $ "0 0.25 0.75")`

@@ -12,7 +12,7 @@ from `0` to `0.5` rather than from `0` to `1`, you could do this:
 
 ~~~~ {haskell}
 d1 $ sound "bd*2 [bd [sn sn*2 sn] sn]"
-   |+| shape ((/ 2) <$> sinewave1)
+   # shape ((/ 2) <$> sinewave1)
 ~~~~
 
 The above applies the function `(/ 2)` (which simply means divide by

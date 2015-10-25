@@ -29,5 +29,5 @@ This is quite dancehall:
 ~~~~ {haskell}
 d1 $ (spread' slow "1%4 2 1 3" $ spread (striate) [2,3,4,1] $ sound
 "sn:2 sid:3 cp sid:4")
-  |+| speed "[1 2 1 1]/2"
+  # speed "[1 2 1 1]/2"
 ~~~~

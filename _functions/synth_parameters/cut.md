@@ -14,7 +14,7 @@ An example would be an open hi-hat followed by a closed one, essentially muting 
 ```haskell
 d1 $ stack [
   sound "bd",
-  sound "~ [~ [ho:2 hc/2]]" |+| cut "1"
+  sound "~ [~ [ho:2 hc/2]]" # cut "1"
   ]
 ```
 
@@ -23,7 +23,7 @@ This will mute the open hi-hat every second cycle when the closed one is played.
 Using `cut` with negative values will only cut the same sample. This is useful to cut very long samples
 
 ```haskell
-d1 $ sound "[bev, [ho:3](3,8)]" |+| cut "-1"
+d1 $ sound "[bev, [ho:3](3,8)]" # cut "-1"
 ```
 
 Using `cut "0"` is effectively _no_ cutgroup.

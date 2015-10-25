@@ -12,8 +12,8 @@ degradeBy :: Double -> Pattern a -> Pattern a
 
 ~~~~ {haskell}
 d1 $ slow 2 $ degrade $ sound "[[[feel:5*8,feel*3] feel:3*8], feel*4]"
-   |+| accelerate "-6"
-   |+| speed "2"
+   # accelerate "-6"
+   # speed "2"
 ~~~~
 
 The shorthand syntax for `degrade` is a question mark: `?`. Using `?`

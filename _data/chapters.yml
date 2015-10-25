@@ -16,6 +16,8 @@
       title: Transforming Patterns
     - name: bjorklund
       title: Bjorklund and Euclid Patterns
+    - name: transitions
+      title: Pattern Transitions
     - name: silence
       title: Silence
     - name: tempo
@@ -31,6 +33,8 @@
       title: Conditional Transformers
     - name: compositions
       title: Compositions
+    - name: transitions
+      title: Transitions
     - name: synth_parameters
       title: Synth Parameters
     - name: combining_parameters

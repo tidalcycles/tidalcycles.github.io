@@ -2,5 +2,7 @@
 category: synth_parameters
 weight: -9
 ---
-Synth parameters generate or affect sample playback. These are the
-synthesis parameters you can use:
+
+In general, synth parameters specify patterns of sounds, and patterns
+of effects on those sounds. These are the synthesis parameters you can
+use with the default Dirt synth:

@@ -1,6 +1,6 @@
 ---
 title: cut
-category: sample
+category: synth_parameters
 ---
 
 ```haskell

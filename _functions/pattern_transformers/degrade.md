@@ -5,7 +5,6 @@ category: pattern_transformers
 
 ~~~~ {haskell}
 degrade :: Pattern a -> Pattern a
-degradeBy :: Double -> Pattern a -> Pattern a
 ~~~~
 
 `degrade` randomly removes events from a pattern 50% of the time:
@@ -29,6 +28,11 @@ You can also use `?` to randomly remove events from entire sub-patterns:
 d1 $ slow 2 $ sound "[[[feel:5*8,feel*3] feel:3*8]?, feel*4]"
 ~~~~
 
+### degradeBy
+
+~~~~ {haskell}
+degradeBy :: Double -> Pattern a -> Pattern a
+~~~~
 
 Similar to `degrade` `degradeBy` allows you to control the percentage of events that
 are removed. For example, to remove events 90% of the time:

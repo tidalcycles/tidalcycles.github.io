@@ -20,5 +20,5 @@ same as `anticipate` though it allows you to specify the number of cycles until 
 ```haskell
 d1 $ sound "jvbass(3,8)"
 
-t1 (anticipateIn 4) $ (0.25 ~>) $ sound "jvbass(5,8)"
+t1 (anticipateIn 4) $ sound "jvbass(5,8)"
 ```

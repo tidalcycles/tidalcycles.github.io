@@ -7,10 +7,9 @@ category: pattern_transformers
 density :: Time -> Pattern a -> Pattern a
 ~~~~
 
-
-Speed up a pattern.
-
-Example:
+Speed up a pattern. For example, the following will play the sound
+pattern `"bd sn kurt"` twice as fast (i.e. so it repeats twice per
+cycle), and the vowel pattern three times as fast:
 
 ~~~~ {haskell}
 d1 $ sound (density 2 "bd sn kurt")

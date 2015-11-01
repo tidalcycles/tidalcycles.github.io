@@ -51,7 +51,7 @@ unpacked Liblo and then run:
 In Cygwin:
 
 ~~~~bash
-git clone http://github.com/tidalcycles/Dirt.git
+git clone --recursive http://github.com/tidalcycles/Dirt.git
 ~~~~
 
 Then:

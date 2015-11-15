@@ -31,7 +31,7 @@ been developed for use with a particular software sampler called
 ~~~~sh
 sudo apt-get install build-essential libsndfile1-dev libsamplerate0-dev \
                      liblo-dev libjack-jackd2-dev qjackctl jackd git
-git clone https://github.com/yaxu/Dirt.git
+git clone --recursive https://github.com/tidalcycles/Dirt.git
 cd Dirt
 make clean; make
 ~~~~

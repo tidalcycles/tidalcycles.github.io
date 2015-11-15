@@ -66,7 +66,7 @@ Get the source code for the Dirt synth:
 
 ```bash
 cd ~
-git clone https://github.com/yaxu/Dirt.git
+git clone --recursive https://github.com/tidalcycles/Dirt.git
 ```
 
 Compile dirt:

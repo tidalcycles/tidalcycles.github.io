@@ -1,6 +1,6 @@
 ---
 title: nudge
-category: pattern_transformers
+category: synth_transformers
 ---
 
 ```haskell

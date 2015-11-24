@@ -14,6 +14,8 @@ The main configuration file for all chapters and sections is found in `_data/cha
 
 This file is a [YAML Collection](http://www.yaml.org/spec/1.2/spec.html#id2759963) of all chapters of the documentation.
 
+### Chapters
+
 For each entry there is:
 
 - a corresponding markdown file with the same name (e.g. the first list entry is named `getting_started` and the folder is named `getting_started.md`)
@@ -21,9 +23,11 @@ For each entry there is:
 
 Each chapter also has a `title` that is displayed in the menu and another collection of `sections`.
 
-The order of sections in the configuration file, determines the order in the sidebar menu. Each section has a `name` and a `title`. While the title determines the sidebar menu label, the `name` is used to make a separate markdown files that live in the corresponding chapter folder to appear in a certain section.
+### Sections
 
-Example:
+Each section has a `name` and a `title`. While the title determines the sidebar menu label, the `name` is used to make a separate markdown files that live in the corresponding chapter folder to appear in a certain section. The order of sections in the configuration file, determines the order in the sidebar menu.
+
+### Example: Adding content
 
 To add a new function description within the `functions` chapter in the `transitions` section. Place a file within `_functions/transitions/your_new_transition.md`.
 
@@ -38,6 +42,8 @@ category: transitions
 
 after the prelude, you can write standard markdown for the contents. The `title` will be displayed as the title of your function description and the category is the name of the section, your description should be placed in.
 
-The order of entries within a section of a chapter is always alphabetical. You can however use the `weight` key in your YAML prelude to have your content appear more likely on top or in the bottom of the chosen section. Weight is given in numeric values where negative values are _light_ and will move you content to the top, while positive values are _heavy_ and will let your content sink to the bottom. Note that weight is not an absolute position, but merely a relative way place content.
-
 _Note that placing `your_new_transition.md` in the subdirectory `transitions` is not strictly necessary, setting the `category` however is! Using subdirectories just makes it easier to navigate through the separate files._
+
+### Influencing the order of Content
+
+The order of entries within a section of a chapter is always alphabetical. You can however use the `weight` key in your YAML prelude to have your content appear more likely on top or in the bottom of the chosen section. Weight is given in numeric values where negative values are _light_ and will move you content to the top, while positive values are _heavy_ and will let your content sink to the bottom. Note that weight is not an absolute position, but merely a relative way place content.

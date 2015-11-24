@@ -5,6 +5,8 @@ Website for Tidal
 
 See the actual website here: [http://tidal.lurk.org](http://tidal.lurk.org).
 
+The documentation is a [Github Page](https://help.github.com/articles/using-jekyll-with-pages/) based on [Jekyll](http://jekyllrb.com/docs/home/)
+
 Extending the documentation
 ---------------------------
 

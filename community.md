@@ -12,6 +12,8 @@ The source for [Tidal](https://github.com/tidalcycles/Tidal), [Dirt](https://git
 
 The official web forum is at [lurk.org/groups/tidal](http://lurk.org/groups/tidal/)
 
+For live discussion and chat, there's an active `tidal` channel (and also a `tidal-innards` channel for those interested in meddling with tidal's internals) on the [TOPLAP slack](http://toplap.org/toplap-on-slack/).
+
 ## Antisocial
 
 Twitter: [@tidalcycles](https://twitter.com/tidalcycles)

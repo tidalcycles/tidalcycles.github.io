@@ -18,5 +18,5 @@ d1 $ weave 3 (shape $ sine1) [sound "bd [sn drum:2*2] bd*2 [sn drum:1]", sound "
 `weave'` is similar in that it blends functions at the same time at different amounts over a pattern:
 
 ~~~~{haskell}
-d1 $ weave' 3 (sound "bd [sn drum:2*2] bd*2 [sn drum:1]") [density 2, (|+| speed "0.5"), chop 16]
+d1 $ weave' 3 (sound "bd [sn drum:2*2] bd*2 [sn drum:1]") [density 2, (# speed "0.5"), chop 16]
 ~~~~

@@ -51,8 +51,8 @@ we can send to the synth. Below shows a couple more, `pan` and `vowel`:
 
 ~~~~ {haskell}
 d1 $ sound "bd sn sn"
-   |+| vowel "a o e"
-   |+| pan "0 0.5 1"
+   # vowel "a o e"
+   # pan "0 0.5 1"
 ~~~~
 
 {% capture multiline %}

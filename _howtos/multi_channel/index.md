@@ -18,7 +18,7 @@ From Tidal, you address the different channels with the `pan` synth parameter, f
 
 ```haskell
 sound "numbers:0 numbers:1 numbers:2 numbers:3"
-  |+| pan "0 0.25 0.5 0.75"
+  # pan "0 0.25 0.5 0.75"
 ```
 
 The range of the pan parameter is still from 0 to 1. So, if you had four speakers, 0 would be the first one, 0.5 would be the third, 0.625 would be panned halfway between the third and fourth, and 0.875 would be halfway between fourth and first. 1 would be the same as 0.

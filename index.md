@@ -17,7 +17,7 @@ Tidal does not make sound itself, but rather controls synths using
 Open Sound Control or MIDI. By default, for its sister the Dirt
 sampler.
 
-To see and hread Tidal in action, Check out
+To see and hear Tidal in action, check out
 [some of the videos](http://tidal.lurk.org/videos.html) of demos and
 performances.
 

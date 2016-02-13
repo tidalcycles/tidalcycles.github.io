@@ -14,6 +14,8 @@ To install the Tidal package in Atom, first open preferences via the
 menus, or with the shortcut `ctrl-,`. Then, click on the `Install`
 menu item, type in "tidal" and click `Install`.
 
+If you're running Atom on OSX and using MacPorts then the default _Ghci Path_ will need to be changed. Menu `Atom` -> `Preferences`, then select `Packages` from the middle column. Find `tidal` in the `Community Packages` and choose `Settings`. Change the _Ghci Path_ to `/opt/local/bin/ghci`
+
 Then you can run Tidal by creating a new file (via the `File` menu, or
 with the shortcut `ctrl-n`), and then saving it (again via the `File`
 menu or with `ctrl-s`), giving it a name that ends with `.tidal`, for

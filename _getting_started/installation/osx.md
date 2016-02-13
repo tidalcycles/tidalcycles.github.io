@@ -100,17 +100,17 @@ LDFLAGS += -lm -L/opt/local/lib  -llo -lsndfile -lsamplerate
 
 ## Haskell
 
-get the binary installer for [the haskell platform](https://www.haskell.org/platform/mac.html).  
-Or you might get it from homebrew (this takes a while)
+get the binary installer for [GHC](https://www.haskell.org/ghc/).  
+Or you might get it from homebrew:
 
 ```bash
-brew install haskell-platform
+brew install ghc
 ```
 
 Or, if using MacPorts:
 
 ```bash
-sudo port install haskell-platform
+sudo port install ghc
 ```
 
 Install Tidal itself:

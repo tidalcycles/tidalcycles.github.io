@@ -121,6 +121,14 @@ cabal install cabal-install
 cabal install tidal
 ```
 
+
+{% capture portmidiosx %} On OS X with GHC 7.10 it is necessary to reinstall PortMidi again with frameworks correctly linked:
+
+```shell
+cabal install portmidi --ghc-options="-optl-Wl,-framework,CoreMIDI,-framework,CoreAudio" --reinstall --jobs=1 --force-reinstalls
+```
+{% endcapture %} {% include alert.html content=portmidiosx caption="OS X users" %}
+
 Now you have to start dirt, the synthesizer/sampler, before getting a
 code editor going. So back in a terminal window, start jack:
 

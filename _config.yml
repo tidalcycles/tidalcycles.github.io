@@ -2,7 +2,7 @@ name: Tidal
 title: Tidal
 description: Domain specific language for live coding of pattern
 permalink: /:categories/:title.html
-baseurl: ""
+baseurl: "/tidalcycles.github.io"
 markdown: redcarpet
 redcarpet:
   smart: true

@@ -1,15 +1,12 @@
 ---
-title: Patterns
+title: "Tidal: the guide"
 category: patterns
 layout: default
 ---
 
-With a bit of fiddling, Tidal can be used to pattern the input to any
-device which takes MIDI or Open Sound Control input, but the default
-is the Dirt software sampler. If you followed the install process, you
-should have Dirt installed and it should be running. 
+You've installed Dirt and Tidal, maybe even made a few sounds, but now you're
+ready to get to business and start really learning Tidal. This guide will help you get started with simple patterns
+and walk you through all the way to complex compositions.
 
-This page shows you the basics of patterning, in particular how to
-quickly define sequences (which can be polyphonic and polyrhythmic),
-and how to use continuous patterns (sinewaves and the like).
-
+> NOTE: please _play_ with the code as you read. Run your own experiments
+> by making slight modification to these examples!

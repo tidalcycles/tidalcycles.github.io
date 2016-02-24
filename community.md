@@ -35,10 +35,12 @@ Some people who make/have made music with Tidal (sometimes amongst
 other things..), in alphabetical order:
 
 * [Anny](http://anny.audio) (London, UK)
+* [Blaerg](http://immigrantbreastnest.com/album/redundant-tautologies) (New York, US)
 * [Alexandra Cardenas](http://cargocollective.com/tiemposdelruido/Alexandra-Cardenas) (Berlin, DE)
 * [Cybernetic Orchestra](http://esp.mcmaster.ca/?page_id=502) lead by [David Ogborn](http://www.d0kt0r0.net/) (Hamilton, CA)
 * [Tanya Goncalves](http://tanyamgoncalves.com/)
 * [Kindohm](http://kindohm.com/) (Minneapolis, US)
+* [Lil Data](http://data.pcmusic.info/) (Internet)
 * [Lysuc](http://lysuc888.blogspot.co.uk/) (Northern Argentina, AR)
 * [munshkr + x/q](http://ikag.github.io/) (Buenos Aires, AR)
 * [Nullish](http://nullish.org/) (Sheffield, UK)

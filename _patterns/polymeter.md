@@ -39,4 +39,4 @@ d1 $ sound "{~ ~ ~ ~, arpy bass2 drum notes can}"
 ```
 
 If "polymeter" sounds a bit confusing, there's a good explanation here:
-http://music.stackexchange.com/questions/10488/polymeter-vs-polyrhythm
+[http://music.stackexchange.com/questions/10488/polymeter-vs-polyrhythm](http://music.stackexchange.com/questions/10488/polymeter-vs-polyrhythm)

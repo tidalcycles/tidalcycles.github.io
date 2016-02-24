@@ -12,6 +12,8 @@ Here's a minimal example, that plays a bass drum every cycle:
 d1 $ sound "bd"
 ```
 
+> Evaluate the above code in your Emacs or Atom editor by pressing `Ctrl+Enter`
+
 In the code above, `sound` tells us we're making a pattern of sound samples, and
 `"bd"` is a pattern that contains a single sound. `bd` is a sample of a bass drum.
 Samples live inside the `/samples` folder which came with Dirt, and
@@ -43,6 +45,22 @@ one on-the-fly. Congratulations, you're live coding.
 
 > You can find (and if you like, add to) the samples in the samples folder
 > inside the Dirt folder. They're in 'wav' format.
+
+### Playing More Than One Sequence
+
+The easiest way to play multiple sequences at the same time is to use two or
+more connections to the Dirt synthesizer:
+
+```haskell
+d1 $ sound "bd sn"
+
+d2 $ sound "hh hh hh hh"
+
+d3 $ sound "arpy"
+```
+
+> NOTE: each connection to Dirt must be evaluated separately in your text editor.
+> That is, you must press `Ctrl+Enter` three times, once for each line above.
 
 ### What is a Cycle?
 

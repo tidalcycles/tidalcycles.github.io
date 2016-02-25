@@ -124,7 +124,7 @@ cabal install tidal
 
 {% capture portmidiosx %} On OS X with GHC 7.10 it is necessary to reinstall PortMidi again with frameworks correctly linked:
 
-```shell
+```bash
 cabal install portmidi --ghc-options="-optl-Wl,-framework,CoreMIDI,-framework,CoreAudio" --reinstall --jobs=1 --force-reinstalls
 ```
 {% endcapture %} {% include alert.html content=portmidiosx caption="OS X users" %}

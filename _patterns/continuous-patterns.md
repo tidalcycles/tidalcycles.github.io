@@ -36,11 +36,18 @@ d1 $ sound "bd*8 sn*8" # speed (density 2 $ tri)
 ### Scaling Oscillation
 
 You can tell the oscillation functions to scale themselves and oscillate
-between two positive values:
+between two values:
 
 ```haskell
 d1 $ sound "bd*8 sn*8" # speed (scale 1 3 $ tri1)
 d1 $ sound "bd*8 sn*8" # speed (slow 4 $ scale 1 3 $ tri1)
+```
+
+You can also scale to negative values, but make sure to wrap negative values in
+parens (because of Haskell's syntax):
+
+```haskell
+d1 $ sound "bd*8 sn*8" # speed (scale (-2) 3 $ tri1)
 ```
 
 This technique works well for a slow low-pass filter cutoff:
@@ -48,9 +55,6 @@ This technique works well for a slow low-pass filter cutoff:
 ```haskell
 d1 $ sound "hh*32" # cutoff (scale 0.001 0.1 $ slow 4 $ sine1) # resonance "0.1"
 ```
-
-> NOTE: `scale` only works with positive values, so it is not (yet?) possible
-> to scale to negative ranges.
 
 > NOTE: despite the fact that the oscillator functions produce continuous values,
 > they are still only heard during discrete sound events.

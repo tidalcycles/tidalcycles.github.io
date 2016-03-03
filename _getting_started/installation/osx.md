@@ -100,17 +100,17 @@ LDFLAGS += -lm -L/opt/local/lib  -llo -lsndfile -lsamplerate
 
 ## Haskell
 
-get the binary installer for [the haskell platform](https://www.haskell.org/platform/mac.html).  
-Or you might get it from homebrew (this takes a while)
+get the binary installer for [GHC](https://www.haskell.org/ghc/).  
+Or you might get it from homebrew:
 
 ```bash
-brew install haskell-platform
+brew install ghc
 ```
 
 Or, if using MacPorts:
 
 ```bash
-sudo port install haskell-platform
+sudo port install ghc
 ```
 
 Install Tidal itself:
@@ -120,6 +120,14 @@ cabal update
 cabal install cabal-install
 cabal install tidal
 ```
+
+
+{% capture portmidiosx %} On OS X with GHC 7.10 it is necessary to reinstall PortMidi again with frameworks correctly linked:
+
+```bash
+cabal install portmidi --ghc-options="-optl-Wl,-framework,CoreMIDI,-framework,CoreAudio" --reinstall --jobs=1 --force-reinstalls
+```
+{% endcapture %} {% include alert.html content=portmidiosx caption="OS X users" %}
 
 Now you have to start dirt, the synthesizer/sampler, before getting a
 code editor going. So back in a terminal window, start jack:

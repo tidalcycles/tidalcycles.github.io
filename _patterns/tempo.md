@@ -3,17 +3,35 @@ category: tempo
 layout: default
 ---
 
+If you've made it this far without changing the tempo in all these examples,
+then you're probably ready to change it up.
 
-You can change the cycles per second (cps) like this:
+Tidal's core unit of time is cycles per second. It can be set with the
+`cps` function:
 
-~~~~ {haskell}
-cps 0.5
-~~~~
+```haskell
+cps 1
+```
 
-The above would give a rate of one cycle every two seconds. If you prefer to think in cycles per minute, simply divide by 60:
+You can execute `cps` just like a pattern (using Shift+Enter in your editor).
 
-~~~~ {haskell}
-cps (30 / 60)
-~~~~
+`cps` accepts a positive numeric value that can include a decimal:
 
-If you wish to think in terms of 'beats' rather than cycles, then decide how many beats per cycle you expect to work with, and divide accordingly.
+```haskell
+cps 1.5
+cps 0.75
+cps 10
+```
+
+### Setting BPM
+
+Tidal also includes a helper function called `bps` to set "beats per second".
+To set beats-per-minute, call `bps` with your bpm value, divided by 120:
+
+```haskell
+-- sets a tempo of 170 BPM:
+bps (170/120)
+
+-- sets a tempo of 100 BPM:
+bps (100/120)
+```

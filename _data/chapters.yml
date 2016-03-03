@@ -9,19 +9,51 @@
   title: Creating Patterns
   sections:
     - name: sequences
-      title: Sequences
-    - name: continuous
-      title: Continuous Patterns
-    - name: transformation
-      title: Transforming Patterns
-    - name: bjorklund
-      title: Bjorklund and Euclid Patterns
-    - name: transitions
-      title: Pattern Transitions
+      title: Creating Rhythmic Sequences
     - name: silence
       title: Silence
+    - name: pattern_groups
+      title: Patterns Within Patterns
+    - name: repetition
+      title: Pattern Repetition and Speed
+    - name: transformation
+      title: Modifying Sequences With Functions
+    - name: effects
+      title: Using Effects
+    - name: speed
+      title: Sample Playback Speed (and Pitch)
+    - name: bjorklund
+      title: Euclidean Sequences
     - name: tempo
       title: Tempo
+    - name: run
+      title: The Run Function
+    - name: sample_selection
+      title: (Algorithmically) Selecting Samples
+    - name: combining_patterns
+      title: Combining Types of Patterns
+    - name: continuous
+      title: Oscillation with Continuous Patterns
+    - name: rests
+      title: Rests
+    - name: polymeter
+      title: Polymeters
+    - name: shifting_time
+      title: Shifting Time
+    - name: randomness
+      title: Introducing Randomness
+    - name: variation
+      title: Creating Variation in Patterns
+    - name: fills
+      title: Creating "Fills" and using "const"
+    - name: composing_patterns
+      title: Composing Multi-Part Patterns
+    - name: cut
+      title: Truncating samples with "cut"
+    - name: transitions
+      title: Transitions Between Patterns
+    - name: samples
+      title: Samples
 - name: functions
   title: Reference
   sections:

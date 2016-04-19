@@ -3,7 +3,7 @@ category: pattern_transformers
 title: brak
 ---
 
-~~~~ {haskell}
+~~~~ haskell
 brak :: Pattern a -> Pattern a
 ~~~~
 
@@ -14,6 +14,6 @@ Make a pattern sound a bit like a breakbeat
 
 Example:
 
-~~~~ {haskell}
+~~~~ haskell
 d1 $ sound (brak "bd sn kurt")
 ~~~~

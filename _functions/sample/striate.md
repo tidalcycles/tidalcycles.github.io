@@ -3,13 +3,13 @@ title: striate
 category: sample
 ---
 
-~~~~ {haskell}
+~~~~ haskell
 striate :: Int -> OscPattern -> OscPattern
 ~~~~
 
 Striate is a kind of granulator, for example:
 
-~~~~ {haskell}
+~~~~ haskell
 d1 $ striate 3 $ sound "ho ho:2 ho:3 hc"
 ~~~~
 
@@ -26,7 +26,7 @@ granular synthesis. The following cuts a sample into 128 parts, plays
 it over 8 cycles and manipulates those parts by reversing and rotating
 the loops.
 
-~~~~ {haskell}
+~~~~ haskell
 d1 $  slow 8 $ striate 128 $ sound "bev"
 ~~~~
 
@@ -37,7 +37,7 @@ each bit is longer, it creates a sort of stuttering effect. For
 example the following will cut the bev sample into 32 parts, but each
 will be 1/16th of a sample long:
 
-~~~~ {haskell}
+~~~~ haskell
 d1 $ slow 32 $ striate' 32 (1/16) $ sound "bev"
 ~~~~
 

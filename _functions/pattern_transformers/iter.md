@@ -3,7 +3,7 @@ title: iter
 category: pattern_transformers
 ---
 
-~~~~ {haskell}
+~~~~ haskell
 iter :: Int -> Pattern a -> Pattern a
 ~~~~
 
@@ -13,13 +13,13 @@ wraps to the first subdivision after the last subdivision is played.
 
 Example:
 
-~~~~ {haskell}
+~~~~ haskell
 d1 $ iter 4 $ sound "bd hh sn cp"
 ~~~~
 
 This will produce the following over four cycles:
 
-~~~~ {haskell}
+~~~~ haskell
 bd hh sn cp
 hh sn cp bd
 sn cp bd hh

@@ -3,7 +3,7 @@ title: whenmod
 category: conditional
 ---
 
-~~~~ {haskell}
+~~~~ haskell
 whenmod :: Int -> Int -> (Pattern a -> Pattern a) -> Pattern a -> Pattern a
 ~~~~
 
@@ -15,6 +15,6 @@ is less than the second parameter.
 For example the following makes every other block of four loops twice
 as dense:
 
-~~~~ {haskell}
+~~~~ haskell
 d1 $ whenmod 8 4 (density 2) (sound "bd sn kurt")
 ~~~~

@@ -3,7 +3,7 @@ title: wedge
 category: compositions
 ---
 
-~~~~{haskell}
+~~~~haskell
 wedge :: Time -> Pattern a -> Pattern a -> Pattern a
 ~~~~
 
@@ -12,6 +12,6 @@ It takes a ratio as the first argument. The ratio determines what percentage of 
 pattern cycle is taken up by the first pattern. The second pattern fills in the
 remainder of the pattern cycle.
 
-~~~~{haskell}
+~~~~haskell
 d1 $ wedge (1/4) (sound "bd*2 arpy*3 cp sn*2") (sound "odx [feel future]*2 hh hh")
 ~~~~

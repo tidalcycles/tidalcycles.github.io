@@ -3,7 +3,7 @@ title: foldEvery
 category: conditional
 ---
 
-~~~~ {haskell}
+~~~~ haskell
 foldEvery :: [Int] -> (Pattern a -> Pattern a) -> Pattern a -> Pattern a
 ~~~~
 
@@ -12,7 +12,7 @@ It is similar to chaining multiple `every` functions together.
 
 Example:
 
-~~~~ {haskell}
+~~~~ haskell
 d1 $ foldEvery [3, 4, 5] (density 2) $ sound "bd sn kurt"
 
 -- this is equal to:

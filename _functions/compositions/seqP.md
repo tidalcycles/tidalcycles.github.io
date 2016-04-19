@@ -9,7 +9,7 @@ separate patterns in a "stack", but each has different start times
 (zero cycles, eight cycles, and sixteen cycles, respectively). All
 patterns stop after 128 cycles:
 
-~~~~ {haskell}
+~~~~ haskell
 d1 $ seqP [ 
   (0, 128, sound "bd bd*2"), 
   (8, 128, sound "hh*2 [sn cp] cp future*4"), 

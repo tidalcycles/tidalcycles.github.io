@@ -3,7 +3,7 @@ title: append
 category: compositions
 ---
 
-~~~~{haskell}
+~~~~haskell
 append :: Pattern a -> Pattern a -> Pattern a
 append' :: Pattern a -> Pattern a -> Pattern a
 ~~~~
@@ -12,13 +12,13 @@ append' :: Pattern a -> Pattern a -> Pattern a
 that the events of the second pattern are appended to those of the
 first pattern, within a single cycle.
 
-~~~~{haskell}
+~~~~haskell
 d1 $ append (sound "bd*2 sn") (sound "arpy jvbass*2")
 ~~~~
 
 `append'` does the same as `append`, but over two cycles, so that
 the cycles alternate between the two patterns.
 
-~~~~{haskell}
+~~~~haskell
 d1 $ append' (sound "bd*2 sn") (sound "arpy jvbass*2")
 ~~~~

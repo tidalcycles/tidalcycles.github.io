@@ -3,7 +3,7 @@ title: interlace
 category: compositions
 ---
 
-~~~~ {haskell}
+~~~~ haskell
 interlace :: OscPattern -> OscPattern -> OscPattern
 ~~~~
 
@@ -15,6 +15,6 @@ Shifts between the two given patterns, using distortion.
 
 Example:
 
-~~~~ {haskell}
+~~~~ haskell
 d1 $ interlace (sound  "bd sn kurt") (every 3 rev $ sound  "bd sn:2")
 ~~~~

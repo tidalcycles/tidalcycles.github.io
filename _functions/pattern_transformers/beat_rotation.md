@@ -3,13 +3,13 @@ title: Beat rotation
 category: pattern_transformers
 
 ---
-~~~~ {haskell}
+~~~~ haskell
 (<~) :: Time -> Pattern a -> Pattern a
 ~~~~
 
 or
 
-~~~~ {haskell}
+~~~~ haskell
 (~>) :: Time -> Pattern a -> Pattern a
 ~~~~
 
@@ -21,6 +21,6 @@ Rotate a loop either to the left or the right.
 
 Example:
 
-~~~~ {haskell}
+~~~~ haskell
 d1 $ every 4 (0.25 <~) $ sound (density 2 "bd sn kurt")
 ~~~~

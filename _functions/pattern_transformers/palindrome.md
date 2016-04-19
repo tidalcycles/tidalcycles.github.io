@@ -8,6 +8,6 @@ the pattern alternates between forwards and backwards.
 
 Example:
 
-~~~~ {haskell}
+~~~~ haskell
 d1 $ palindrome $ sound "hh*2 [sn cp] cp future*4"
 ~~~~

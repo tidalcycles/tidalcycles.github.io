@@ -3,14 +3,14 @@ title: striateL
 category: sample
 ---
 
-~~~~ {haskell}
+~~~~ haskell
 striateL :: Int -> Int -> OscPattern -> OscPattern
 ~~~~
 
 Just like `striate`, but also loops each sample chunk a number of times specified in the second argument.
 The primed version is just like `striate'`, where the loop count is the third argument. For example:
 
-~~~~ {haskell}
+~~~~ haskell
 d1 $ striateL' 3 0.125 4 $ sound "feel sn:2"
 ~~~~
 

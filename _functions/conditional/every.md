@@ -3,7 +3,7 @@ title: every
 category: conditional
 ---
 
-~~~~ {haskell}
+~~~~ haskell
 every :: Int -> (Pattern a -> Pattern a) -> Pattern a -> Pattern a
 ~~~~
 
@@ -11,7 +11,7 @@ every :: Int -> (Pattern a -> Pattern a) -> Pattern a -> Pattern a
 
 Example:
 
-~~~~ {haskell}
+~~~~ haskell
 d1 $ every 3 (density 2) $ sound "bd sn kurt"
 ~~~~
 

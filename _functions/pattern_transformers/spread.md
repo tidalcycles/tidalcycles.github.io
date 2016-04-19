@@ -3,7 +3,7 @@ title: spread
 category: pattern_transformers
 ---
 
-~~~~ {haskell}
+~~~~ haskell
 spread :: (a -> t -> Pattern b) -> [a] -> t -> Pattern b
 ~~~~
 
@@ -17,33 +17,33 @@ function across several values.
 
 Taking a simple high hat loop as an example:
 
-~~~~ {haskell}
+~~~~ haskell
 d1 $ sound "ho ho:2 ho:3 hc"
 ~~~~
 
 We can slow it down by different amounts, such as by a half:
 
-~~~~ {haskell}
+~~~~ haskell
   d1 $ slow 2 $ sound "ho ho:2 ho:3 hc"
 ~~~~
 
 Or by four thirds (i.e. speeding it up by a third; `4%3` means four over
 three):
 
-~~~~ {haskell}
+~~~~ haskell
   d1 $ slow (4%3) $ sound "ho ho:2 ho:3 hc"
 ~~~~
 
 But if we use `spread`, we can make a pattern which alternates between
 the two speeds:
 
-~~~~ {haskell}
+~~~~ haskell
 d1 $ spread slow [2,4%3] $ sound "ho ho:2 ho:3 hc"
 ~~~~
 
 There's a version of this function, `spread'` (pronounced "spread prime"), which takes a *pattern* of parameters, instead of a list:
 
-~~~~ {haskell}
+~~~~ haskell
 d1 $ spread' slow "2 4%3" $ sound "ho ho:2 ho:3 hc"
 ~~~~
 
@@ -51,6 +51,6 @@ This is quite a messy area of Tidal - due to a slight difference of
 implementation this sounds completely different! One advantage of
 using `spread'` though is that you can provide polyphonic parameters, e.g.:
 
-~~~~ {haskell}
+~~~~ haskell
 d1 $ spread' slow "[2 4%3, 3]" $ sound "ho ho:2 ho:3 hc"
 ~~~~

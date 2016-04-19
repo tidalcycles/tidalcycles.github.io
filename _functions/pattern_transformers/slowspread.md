@@ -3,7 +3,7 @@ title: slowspread
 category: pattern_transformers
 ---
 
-~~~~ {haskell}
+~~~~ haskell
 slowspread :: (a -> t -> Pattern b) -> [a] -> t -> Pattern b
 ~~~~
 
@@ -12,7 +12,7 @@ then repeats.
 
 Example:
 
-~~~~ {haskell}
+~~~~ haskell
 d1 $ slowspread ($) [density 2, rev, slow 2, striate 3, (# speed "0.8")] 
     $ sound "[bd*2 [~ bd]] [sn future]*2 cp jvbass*4"
 ~~~~

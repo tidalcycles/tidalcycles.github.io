@@ -3,14 +3,14 @@ title: stack
 category: compositions
 ---
 
-~~~~ {haskell}
+~~~~ haskell
 stack :: [Pattern a] -> Pattern a
 ~~~~
 
 `stack` takes a list of patterns and combines them into a new pattern by
 playing all of the patterns in the list simultaneously.
 
-~~~~ {haskell}
+~~~~ haskell
 d1 $ stack [ 
   sound "bd bd*2", 
   sound "hh*2 [sn cp] cp future*4", 
@@ -21,7 +21,7 @@ d1 $ stack [
 This is useful if you want to use a transform or synth parameter on the entire 
 stack:
 
-~~~~ {haskell}
+~~~~ haskell
 d1 $ whenmod 5 3 (striate 3) $ stack [ 
   sound "bd bd*2", 
   sound "hh*2 [sn cp] cp future*4", 

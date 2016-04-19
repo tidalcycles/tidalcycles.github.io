@@ -3,7 +3,7 @@ title: gap
 category: sample
 ---
 
-~~~~ {haskell}
+~~~~ haskell
 gap :: Int -> OscPattern -> OscPattern
 ~~~~
 
@@ -11,7 +11,7 @@ gap :: Int -> OscPattern -> OscPattern
 but every other grain is silent. Use an integer value to specify how many granules 
 each sample is chopped into:
 
-~~~~ {haskell}
+~~~~ haskell
 d1 $ gap 8 $ sound "jvbass"
 d1 $ gap 16 $ sound "[jvbass drum:4]"
 ~~~~

@@ -11,7 +11,7 @@ functor", it's easy to combine them. For example, if you have two
 patterns of numbers, you can combine the patterns by, for example,
 multiplying the numbers inside them together, like this:
 
-~~~~ {haskell}
+~~~~ haskell
 d1 $ (brak (sound "bd sn:2 bd sn"))
    # pan ((*) <$> sinewave1 <*> (slow 8 $ "0 0.25 0.75"))
 ~~~~
@@ -23,7 +23,7 @@ function that instead works on two *patterns* of numbers.
 
 Here's another example of this technique:
 
-~~~~ {haskell}
+~~~~ haskell
 d1 $ sound (pick <$> "kurt mouth can*3 sn" <*> slow 7 "0 1 2 3 4")
 ~~~~
 

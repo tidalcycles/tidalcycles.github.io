@@ -14,17 +14,17 @@ function and a new pattern.
 So instead of directly sending the new pattern to d1, we'll send it to the
 corresponding transition channel t1 and give it a nice transition function:
 
-```haskell
+~~~haskell
 d1 $ sound (samples "hc*8" (iter 4 $ run 4))
 t1 anticipate $ sound (samples "bd(3,8)" (run 3))
-```
+~~~
 
 To transition from here, simply change the pattern within t1, and in this case
 also change the transition function:
 
-```haskell
+~~~haskell
 t1 (xfadeIn 16) $ sound "bd(5,8)"
-```
+~~~
 
 The above will fade over 16 cycles from the former pattern to the given new one.
 

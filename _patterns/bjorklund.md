@@ -7,37 +7,37 @@ If you give two numbers in parenthesis after an element in a pattern, then Tidal
 will distribute the first number of sounds equally across the second number of
 steps:
 
-```haskell
+~~~haskell
 d1 $ sound "bd(5,8)"
-```
+~~~
 
 You can also use the `e` function to do this. `e` takes the same two arguments
 as what is used in the parenthesis above:
 
-```haskell
+~~~haskell
 d1 $ e 5 8 $ sound "bd"
-```
+~~~
 
 You can use the parenthesis notation within a single element of a pattern:
 
-```haskell
+~~~haskell
 d1 $ sound "bd(3,8) sn*2"
 d1 $ sound "bd(3,8) sn(5,8)"
-```
+~~~
 
 You can also use the `e` function to apply a Euclidean algorithm over a
 complex pattern, although the results are a little difficult to describe:
 
-```haskell
+~~~haskell
 d1 $ e 3 8 $ sound "bd*2 [sn cp]"
-```
+~~~
 
 As a bonus, it is possible to pattern the parameters, for example to
 alternate between 3 and 5 elements:
 
-```haskell
+~~~haskell
 d1 $ sound "bd([5 3]/2,8)"
-```
+~~~
 
 
 These types of sequences use "Bjorklund's algorithm", which wasn't made for

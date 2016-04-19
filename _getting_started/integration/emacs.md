@@ -37,22 +37,22 @@ working.
 
 Install emacs, and make it appear in your applications folder:
 
-```bash
+~~~bash
 brew install emacs --cocoa
 brew linkapps
-```
+~~~
 
 Ok now time to configure emacs.. Do the following:
 
-```bash
+~~~bash
 mkdir ~/tidal
 cd ~/tidal
 curl -L https://raw.githubusercontent.com/yaxu/Tidal/master/tidal.el > tidal.el
-```
+~~~
 
 Then create a file in your home folder called .emacs (unless it exists already), then open the file in a text editor and insert the following lines:
 
-```emacs
+~~~emacs
 (require 'package)
 (add-to-list 'package-archives 
     '("marmalade" .
@@ -61,35 +61,35 @@ Then create a file in your home folder called .emacs (unless it exists already),
 (setq load-path (cons "~/tidal/" load-path))
 (require 'tidal)
 (setq tidal-interpreter "/usr/local/bin/ghci")
-```
+~~~
 
 The above ensures that emacs has access to the extensions in the 'marmalade' repository (in particular, haskell-mode), that the tidal.el file you downloaded earlier is is loaded, and that tidal can find the haskell interpreter.
 
 {% capture haskellplatform %}
 **Note:** If you have already installed Haskell using the [Haskell Platform](http://www.haskell.org/platform/) installer, make the following change to the above:
 
-```emacs
+~~~emacs
 (setq tidal-interpreter "/usr/bin/ghci")
-```
+~~~
 {% endcapture %}
 {% include alert.html content=haskellplatform %}
 
 Now start emacs (or if it's already loaded, restart it to make sure .emacs is read), it should be in your Applications folder (if you start it from the terminal it'll probably load an old version). Once emacs has started, press `alt-x` (i.e. hold down `alt` while pressing `x`) and type:
 
-```emacs
+~~~emacs
 package-refresh-contents
-```
+~~~
 Then do `alt-x` again and type:
 
-```emacs
+~~~emacs
 package-install
-```
+~~~
 
 and then:
 
-```emacs
+~~~emacs
 haskell-mode
-```
+~~~
 
 Now see under 'Testing, testing' below to check everything is
 working.

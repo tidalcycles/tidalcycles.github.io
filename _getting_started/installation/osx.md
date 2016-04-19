@@ -16,15 +16,15 @@ Unless otherwise specified, the below commands should be typed or pasted into a 
 
 To install homebrew:
 
-```bash
+~~~bash
 ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-```
+~~~
 
 Initialise homebrew:
 
-```bash
+~~~bash
 brew doctor
-```
+~~~
 
 Install Dirt, a synth (well, more of a sampler) made to work with
 Tidal. A homebrew 'recipe' for dirt does exist, but that doesn't come
@@ -33,15 +33,15 @@ download it all from github and compile it as follows.
 
 Install some libraries which the Dirt synth needs to compile:
 
-```bash
+~~~bash
 brew install liblo libsndfile libsamplerate
-```
+~~~
 
 Install the 'jack audio connection kit' which Dirt also needs:
 
-```bash
+~~~bash
 brew install jack
-```
+~~~
 
 {% capture jackosx %}
 __Note:__ If Homebrew's installation of Jack fails with a `make` error, you can use the [JackOSX Installer](http://www.jackosx.com/download.html) instead. This will, however, add an additional step when installing Dirt (see below).
@@ -54,9 +54,9 @@ __Note:__ If Homebrew's installation of Jack fails with a `make` error, you can 
 If you already installed dependencies via homebrew, skip ahead to build Dirt.  
 Otherwise if you happen to already use MacPorts, here's a list of steps in order to get all dependencies:
 
-```bash
+~~~bash
 sudo port install liblo libsndfile libsamplerate
-```
+~~~
 
 Download and install jack2 [Jack Download Page](http://jackaudio.org/downloads/). Jack 2 has better OS X integration [Jack Comparison](https://github.com/jackaudio/jackaudio.github.com/wiki/Q_difference_jack1_jack2).
 
@@ -64,25 +64,25 @@ Download and install jack2 [Jack Download Page](http://jackaudio.org/downloads/)
 
 Get the source code for the Dirt synth:
 
-```bash
+~~~bash
 cd ~
 git clone --recursive https://github.com/tidalcycles/Dirt.git
-```
+~~~
 
 Compile dirt:
 
-```bash
+~~~bash
 cd ~/Dirt
 make clean; make
-```
+~~~
 
 {% capture dirtcompile %}
 If Dirt fails to compile after using the JackOSX installer as above, you may need to add flags to the Makefile to specify the appropriate paths:
 
-```make
+~~~make
 CFLAGS += -g -I/usr/local/include -Wall -O3 -std=gnu99 -DCHANNELS=2
 LDFLAGS += -lm -L/usr/local/lib -llo -lsndfile -lsamplerate -ljack
-```
+~~~
 {% endcapture %}
 {% include alert.html content=dirtcompile caption="Homebrew users" %}
 
@@ -90,10 +90,10 @@ LDFLAGS += -lm -L/usr/local/lib -llo -lsndfile -lsamplerate -ljack
 As MacPorts installs all libs on `/opt/local/`
 edit the Makefile to point the right direction of `libsndfile` and `libsamplerate`
 
-```make
+~~~make
 CFLAGS += -g -I/opt/local/include -Wall -O3 -std=gnu99
 LDFLAGS += -lm -L/opt/local/lib  -llo -lsndfile -lsamplerate
-```
+~~~
 {% endcapture %}
 {% include alert.html content=dirtcompileport caption="MacPorts users" %}
 
@@ -103,38 +103,38 @@ LDFLAGS += -lm -L/opt/local/lib  -llo -lsndfile -lsamplerate
 get the binary installer for [GHC](https://www.haskell.org/ghc/).  
 Or you might get it from homebrew:
 
-```bash
+~~~bash
 brew install ghc
-```
+~~~
 
 Or, if using MacPorts:
 
-```bash
+~~~bash
 sudo port install ghc
-```
+~~~
 
 Install Tidal itself:
 
-```bash
+~~~bash
 cabal update
 cabal install cabal-install
 cabal install tidal
-```
+~~~
 
 
 {% capture portmidiosx %} On OS X with GHC 7.10 it is necessary to reinstall PortMidi again with frameworks correctly linked:
 
-```bash
+~~~bash
 cabal install portmidi --ghc-options="-optl-Wl,-framework,CoreMIDI,-framework,CoreAudio" --reinstall --jobs=1 --force-reinstalls
-```
+~~~
 {% endcapture %} {% include alert.html content=portmidiosx caption="OS X users" %}
 
 Now you have to start dirt, the synthesizer/sampler, before getting a
 code editor going. So back in a terminal window, start jack:
 
-```bash
+~~~bash
 jackd -d coreaudio &
-```
+~~~
 
 Or, if you downloaded Jack 2, then start the JackPilot at:
 /Applications/Jack/JackPilot.app
@@ -142,10 +142,10 @@ Click __start__ button.
 
 Then start dirt:
 
-```bash
+~~~bash
 cd ~/Dirt
 ./dirt &
-```
+~~~
 
 You will have to start dirt every time you want to run Tidal,
 otherwise there will be no sound.

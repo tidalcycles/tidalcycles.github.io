@@ -23,9 +23,9 @@ down its IP address.
 On the other computers(s), use the master's tempo clock by setting an
 environment variable when you start your editor, e.g.:
 
-````bash
+~~~bash
 TIDAL_TEMPO_IP=<HOST IP ADDRESS> atom &
-````
+~~~
 
 Replace `<HOST IP ADDRESS>` with the master's IP address. If you're
 using emacs or some editor, this still works, just replace `atom` with
@@ -33,9 +33,9 @@ the command to start your editor.
 
 ## Step 3: evaluate crazy sound on all the computers
 
-````{haskell}
+~~~haskell
 d1 $ slow 16 $ striate 128 $ sound "bd*12 sn*8 [hh sn bd]*4 sn*4 bd*4"
-````
+~~~
 
 Hopefully all the computers will be in time with each other, and
 changes to the `cps` will take effect across all of them.
@@ -46,9 +46,9 @@ If you wish, you can use a dirt synth running on a different
 laptop. To do this start up a Tidal process in your editor, then
 evaluate this code:
 
-````{haskell}
+~~~haskell
 d1 <- stream "<IP ADDRESS OF HOST>" 7771 dirt
-````
+~~~
 
 But instead replace `<IP ADDRESS OF HOST>` with the host's IP address.
 

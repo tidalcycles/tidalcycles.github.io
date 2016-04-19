@@ -68,9 +68,9 @@ Next, open a .tidal file in Emacs and start a Tidal process (`Ctrl-C` then `Ctrl
 
 To get MIDI to work, type this in Emacs and evaluate it:
 
-```haskell
+~~~haskell
 keyproxy 100000 "16:0"
-```
+~~~
 
 But replace `16:0` with the specific device ID and number that you noted earlier.
 
@@ -78,9 +78,9 @@ The value "100000" is a latency value will need to be adjusted for your specific
 
 Next, type and evaluate:
 
-```haskell
+~~~haskell
 k <- keyStream
-```
+~~~
 
 Now you are ready to play some MIDI notes. Type and evaluate the following to play MIDI note #40:
 
@@ -103,7 +103,7 @@ For GarageBand, open an empty project.
 
 From Tidal, this is the minimum needed to hear the MIDI synth. Note that location in quotes matches that of the SimpleSynth and Audio MIDI Setup. 
 
-```haskell
+~~~haskell
 import Sound.Tidal.MIDI.Output
 import Sound.Tidal.SimpleSynth
 
@@ -111,13 +111,13 @@ keyStreams <- midiproxy 1 "IAC Driver Bus 1" [(keys, 1)]
 
 [k1] <- sequence keyStreams
 k1 $ note "50"
-```
+~~~
 
 # Making MIDI patterns
 
 You can create patterns of MIDI notes just like with Dirt:
 
-~~~~{haskell}
+~~~~haskell
 k $ note "40 [32 34] 36*2 42*3" # detune (slow 4 sine1)
 k $ note "[[32 34], [36 38]]"
 k $ every 3 (density 2) $ every 4 (palindrome) $ note "{50 52 54}%8"
@@ -125,7 +125,7 @@ k $ every 3 (density 2) $ every 4 (palindrome) $ note "{50 52 54}%8"
 
 Here is the full list of parameters available for the volca keys:
 
-~~~~{haskell}
+~~~~haskell
 note
 dur
 portamento

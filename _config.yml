@@ -3,9 +3,9 @@ title: Tidal
 description: Domain specific language for live coding of pattern
 permalink: /:categories/:title.html
 baseurl: ""
-markdown: redcarpet
-redcarpet:
-  smart: true
+markdown: kramdown
+kramdown:
+  default_lang: haskell
 collections:
   getting_started:
   patterns:

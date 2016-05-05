@@ -6,19 +6,19 @@ layout: default
 Use Tidal's _square braces_ syntax to create a pattern grouping:
 
 ~~~haskell
-d1 $ sound "[bd sd] cp"
+d1 $ sound "[bd sn] cp"
 ~~~
 
 Square braces allow several events to be played inside of a single event.
 Practically, this means you can create denser sub-divisions of samples:
 
 ~~~haskell
-d1 $ sound "bd [sd sd]"
-d1 $ sound "bd [sd sd sd]"
-d1 $ sound "bd [sd sd sd sd]"
-d1 $ sound "[bd bd] [sd sd sd sd]"
-d1 $ sound "[bd bd bd] [sd sd]"
-d1 $ sound "[bd bd bd bd] [sd]"
+d1 $ sound "bd [sn sn]"
+d1 $ sound "bd [sn sn sn]"
+d1 $ sound "bd [sn sn sn sn]"
+d1 $ sound "[bd bd] [sn sn sn sn]"
+d1 $ sound "[bd bd bd] [sn sn]"
+d1 $ sound "[bd bd bd bd] [sn]"
 ~~~
 
 You can even nest groups inside groups to create very dense and complex

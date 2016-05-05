@@ -74,9 +74,9 @@ All of the samples inside of a pattern get squashed into a single cycle.
 The patterns below all loop over the same amount of time:
 
 ~~~haskell
-d1 $ sound "bd sd"
-d1 $ sound "bd sd hh cp mt arpy drum"
-d1 $ sound "bd sd hh cp mt arpy drum odx bd arpy bass2 feel future"
+d1 $ sound "bd sn"
+d1 $ sound "bd sn hh cp mt arpy drum"
+d1 $ sound "bd sn hh cp mt arpy drum odx bd arpy bass2 feel future"
 ~~~
 
 No matter how many samples you put in a pattern, they will always be

@@ -40,10 +40,10 @@ d1 $ sound "bd/3" -- plays the bd samples only once each third cycle
 You can apply the `*` and `/` symbols on groups of patterns:
 
 ~~~haskell
-d1 $ sound "[bd sd]*2 cp"
-d1 $ sound "[bd sd] cp/2"
-d1 $ sound "[[bd sd] cp]*2" -- speeds up the entire pattern by 2
-d1 $ sound "[[bd sd] cp]/2" -- slows down the entire pattern by 2
+d1 $ sound "[bd sn]*2 cp"
+d1 $ sound "[bd sn] cp/2"
+d1 $ sound "[[bd sn] cp]*2" -- speeds up the entire pattern by 2
+d1 $ sound "[[bd sn] cp]/2" -- slows down the entire pattern by 2
 ~~~
 
 You can also use the symbols on nested groups to create more complex

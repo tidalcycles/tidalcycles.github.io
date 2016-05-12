@@ -113,6 +113,12 @@ Or, if using MacPorts:
 sudo port install ghc
 ~~~
 
+Install Cabal:
+
+~~~bash
+brew install cabal-install
+~~~
+
 Install Tidal itself:
 
 ~~~bash

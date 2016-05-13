@@ -34,7 +34,7 @@ Next, assuming you have a MIDI device attached, you need to get its
 device id. Run the following command (again in the editor, with
 shift-enter):
 
-~~~~{haskell
+~~~~haskell
 displayOutputDevices >>= putStrLn
 ~~~~
 

@@ -3,8 +3,10 @@
   sections:
     - name: installation
       title: Installing Tidal
-    - name: integration
-      title: Installing an Editor
+    - name: running
+      title: Running Tidal
+    - name: editors
+      title: Alternative editors
 - name: patterns
   title: Creating Patterns
   sections:

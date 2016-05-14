@@ -1,7 +1,7 @@
 ---
-category: integration
+category: editors
 weight: -9
 ---
 
-To use Tidal, you will need to install and configure a code
-editor. Atom is the recommended option for beginners.
+If you prefer using another editor (rather installing Atom as
+described above), you can try one of the following.

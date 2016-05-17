@@ -32,7 +32,11 @@ Start SuperCollider, and in the editor window paste in the following line of cod
 ( include("SuperDirt"); include("Dirt-Samples"); )
 ~~~~
 
-Click on the code to make sure the cursor is on this line, then hold down shift and press enter. This will include the SuperDirt synthesiser, and a default audio samples to play with. It will also take a while to run, but you can move on while it’s running.
+Click on the code to make sure the cursor is on this line, then hold
+down shift and press enter. This will include the SuperDirt
+synthesiser, and a default audio samples to play with. It will also
+take a while to run, but you can move on to the next step (installing
+the atom plugin) while it’s running.
 
 After it has completed, you will need to reset SuperCollider, either
 by selecting `Language > recompile Class Library` in the menus, or

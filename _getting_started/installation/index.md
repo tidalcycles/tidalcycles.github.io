@@ -34,6 +34,12 @@ Start SuperCollider, and in the editor window paste in the following line of cod
 
 Click on the code to make sure the cursor is on this line, then hold down shift and press enter. This will include the SuperDirt synthesiser, and a default audio samples to play with. It will also take a while to run, but you can move on while it’s running.
 
+After it has completed, you will need to reset SuperCollider, either
+by selecting `Language > recompile Class Library` in the menus, or
+closing and restarting the whole app.
+
 ## Install the Atom plugin
 
-Start Atom, and install the Tidal plugin. You can find it via the menus under edit > settings > install, then typing “tidal” into the search box.
+Start Atom, and install the Tidal plugin. You can find it via the
+menus under `edit > settings > install`, then typing “tidal” into the
+search box. Once that's installed, shut down atom and reopen atom.

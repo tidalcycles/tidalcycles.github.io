@@ -46,4 +46,5 @@ closing and restarting the whole app.
 
 Start Atom, and install the Tidal plugin. You can find it via the
 menus under `edit > settings > install`, then typing “tidal” into the
-search box. Once that's installed, shut down atom and reopen atom.
+search box. Once that's installed, restart atom and you should be
+ready to start Tidal and SuperDirt.

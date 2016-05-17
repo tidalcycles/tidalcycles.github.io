@@ -29,7 +29,7 @@ This command will take a while to run, but you can go ahead with the next steps 
 Start SuperCollider, and in the editor window paste in the following line of code:
 
 ~~~~c
-( include("SuperDirt"); include("Dirt-Samples"); )
+include("SuperDirt")
 ~~~~
 
 Click on the code to make sure the cursor is on this line, then hold

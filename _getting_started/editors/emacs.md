@@ -1,6 +1,6 @@
 ---
 title: Emacs
-category: integration
+category: editors
 ---
 
 Emacs is a classic programmer's editor, very well developed but a

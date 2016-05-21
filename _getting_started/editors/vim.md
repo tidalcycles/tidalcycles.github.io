@@ -1,6 +1,6 @@
 ---
 title: Vim
-category: integration
+category: editors
 ---
 
 Installation instructions for the Vim editor have not yet been

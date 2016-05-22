@@ -80,10 +80,10 @@
 - name: videos
   title: Videos
   sections:
-    - name: tutorials
-      title: Tutorials and demos
     - name: performances
       title: Performances
+    - name: tutorials
+      title: Tutorials and demos
 - name: howtos
   title: HowTos
   sections:

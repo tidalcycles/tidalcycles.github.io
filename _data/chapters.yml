@@ -95,12 +95,12 @@
       title: "MIDI"
     - name: live
       title: Playing live
-- name: publications
-  title: Publications
+- name: credits
+  title: Credits
   sections:
-    - name: recent
-      title: Recent
-    - name: historic
-      title: Archive
+    - name: people
+      title: People
+    - name: publications
+      title: Publications
 - name: community
   title: Community

@@ -25,20 +25,29 @@ d1 $ sound "bd(3,8) sn*2"
 d1 $ sound "bd(3,8) sn(5,8)"
 ~~~
 
+You can also add a third parameter, which 'rotates' the pattern so it starts on 
+a different step:
+
+~~~haskell
+d1 $ sound "bd(5,8,2)"
+~~~
+
 You can also use the `e` function to apply a Euclidean algorithm over a
-complex pattern, although the results are a little difficult to describe:
+complex pattern, although the structure of that pattern will be lost:
 
 ~~~haskell
 d1 $ e 3 8 $ sound "bd*2 [sn cp]"
 ~~~
 
-As a bonus, it is possible to pattern the parameters, for example to
-alternate between 3 and 5 elements:
+In the above, three sounds are picked from the pattern on the right according 
+to the structure given by the `e 3 8`. It ends up picking two `bd` sounds, a 
+`cp` and missing the `sn` entirely.
+
+As a bonus, it is possible to pattern the parameters within the parenthesis, for example to alternate between 3 and 5 elements:
 
 ~~~haskell
 d1 $ sound "bd([5 3]/2,8)"
 ~~~
-
 
 These types of sequences use "Bjorklund's algorithm", which wasn't made for
 music but for an application in nuclear physics, which is exciting. More

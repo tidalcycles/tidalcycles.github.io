@@ -6,11 +6,14 @@ layout: default
 Use Tidal's _square braces_ syntax to create a pattern grouping:
 
 ~~~haskell
-d1 $ sound "[bd sn] cp"
+d1 $ sound "[bd sn sn] cp"
 ~~~
 
-Square braces allow several events to be played inside of a single event.
-Practically, this means you can create denser sub-divisions of samples:
+Square braces allow several events to be played inside of a single
+step. You can think of the above pattern as having two steps, with the
+first step broken down into a subpattern, which has three
+steps. Practically, this means you can create denser sub-divisions of
+samples:
 
 ~~~haskell
 d1 $ sound "bd [sn sn]"
@@ -30,16 +33,17 @@ d1 $ sound "[bd bd] [bd [sn [sn sn] sn] sn]"
 
 ### Layering (Polyrhythms) Instead of Grouping
 
-You can also layer up several loops, by using commas to separate the different parts:
+You can also layer up several loops, by using commas to separate the
+different parts:
 
 ~~~haskell
 d1 $ sound "[bd bd bd, sn cp sn cp]"
 ~~~
 
-This would play the sequence `bd bd bd` at the same time as `sn cp sn cp`.
-Note that the first sequence only has three events, and the second one has four.
-Because tidal ensures both loops fit inside same duration, you end up with
-a polyrhythm.
+This would play the sequence `bd bd bd` at the same time as `sn cp sn
+cp`.  Note that the first sequence only has three events, and the
+second one has four.  Because tidal ensures both loops fit inside the
+same cyclic duration, you end up with a polyrhythm.
 
 You can layer any number of patterns to create many polyrhythms:
 

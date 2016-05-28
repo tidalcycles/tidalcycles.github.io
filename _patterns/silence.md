@@ -10,8 +10,8 @@ off' a pattern, you can just set it to that:
 d1 silence
 ~~~~
 
-If you want to set all the connections (from `d1` to `d9`) to silence
-at once, there's a single-word shortcut for that:
+If you want to set all the connections (from `d1` to `d9`) to be
+silent at once, there's a single-word shortcut for that:
 
 ~~~~ haskell
 hush

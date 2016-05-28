@@ -4,9 +4,10 @@ category: patterns
 layout: default
 ---
 
-You've installed Dirt and Tidal, maybe even made a few sounds, but now you're
-ready to get to business and start really learning Tidal. This guide will help you get started with simple patterns
+You've installed TidalCycles and (Super)Dirt, maybe even made a few
+sounds, but now you're ready to get to business and start really
+learning. This guide will help you get started with simple patterns
 and walk you through all the way to complex compositions.
 
-> NOTE: please _play_ with the code as you read. Run your own experiments
-> by making slight modification to these examples!
+> Why not play with the code as you read, running your own experiments
+> by changing the examples, and seeing where they take you?

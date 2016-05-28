@@ -47,9 +47,10 @@ d1 $ sound "[[bd sn] cp]/2" -- slows down the entire pattern by 2
 ~~~
 
 You can also use the symbols on nested groups to create more complex
-symbol logic:
+rhythms:
 
 ~~~haskell
 d1 $ sound "[bd sn sn*3]/2 [bd sn*3 bd*4]/3"
 d1 $ sound "[bd [sn sn]*2]/2 [bd [sn bd]/2]*2"
 ~~~
+

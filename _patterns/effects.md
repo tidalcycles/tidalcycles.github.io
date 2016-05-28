@@ -3,9 +3,9 @@ category: effects
 layout: default
 ---
 
-Tidal has a number of effects that you can apply to sounds. Some of them do
-simple things like change volume, and others do more complex things like
-change sample rate or add delay.
+TidalCycles has a number of effects that you can apply to sounds. Some
+of them do simple things like change volume, and others do more
+complex things like add delay or distortion.
 
 You use an effect by adding the `#` operator between your sound pattern and
 the effect:
@@ -28,8 +28,8 @@ at a level of 0.5.
 
 ### Effects are patterns too
 
-You may notice that the values of effects are specified in double quotes. This
-means that you can put a pattern of effect values inside the quotes:
+You may notice that the values of effects are specified in double
+quotes. This means that you can pattern the effect values too:
 
 ~~~haskell
 d1 $ sound "bd*4" # gain "1 0.8 0.5 0.7"
@@ -49,6 +49,18 @@ d1 $ sound "bd*4" # gain (every 3 (rev) $ "1 0.8 0.5 0.7")
 
 > Like with the `sound` example earlier, you must use parenthesis after `gain`
 > in order to specify a function on the `gain` pattern.
+
+### Effect pattern order
+
+You can specify the effect before the sound pattern:
+
+~~~haskell
+d1 $ gain "1 0.8 0.5 0.7" # sound "bd"
+~~~
+
+The order that you put things matters; the structure of the pattern is given by 
+the pattern on the left of the `#`. In this case, only one `bd` sound is given, 
+but you hear four, because the structure comes from the `gain` pattern on the left.
 
 ### Modifying effect values
 
@@ -101,7 +113,6 @@ More complex patterns and chaining can be done, and with any effect, of course:
 ~~~haskell
 d1 $ every 3 (|-| up "3") $ every 2 (|+| up "5") $ sound "arpy*4" |=| up "0 2 4 5"
 ~~~
-
 
 ### Some Common Effects
 

@@ -8,11 +8,11 @@ pattern messages to external devices and software synths.
 
 You can use it using standard general MIDI, or use a synth-specific
 library - there currently exist libraries for the Volca Keys, Bass and
-Beats, with more to follow.
+Beats.
 
 # Install
 
-To install Tidal MIDI support, just run this in a terminal window:
+To install TidalCycles MIDI support, just run this in a terminal window:
 
 ~~~~bash
 cabal update
@@ -21,14 +21,14 @@ cabal install tidal-midi
 
 # Load the MIDI modules
 
-Start up Tidal in your favourite editor, then the following line
+Start up TidalCycles in your favourite editor, then the following line
 of code (with e.g. shift-enter):
 
 ~~~~haskell
 import Sound.Tidal.MIDI.Context
 ~~~~
 
-# Talk MIDI from Tidal
+# Talk MIDI from TidalCycles
 
 Next, assuming you have a MIDI device attached, you need to get its
 device id. Run the following command (again in the editor, with
@@ -55,7 +55,7 @@ devices <- midiDevices
 m1 <- midiStream devices "USB Midi Cable MIDI" 1 synthController
 ~~~~
 
-The number `1` there specifies what MIDI channel your synth is
+The number `1` there specifies the MIDI channel your synth is
 listening to. Now you are ready to play some MIDI notes. Type and
 evaluate the following to play MIDI note #40 and #52:
 
@@ -99,4 +99,4 @@ parameters, for example `lfo` and `cutoff`:
 m1 $ every 4 (slow 1.5) $ slow 2 $ n (offadd 0.25 (7) "f3(3,8) g5*3")
   # lfo "0.1"
   # cutoff (slow 4 sine1)
-~~~~haskell
+~~~~

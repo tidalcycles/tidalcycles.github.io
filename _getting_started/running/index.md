@@ -15,13 +15,14 @@ SuperDirt.startup
 To start TidalCycles, open a new window, save it with a filename than ends in `.tidal`, e.g. `test.tidal`, then try running a simple pattern:
 
 ~~~~haskell
-s1 $ sound “bd sn”
+d1 $ sound “bd sn”
 ~~~~
 
 n.b. If you see an example starting with `d1` to `d9` change it to be e.g. `s1` instead. This is because you are using the new `SuperDirt` synth.
 
-If you hear sound, congratulations, time to move on to the tutorial!
+**If you hear sound, congratulations!** Time to move on to [the tutorial](/patterns.html).
 
-If you get stuck feel free to ask questions and share problems on
-[the forum](http://lurk.org/groups/tidal/), or on the `#tidal` channel
-of the [TOPLAP slack](http://toplap.org/toplap-on-slack/).
+If you get stuck, you are very welcome to ask questions and share
+problems on [the forum](http://lurk.org/groups/tidal/), or on the
+`#tidal` channel of the
+[TOPLAP slack](http://toplap.org/toplap-on-slack/).

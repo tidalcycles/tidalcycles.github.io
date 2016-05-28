@@ -3,7 +3,7 @@ category: speed
 layout: default
 ---
 
-You can change the playback speed of a sample in Tidal using the `speed` effect.
+You can change the playback speed of a sample in TidalCycles by using the `speed` effect.
 You can use `speed` to change pitches, to create a weird effect, or to match
 the length of a sample to a specific period of the cycle time.
 

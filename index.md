@@ -4,6 +4,8 @@ layout: default
 category: homepage
 ---
 
+*gh-pages branch*
+
 Tidal is a language for [live coding](http://toplap.org/) pattern. It
 provides a way to express music with very flexible timing, providing a
 little language for describing patterns as discrete sequences (which

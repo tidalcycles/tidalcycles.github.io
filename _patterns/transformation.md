@@ -11,6 +11,7 @@ For example, `rev` reverses a pattern:
 ~~~haskell
 d1 $ rev (sound "[bd bd] [bd [sn [sn sn] sn] sn]")
 ~~~
+{: .render}
 
 That's not so exciting, but things get more interesting when this is
 used in combination with another function. For example `every` takes
@@ -22,6 +23,7 @@ fourth repetition:
 ~~~haskell
 d1 $ every 4 (rev) (sound "bd*2 [bd [sn sn*2 sn] sn]")
 ~~~
+{: .render}
 
 > It takes a while to get used to how we're using parenthesis here. In
 > the previous example, `rev` takes one parameter, a pattern, and we

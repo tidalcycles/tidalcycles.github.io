@@ -11,4 +11,4 @@ if you want a rest, or gap of silence, in your pattern? You can use the
 d1 $ sound "bd bd ~ bd"
 ~~~
 
-Think of the `~` as an 'empty' step in a sequence that just produces silence.
+Think of the `~` as an 'empty' step in a sequence, that just produces silence.

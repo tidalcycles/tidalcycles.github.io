@@ -95,6 +95,7 @@ d1 $ sound "bd sn"
 d1 $ sound "bd sn hh cp mt arpy drum"
 d1 $ sound "bd sn hh cp mt arpy drum odx bd arpy bass2 feel future"
 ~~~
+{: .render-lines}
 
 Note how the more steps you add to the pattern, the faster it goes to
 fit them all in. No matter how many samples you put in a pattern in

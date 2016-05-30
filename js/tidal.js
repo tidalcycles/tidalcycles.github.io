@@ -1,8 +1,6 @@
-var dirt;
-
 (function($, window) {
   $(document).ready(function() {
-     $(".tidal-video").fitVids(); 
+     $(".tidal-video").fitVids();
   });
   var metas = document.getElementsByTagName('meta');
   var i;
@@ -23,15 +21,22 @@ var dirt;
   }
 }(jQuery, this, undefined));
 
+var dirt;
+
+function playWithWebDirt() {
+  if(dirt == null) dirt = new WebDirt("/WebDirt/sampleMap.json", "/samples");
+  // for full compatibility with iOS, this function, which initializes WebDirt and the underlying
+  // audio context, needs to be called flowing from a user interaction with the displayed page
+  dirt.testPlaybackOfSimpleMessage();
+}
+
 $(document).ready(function() {
-   dirt = new WebDirt("/WebDirt/sampleMap.json", "/samples");
+   $(".render").each(function() {
+       // alert($(this).text());
+       $(this).append("<button onclick=\"playWithWebDirt();\">play</button>");
+   });
    WebDirt.prototype.testPlaybackOfSimpleMessage = function(){
       var msg = { sample_name: 'cp', sample_n:0, when:this.ac.currentTime+0.5 };
       this.queue(msg);
    }
-   
-   $(".render").each(function() {
-       // alert($(this).text());
-       $(this).append("<button onclick=\"dirt.testPlaybackOfSimpleMessage();\">play</button>");
-   });
 });

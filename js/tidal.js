@@ -23,14 +23,14 @@
 
 function playWithWebDirt(button) {
      console.log("loading");
-     $(button).html("<button onclick=\"playWithWebDirt(this);\">loading</button>");
+     $(button).text('loading');
      readyCallback = function() {
        console.log("playing");
-       $(button).html("<button onclick=\"playWithWebDirt(this);\">playing</button>");
+       $(button).text('playing');
       };
      finishedCallback = function() {
        console.log("finished");
-       $(button).html("<button onclick=\"playWithWebDirt(this);\">play</button>");
+       $(button).text('finished');
      };
      dirt.playScoreWhenReady([{sample_name: 'cp', sample_n:0, when:0}],0.05,readyCallback,finishedCallback);
      // dirt.loadAndPlayScore(url,0.05);
@@ -39,15 +39,20 @@ function playWithWebDirt(button) {
 }
 
 $(document).ready(function() {
-   $(".render").each(function() {
-       $(this).append("<button onclick=\"playWithWebDirt(this);\">(WebDirt loading)</button>");
-   });
-   dirt = new WebDirt("/WebDirt/sampleMap.json", "/samples", null, function() {
-     $(".render").each(function() {
-       $(this).append("<button onclick=\"playWithWebDirt(this);\">play</button>");
-     });
-   });
-   // note: for full compatibility with iOS, the first WebDirt function called to
-   // make a sound (which will initialize the web audio context) must be called
-   // from a user interaction with the page.
+  $(".render").each(function() {
+    var button = $('<button/>', { text: "loading", class: "renderButton" });
+    $this.append(button);
+  });
+  dirt = new WebDirt("/WebDirt/sampleMap.json", "/samples", null, function() {
+    $(".renderButton").each(function() {
+      $(this).text('play');
+      var button = this;
+      $(this).on('click',function() {
+        playWithWebDirt(button);
+      });
+    });
+  });
+  // note: for full compatibility with iOS, the first WebDirt function called to
+  // make a sound (which will initialize the web audio context) must be called
+  // from a user interaction with the page.
 });

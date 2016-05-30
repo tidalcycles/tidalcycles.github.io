@@ -22,8 +22,10 @@
 }(jQuery, this, undefined));
 
 function playWithWebDirt() {
-     this.queue({sample_name: 'cp', sample_n:0},0.5); // with 0.5 s latency for testing
-     // this.loadAndPlayScore(url,0.05); // will only start when all samples loaded hence low latency setting
+     this.playScoreWhenReady([{sample_name: 'cp', sample_n:0}],0.05);
+     // this.loadAndPlayScore(url,0.05);
+     // both of these methods will only start when all necessary samples loaded
+     // hence, the low latency setting of 50 milliseconds
 }
 
 $(document).ready(function() {

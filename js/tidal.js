@@ -23,14 +23,14 @@
 
 function playWithWebDirt(button) {
      console.log("loading");
-     $(button).text('loading');
+     button.text('loading');
      readyCallback = function() {
        console.log("playing");
-       $(button).text('playing');
+       button.text('playing');
       };
      finishedCallback = function() {
        console.log("finished");
-       $(button).text('finished');
+       button.text('finished');
      };
      dirt.playScoreWhenReady([{sample_name: 'cp', sample_n:0, when:0}],0.05,readyCallback,finishedCallback);
      // dirt.loadAndPlayScore(url,0.05);
@@ -41,7 +41,7 @@ function playWithWebDirt(button) {
 $(document).ready(function() {
   $(".render").each(function() {
     var button = $('<button/>', { text: "loading", class: "renderButton" });
-    $this.append(button);
+    $(this).append(button);
   });
   dirt = new WebDirt("/WebDirt/sampleMap.json", "/samples", null, function() {
     $(".renderButton").each(function() {

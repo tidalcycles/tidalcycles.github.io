@@ -23,23 +23,32 @@
 
 function playWithWebDirt(button) {
      $(button).text('loading');
-     dirt.playScoreWhenReady([{sample_name: 'cp', sample_n:0, when:0}],0.05,
-       function() { $(button).text('stop') }, // readyCallback
-       function() { $(button).text('play') }  // finishedCallback
-     );
-     // dirt.loadAndPlayScore(url,0.05);
+     $(button).prop('disabled',true);
      // both of these methods will only start when all necessary samples loaded
-     // hence, the low latency setting of 50 milliseconds
+     // hence, the low latency setting of 50 milliseconds:
+     // dirt.playScoreWhenReady([{sample_name: 'cp', sample_n:0, when:0}],0.05,
+     dirt.loadAndPlayScore("testScore.json",0.05,
+       function() { // readyCallback
+         $(button).text('playing');
+         $(button).prop('disabled',true);
+       },
+       function() { // finishedCallback
+         $(button).text('play');
+         $(button).prop('disabled',false);
+       }
+     );
 }
 
 $(document).ready(function() {
   $(".render").each(function() {
     var button = $('<button/>', { text: "loading", class: "renderButton" });
+    button.prop('disabled',true);
     $(this).append(button);
   });
   dirt = new WebDirt("/WebDirt/sampleMap.json", "/samples", null, function() {
     $(".renderButton").each(function() {
       $(this).text('play');
+      $(this).prop('disabled',false);
       var button = this;
       $(this).on('click',function() {
         playWithWebDirt(button);

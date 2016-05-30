@@ -21,13 +21,9 @@
   }
 }(jQuery, this, undefined));
 
-var dirt;
-
 function playWithWebDirt() {
-  if(dirt == null) dirt = new WebDirt("/WebDirt/sampleMap.json", "/samples");
-  // for full compatibility with iOS, this function, which initializes WebDirt and the underlying
-  // audio context, needs to be called flowing from a user interaction with the displayed page
-  dirt.testPlaybackOfSimpleMessage();
+     this.queue({sample_name: 'cp', sample_n:0},0.5); // with 0.5 s latency for testing
+     // this.loadAndPlayScore(url,0.05); // will only start when all samples loaded hence low latency setting
 }
 
 $(document).ready(function() {
@@ -35,8 +31,8 @@ $(document).ready(function() {
        // alert($(this).text());
        $(this).append("<button onclick=\"playWithWebDirt();\">play</button>");
    });
-   WebDirt.prototype.testPlaybackOfSimpleMessage = function(){
-      var msg = { sample_name: 'cp', sample_n:0, when:this.ac.currentTime+0.5 };
-      this.queue(msg);
-   }
+   dirt = new WebDirt("/WebDirt/sampleMap.json", "/samples");
+   // note: for full compatibility with iOS, the first WebDirt function called to
+   // make a sound (which will initialize the web audio context) must be called
+   // from a user interaction with the page.
 });

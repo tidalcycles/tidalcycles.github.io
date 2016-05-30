@@ -42,7 +42,7 @@ $(document).ready(function() {
    $(".render").each(function() {
        $(this).append("<button onclick=\"playWithWebDirt(this);\">(WebDirt loading)</button>");
    });
-   dirt = new WebDirt("/WebDirt/sampleMap.json", "/samples", function() {
+   dirt = new WebDirt("/WebDirt/sampleMap.json", "/samples", null, function() {
      $(".render").each(function() {
        $(this).append("<button onclick=\"playWithWebDirt(this);\">play</button>");
      });

@@ -21,8 +21,18 @@
   }
 }(jQuery, this, undefined));
 
-function playWithWebDirt() {
-     dirt.playScoreWhenReady([{sample_name: 'cp', sample_n:0, when:0}],0.05);
+function playWithWebDirt(button) {
+     console.log("loading");
+     $("span", button).text("loading");
+     readyCallback = function() {
+       console.log("playing");
+       $("span", button).text("playing");
+     };
+     finishedCallback = function() {
+       console.log("finished");
+       $("span", button).text("play")
+     };
+     dirt.playScoreWhenReady([{sample_name: 'cp', sample_n:0, when:0}],0.05,readyCallback,finishedCallback);
      // dirt.loadAndPlayScore(url,0.05);
      // both of these methods will only start when all necessary samples loaded
      // hence, the low latency setting of 50 milliseconds
@@ -31,7 +41,7 @@ function playWithWebDirt() {
 $(document).ready(function() {
    $(".render").each(function() {
        // alert($(this).text());
-       $(this).append("<button onclick=\"playWithWebDirt();\">play</button>");
+       $(this).append("<button onclick=\"playWithWebDirt(this);\">play</button>");
    });
    dirt = new WebDirt("/WebDirt/sampleMap.json", "/samples");
    // note: for full compatibility with iOS, the first WebDirt function called to

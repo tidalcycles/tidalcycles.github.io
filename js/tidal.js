@@ -1,6 +1,9 @@
-(function($, window) {
-  $(document).ready(function() { $(".tidal-video").fitVids(); });
+var dirt;
 
+(function($, window) {
+  $(document).ready(function() {
+     $(".tidal-video").fitVids(); 
+  });
   var metas = document.getElementsByTagName('meta');
   var i;
   if (navigator.userAgent.match(/iPhone/i)) {
@@ -19,3 +22,16 @@
     }
   }
 }(jQuery, this, undefined));
+
+$(document).ready(function() {
+   dirt = new WebDirt("/WebDirt/sampleMap.json", "/samples");
+   WebDirt.prototype.testPlaybackOfSimpleMessage = function(){
+      var msg = { sample_name: 'cp', sample_n:0, when:this.ac.currentTime+0.5 };
+      this.queue(msg);
+   }
+   
+   $(".render").each(function() {
+       // alert($(this).text());
+       $(this).append("<button onclick=\"dirt.testPlaybackOfSimpleMessage();\">play</button>");
+   });
+});

@@ -22,17 +22,11 @@
 }(jQuery, this, undefined));
 
 function playWithWebDirt(button) {
-     console.log("loading");
-     button.text('loading');
-     readyCallback = function() {
-       console.log("playing");
-       button.text('playing');
-      };
-     finishedCallback = function() {
-       console.log("finished");
-       button.text('finished');
-     };
-     dirt.playScoreWhenReady([{sample_name: 'cp', sample_n:0, when:0}],0.05,readyCallback,finishedCallback);
+     $(button).text('loading');
+     dirt.playScoreWhenReady([{sample_name: 'cp', sample_n:0, when:0}],0.05,
+       function() { $(button).text('stop') }, // readyCallback
+       function() { $(button).text('play') }  // finishedCallback
+     );
      // dirt.loadAndPlayScore(url,0.05);
      // both of these methods will only start when all necessary samples loaded
      // hence, the low latency setting of 50 milliseconds

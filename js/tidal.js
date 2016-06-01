@@ -32,7 +32,7 @@ function playWithWebDirt(button) {
      // hence, the low latency setting of 50 milliseconds:
      // dirt.playScoreWhenReady([{sample_name: 'cp', sample_n:0, when:0}],0.05,
      // dirt.loadAndPlayScore("testScore.json",0.05,
-     dirt.renderAndPlayScore("ws://www.d0kt0r0.net:9162",pattern,0.5,1,0.05,
+     dirt.renderAndPlayScore("ws://www.d0kt0r0.net:9162",pattern,0.5,8,0.05,
        function() { // readyCallback
          $(button).text('playing');
          $(button).prop('disabled',true);

@@ -7,7 +7,7 @@ We talked about _polyrhythms_ earlier, but Tidal can also produce
 _polymeter_ sequences. A polymeter pattern is one where two patterns
 have different sequence lengths, but share the same pulse or tempo.
 
-You use curly brace syntax in Tidal to create a polymeter rhythm:
+You use curly brace syntax to create a polymeter rhythm:
 
 ~~~haskell
 d1 $ sound "{bd hh sn cp, arpy bass2 drum notes can}"

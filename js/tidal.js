@@ -24,10 +24,13 @@
 function playWithWebDirt(button) {
      $(button).text('loading');
      $(button).prop('disabled',true);
-     // both of these methods will only start when all necessary samples loaded
+     var pattern = $(button).parent().firstChild.textContent;
+     console.log(pattern);
+     // all of these methods will only start when all necessary samples loaded
      // hence, the low latency setting of 50 milliseconds:
      // dirt.playScoreWhenReady([{sample_name: 'cp', sample_n:0, when:0}],0.05,
-     dirt.loadAndPlayScore("testScore.json",0.05,
+     // dirt.loadAndPlayScore("testScore.json",0.05,
+     dirt.renderAndPlayScore("ws://www.d0kt0r0.net:9162",pattern,0.5,1,0.05,
        function() { // readyCallback
          $(button).text('playing');
          $(button).prop('disabled',true);

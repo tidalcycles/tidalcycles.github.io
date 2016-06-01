@@ -24,7 +24,7 @@
 function playWithWebDirt(button) {
      $(button).text('loading');
      $(button).prop('disabled',true);
-     var pattern = $(button).parentElement.firstChild.textContent;
+     var pattern = button.parentElement.firstChild.textContent;
      console.log(pattern);
      // all of these methods will only start when all necessary samples loaded
      // hence, the low latency setting of 50 milliseconds:

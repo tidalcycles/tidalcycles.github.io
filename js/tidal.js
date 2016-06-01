@@ -25,7 +25,9 @@ function playWithWebDirt(button) {
      $(button).text('loading');
      $(button).prop('disabled',true);
      var pattern = button.parentElement.firstChild.textContent;
-     console.log(pattern);
+     // super crude way of eliminating unnecessary d1 $ at beginning of example code:
+     pattern = pattern.substring(4);
+     // console.log(pattern);
      // all of these methods will only start when all necessary samples loaded
      // hence, the low latency setting of 50 milliseconds:
      // dirt.playScoreWhenReady([{sample_name: 'cp', sample_n:0, when:0}],0.05,

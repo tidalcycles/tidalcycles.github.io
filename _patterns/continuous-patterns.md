@@ -3,9 +3,7 @@ category: continuous
 layout: default
 ---
 
-So far we've only been working with discrete values. Tidal has some helper
-functions to create continuous patterns using sine, saw, triangle, and square
-waves:
+So far we've only been working with *discrete* patterns, by which we mean patterns which containing events which begin and end. Tidal also supports *continuous* patterns which instead vary continually over time. You can create continuous patterns using functions which give sine, saw, triangle, and square waves:
 
 ~~~haskell
 d1 $ sound "bd*16" # pan sine1
@@ -21,15 +19,22 @@ In addition to `sine1`, there is also a `sine` function. What is the difference?
 
 Thus, the "1" suffix means only positive values.
 
-In addition to the `sine/sine1` functions, Tidal also has `saw/saw1`,
-`tri/tri1`, and `square/square1`.
+In addition to the `sine`/`sine1` functions, Tidal also has `saw`/`saw1`,
+`tri`/`tri1`, and `square`/`square1`.
 
-You can control oscillation speed with `slow` or `density`:
+Just like discrete patterns, you can control the speed of continuous patterns with `slow` or `density`:
 
 ~~~haskell
 d1 $ sound "bd*16" # pan (slow 8 $ saw1)
 d1 $ sound "bd*8 sn*8" # pan (density 1.75 $ tri1)
 d1 $ sound "bd*8 sn*8" # speed (density 2 $ tri)
+~~~
+
+You can also combine them in different ways:
+
+~~~haskell
+d1 $ sound "bd*16" # pan (slowcat [sine1, saw1, square1, tri1])
+d1 $ sound "sn:2*16" # (speed $ scale 0.5 3 sine1) |*| (speed $ slow 4 saw1)
 ~~~
 
 ### Scaling Oscillation
@@ -52,7 +57,7 @@ d1 $ sound "bd*8 sn*8" # speed (scale (-2) 3 $ tri1)
 This technique works well for a slow low-pass filter cutoff:
 
 ~~~haskell
-d1 $ sound "hh*32" # cutoff (scale 300 1000 $ slow 4 $ sine1) # resonance "0.1"
+d1 $ sound "hh*32" # cutoff (scale 300 1000 $ slow 4 $ sine1) # resonance "0.4"
 d1 $ sound "hh*32" # cutoff (scale 0.001 0.1 $ slow 4 $ sine1) # resonance "0.1"
 ~~~
 
@@ -62,5 +67,4 @@ d1 $ sound "hh*32" # cutoff (scale 0.001 0.1 $ slow 4 $ sine1) # resonance "0.1"
 > cutoff between 0 and 1, as in the second example.
 
 > NOTE 2: Despite the fact that the oscillator functions produce continuous values,
-> you still need to apply them to discrete sound events.
-
+> you still need to map them to discrete sound events.

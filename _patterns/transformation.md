@@ -39,12 +39,14 @@ quarter of the speed:
 ~~~haskell
 d1 $ slow 4 $ sound "bd*2 [bd [sn sn*2 sn] sn]"
 ~~~
+{: .render}
 
 And this four times the speed:
 
 ~~~haskell
 d1 $ density 4 $ sound "bd*2 [bd [sn sn*2 sn] sn]"
 ~~~
+{: .render}
 
 > Note that `slow 0.25` would do exactly the same as `density 4`.
 
@@ -53,6 +55,7 @@ Again, this can be applied selectively:
 ~~~haskell
 d1 $ every 4 (density 4) $ sound "bd*2 [bd [sn sn*2 sn] sn]"
 ~~~
+{: .render}
 
 > Note again the use of parenthesis, around `density 4`. This is
 > needed, to group together the function `density` with its parameter
@@ -68,6 +71,7 @@ the outer pattern of synthesiser triggers that `sound` gives you:
 ~~~haskell
 d1 $ sound (every 4 (density 4) "bd*2 [bd [sn sn*2 sn] sn]")
 ~~~
+{: .render}
 
 ### Where are all the functions?
 

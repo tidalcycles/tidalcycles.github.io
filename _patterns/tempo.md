@@ -26,11 +26,14 @@ cps 10
 ### Setting BPM
 
 Tidal also includes a helper function called `bps` to set "beats per second".
-To set beats-per-minute, call `bps` with your bpm value, divided by 120:
+To set beats-per-minute, call `bps` with your bpm value, divided by 60:
 
 ~~~haskell
 -- sets a tempo of 170 BPM:
-bps (170/120)
+bps (120/60)
+
+Or you might want to divide it by 120 instead, to create a pattern twice as
+long (or half the speed, depending on how you think about it:
 
 -- sets a tempo of 100 BPM:
 bps (100/120)

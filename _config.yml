@@ -12,7 +12,7 @@ collections:
   functions:
   videos:
   howtos:
-  publications:
+  credits:
 
 defaults:
   -
@@ -47,7 +47,7 @@ defaults:
       layout: default
   -
     scope:
-      path: "publications"
+      path: "credits"
     values:
       layout: default
       theme: bibliography

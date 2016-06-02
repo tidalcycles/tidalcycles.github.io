@@ -1,6 +1,6 @@
 ---
 title: Sublime Text
-category: integration
+category: editors
 ---
 
 [Sublime Text](http://www.sublimetext.com/) is a popular

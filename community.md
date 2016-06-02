@@ -6,7 +6,7 @@ category: community
 
 ## Github
 
-The source for [Tidal](https://github.com/tidalcycles/Tidal), [Dirt](https://github.com/tidalcycles/Dirt) and [this website](https://github.com/tidalcycles/tidalcycles.github.io) is accessible at [github.com/tidalcycles](https://github.com/tidalcycles/)
+The source for [Tidal](https://github.com/tidalcycles/Tidal), [SuperDirt](https://github.com/musikinformatik/SuperDirt), [Dirt](https://github.com/tidalcycles/Dirt) and [this website](https://github.com/tidalcycles/tidalcycles.github.io) is accessible at [github.com/tidalcycles](https://github.com/tidalcycles/). 
 
 ## Tidal forum
 

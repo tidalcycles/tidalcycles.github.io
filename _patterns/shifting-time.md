@@ -4,8 +4,7 @@ layout: default
 ---
 
 
-You can use the `<~` and `~>` functions to shift time to the left and right.
-With each of these functions, you can specify an amount, in cycle units.
+You can use the `~>` and `<-` functions to shift patterns forwards or backwards in time, respectively. With each of these functions, you can specify an amount, in cycle units.
 
 ~~~haskell
 d1 $ (0.25 <~) $ sound "bd*2 cp*2 hh sn"

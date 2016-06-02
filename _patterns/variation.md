@@ -3,7 +3,6 @@ category: variation
 layout: default
 ---
 
-
 You can create a lot of cyclic variations in patterns by layering conditional
 logic:
 

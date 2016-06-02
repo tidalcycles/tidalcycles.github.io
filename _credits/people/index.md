@@ -8,7 +8,7 @@ Tidal over the years, contributing thoughts, ideas and questions which
 have pushed it forward. You're all great.
 
 TidalCycles and (Super)Dirt are created by <span class="people"><span class="person">[Alex McLean](http://yaxu.org), </span><span class="person">[Julian Rohrhuber](http://wertlos.org/~rohrhuber/), </span><span class="person">[Mike Hodnick](http://kindohm.com/), 
-[Lennart Melzer](https://github.com/lennart), </span><span class="person">[David Ogborn](http://www.d0kt0r0.net/), </span><span class="person">[Ben Gold](https://github.com/bgold-cosmos), </span> <span><a href="http://notimportant.org/">Sean Lee</a>, </span></span> and [friends](https://github.com/tidalcycles/Tidal/graphs/contributors).
+[Lennart Melzer](https://github.com/lennart), </span><span class="person">[David Ogborn](http://www.d0kt0r0.net/), </span><span class="person">[Ben Gold](https://github.com/bgold-cosmos), </span> <span class="person"><a href="http://notimportant.org/">Sean Lee</a>, </span></span> and [friends](https://github.com/tidalcycles/Tidal/graphs/contributors).
 
 <script>
 $.fn.randomize = function(selector){

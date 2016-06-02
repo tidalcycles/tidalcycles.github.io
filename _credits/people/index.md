@@ -24,5 +24,17 @@ $.fn.randomize = function(selector){
 $(".people").randomize(".person");
 </script>
 
+The vast majority of TidalCycles development comes through volunteer
+work from the above fine people, however we would also like to
+acknowledge instutional and crowdfunding support:
+
 Its first proper free/open source release was supported by a
 [L'ull Cec](https://lullcec.org/) residency at Hangar Barcelona.
+
+Development during 2016 is partly supported by a residency at the
+[Open Data Institute](http://theodi.org/), funded by
+[Sound and Music](http://soundandmusic.org/).
+
+Development is also partly supported by contributors to Yaxu's
+[Spicule](http://www.pledgemusic.com/projects/spicule/) crowdfund
+(target pending).

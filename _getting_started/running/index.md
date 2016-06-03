@@ -26,3 +26,8 @@ If you get stuck, you are very welcome to ask questions and share
 problems on [the forum](http://lurk.org/groups/tidal/), or on the
 `#tidal` channel of the
 [TOPLAP slack](http://toplap.org/toplap-on-slack/).
+
+As is common with free software, you have alternative choices for the
+different components that make up a TidalCycles system. Atom and
+SuperDirt might be all you ever need, but read on if you want to learn
+what other editors and synths you can use.

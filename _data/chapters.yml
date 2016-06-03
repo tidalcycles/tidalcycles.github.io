@@ -2,9 +2,9 @@
   title: Installation
   sections:
     - name: installation
-      title: Installing Tidal
+      title: Installing TidalCycles
     - name: running
-      title: Running Tidal
+      title: Running TidalCycles
     - name: editors
       title: Alternative editors
     - name: synths
@@ -58,6 +58,8 @@
       title: Transitions Between Patterns
     - name: samples
       title: Samples
+    - name: synths
+      title: Synths
 - name: functions
   title: Reference
   sections:

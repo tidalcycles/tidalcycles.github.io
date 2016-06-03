@@ -32,7 +32,7 @@ Open a Terminal window and type in the following command, to install
 TidalCycles:
 
 ~~~~bash
-cabal install tidal?
+cabal install tidal
 ~~~~
 
 > If you're unsure how to open a terminal window: in Windows it's

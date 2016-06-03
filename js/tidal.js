@@ -44,6 +44,7 @@ function playWithWebDirt(button) {
      );
 }
 
+/*
 $(document).ready(function() {
   $(".render").each(function() {
     var button = $('<button/>', { text: "loading", class: "renderButton" });
@@ -64,3 +65,4 @@ $(document).ready(function() {
   // make a sound (which will initialize the web audio context) must be called
   // from a user interaction with the page.
 });
+*/

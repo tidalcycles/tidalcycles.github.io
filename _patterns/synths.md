@@ -9,14 +9,19 @@ SuperCollider synths from TidalCycles in much the same way as you
 trigger samples. For example:
 
 ~~~haskell
-d1 $ n "60 62*2" # s "supersaw"
+d1 $ midinote "60 62*2" # s "supersaw"
 ~~~
 
-The above plays note 60 and 62 of the MIDI scale. You can alternative
-specify notes by name:
+The above plays note 60 and 62 of the MIDI scale, using the `midinote` parameter. You can alternatively specify notes by name, using `n`:
 
 ~~~haskell
 d1 $ n "c5 d5*2" # s "supersaw"
+~~~
+
+You can also specify note numbers with `n`, but where `0` is middle c (rather than `60` with `midinote`).
+
+~~~haskell
+d1 $ n "0 5" # s "supersaw"
 ~~~
 
 The default sustain length is a bit long so the sounds will overlap,
@@ -27,7 +32,7 @@ d1 $ n "c5 d5*2" # s "supersaw" # sustain "0.4 0.2"
 ~~~
 
 Many example synths can be found in the `default-synths.scd` file
-in the `SuperDirt/synths` directory. These include:
+in the `SuperDirt/synths` folder. These include:
 
 * a series of tutorials: `tutorial1`, `tutorial2`, `tutorial3`, `tutorial4`, `tutorial5`
 * examples of modulating with the cursor or sound input: `pmsin`, `in`, `inr`
@@ -36,17 +41,19 @@ in the `SuperDirt/synths` directory. These include:
 * four analogue-style synths: `supersquare`, `supersaw`, `superpwm`, `supercomparator`
 * two digital-style synths: `superchip`, `supernoise`
 
-Many accept additional Tidal Parameters or interpret the usual parameters in a slightly
+To find the SuperDirt folder, simply run `Quarks.folder` in supercollider. The full folder location should appear in the postwindow (which is usually in the bottom right).
+
+Many of the above synths accept additional Tidal Parameters or interpret the usual parameters in a slightly
 different way. For complete documentation, see `default-synths.scd`, but here are some
 examples to try:
 
 ~~~haskell
-d1 $ jux (# accelerate "-0.1") $ s "supermandolin*8" # n "[80!6 78]/8"
+d1 $ jux (# accelerate "-0.1") $ s "supermandolin*8" # midinote "[80!6 78]/8"
   # sustain "1 0.25 2 1"
 ~~~
 
 ~~~haskell
-d1 $ n (slow 2 $ fmap ((+50) . (*7)) $ run 8) # s "supergong" # decay "[1 0.2]/4"
+d1 $ midinote (slow 2 $ fmap ((+50) . (*7)) $ run 8) # s "supergong" # decay "[1 0.2]/4"
   # voice "[0.5 0]/8" # sustain (slow 16 $ scale 5 0.5 $ saw1)
 ~~~
 
@@ -73,8 +80,8 @@ d1 $ n "[c2 e3 g4 c5 c4 c3]/3" # s "[superpwm supersaw supersquare]/24" # sustai
 ~~~
 
 ~~~haskell
-d1 $ every 16 (density 24 . (|+| n "24") . (# sustain "0.3") . (# attack "0.05"))
-  $ s "supercomparator/4" # n (fmap (+24) $ irand 24)
+d1 $ every 16 (density 24 . (|+| midinote "24") . (# sustain "0.3") . (# attack "0.05"))
+  $ s "supercomparator/4" # midinote (fmap (+24) $ irand 24)
   # sustain "8" # attack "0.5" # hold "4" # release "4"
   # voice "0.5" # resonance "0.9" # lfo "1" # speed "30" # pitch1 "4"
 ~~~
@@ -89,7 +96,7 @@ d2 $ every 4 (echo (negate 3/32)) $ n "c5*4" # s "supernoise"
 ~~~
 
 ~~~haskell
-d1 $ s "supernoise/8" # n (fmap (+30) $ irand 10) # sustain "8"
+d1 $ s "supernoise/8" # midinote (fmap (+30) $ irand 10) # sustain "8"
  # accelerate "0.5" # voice "0.5" # pitch1 "0.15" # slide "-0.5" # resonance "0.7"
  # attack "1" # release "20" # room "0.9" # size "0.9" # orbit "1"
 ~~~

@@ -60,10 +60,17 @@ listening to. Now you are ready to play some MIDI notes. Type and
 evaluate the following to play MIDI note #40 and #52:
 
 ~~~~haskell
-m1 $ n "40 52"
+m1 $ midinote "40 52"
 ~~~~
 
-By the way, you can also specify notes via their names, e.g. c sharp
+With MIDI notes, `60` stands for middle C note. If you use `n` rather
+than `midinote`, then you'll find that `0` is middle C. 
+
+~~~~haskell
+m1 $ n "0 4 -8"
+~~~~
+
+Using `n`, you can also specify notes via their names, e.g. c sharp
 in the fifth octave followed by a in the fourth octave:
 
 ~~~~haskell
@@ -75,11 +82,14 @@ m1 $ n "cs5 a4"
 You can create patterns of MIDI notes just like with Dirt:
 
 ~~~~haskell
-m1 $ n "40 [32 34] 36*2 42*3"
-m1 $ n "[[32 34], [36 38]]"
+m1 $ midinote "40 [32 34] 36*2 42*3"
+m1 $ midinote "[[32 34], [36 38]]"
 m1 $ every 3 (density 2) $ every 4 (palindrome) $ n "{c a4 f3}%8"
 m1 $ n "c a" # dur (scale 0.1 0.4 sine1)
 ~~~~
+
+If you find your note names aren't coming out right, it's probably because you're 
+trying to use them with `midinote`, instead of `n`.
 
 # Using synth-specific libraries
 

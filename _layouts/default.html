@@ -15,6 +15,15 @@
     <link rel="icon" type="image/png" href="favicon/favicon-32x32.png" sizes="32x32">
     <link rel="icon" type="image/png" href="favicon/favicon-96x96.png" sizes="96x96">
     <link rel="icon" type="image/png" href="favicon/favicon-194x194.png" sizes="194x194">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fitvids/1.1.0/jquery.fitvids.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <!-- <script src="{{ site.baseurl }}/WebDirt/SampleBank.js"></script>
+    <script src="{{ site.baseurl }}/WebDirt/WebDirt.js"></script>
+    <script src="{{ site.baseurl }}/WebDirt/Graph.js"></script> -->
+    <script src="{{ site.baseurl }}/js/tidal.js"></script>
+
 </head>
 
 <body data-spy="scroll" data-target=".tidal-sidebar">
@@ -78,7 +87,7 @@
                     <h1>{{ page.title }}</h1>
                 </div>
 
-                {{ content }} {% for section_meta in sections %} {% assign section = grps | where: "name", section_meta.name | first %} {% assign docs = section.items | sort: "weight", "last" | sort: "title" %}
+                {{ content }} {% for section_meta in sections %} {% assign section = grps | where: "name", section_meta.name | first %} {% assign docs = section.items | sort: "title" | sort: "weight", "last" %}
                 <section>
                     <header>
                         <h1 id="{{section_meta.name}}" class="tidal-toc-heading">{{section_meta.title}}</h1>
@@ -89,7 +98,7 @@
                     {% include {{doc.theme}}.html doc=doc %}
                     {% else %}
                     <article>
-                        {% if doc.title != null %}
+                        {% if doc.title != "Index" %}
                         <h1 id="{{ doc.title | slugify }}" class="tidal-toc-heading">{{ doc.title }}</h1>
                         {% endif %} {{doc.content}}
                     </article>
@@ -102,13 +111,13 @@
             <div class="col-md-3">
                 <div class="tidal-sidebar">
                     <ul class="nav affix">
-                        {% for section_meta in sections %} {% assign section = grps | where: "name", section_meta.name | first %} {% assign docs = section.items | sort: "weight", "last" | sort: "title" %}
+                        {% for section_meta in sections %} {% assign section = grps | where: "name", section_meta.name | first %} {% assign docs = section.items | sort: "title" | sort: "weight", "last" %}
                         <li>
                             <a href="#{{section_meta.name}}">
                                 <h4>{{section_meta.title}}</h4>
                             </a>
                             <ul class="nav">
-                                {% for doc in docs%} {% capture cat_prefix %}_{{page.category}}{% endcapture %} {% if doc.title != null %}
+                                {% for doc in docs%} {% capture cat_prefix %}_{{page.category}}{% endcapture %} {% if doc.title != "Index" %}
                                 <li>
                                     <a href="#{{ doc.title | slugify }}">{{ doc.title }}</a>
                                 </li>
@@ -125,10 +134,6 @@
     <!-- main end -->
     {% endif %}
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/fitvids/1.1.0/jquery.fitvids.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
-    <script src="{{ site.baseurl }}/js/tidal.js"></script>
     {% include tracking.html %}
 </body>
 

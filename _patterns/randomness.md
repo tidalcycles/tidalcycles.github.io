@@ -9,14 +9,14 @@ introduce randomness into patterns by removing random events.
 
 ### Random Decimal Patterns
 
-Use the `rand` function to create a random value between 0 and 1 (useful for
-effects):
+You can use the `rand` function to create a random value between 0
+and 1. This is useful for effects:
 
 ~~~haskell
 d1 $ sound "arpy*4" # pan (rand)
 ~~~
 
-Similar to `run`, `rand` can also be scaled:
+As with `run` and all numeric patterns, the values that `rand` give you can be scaled, for example the below gives random numbers between `0.25` and `0.75`:
 
 ~~~haskell
 d1 $ sound "arpy*4" # pan (scale 0.25 0.75 $ rand)
@@ -25,14 +25,24 @@ d1 $ sound "arpy*4" # pan (scale 0.25 0.75 $ rand)
 ### Random Integer Patterns
 
 Use the `irand` function to create a random integer up to a given maximum.
-Perhaps the most common usage of `irand` is to produce a random pattern of
+The most common usage of `irand` is to produce a random pattern of
 sample indices (similar to `run`):
 
 ~~~haskell
-d1 $ sound $ samples "arpy*8" (irand 30)
+d1 $ s "arpy*8" # n (irand 30)
 ~~~
 
-> The code above randomly chooses from 30 samples in the "arpy" folder.
+The code above randomly chooses from 30 samples in the "arpy" folder.
+
+> Hairy detail: `rand` and `irand` are actually *continuous* patterns,
+> which in practical terms means they have infinite detail - you can
+> treat them as pure information! As with all patterns they are also
+> deterministic, stateless functions of time, so that if you
+> retriggered a pattern from the same logical time point, exactly the
+> same numbers would be produced. Furthermore, if you use a `rand` or
+> `irand` in two different places, you would get the same 'random'
+> pattern - if this isn't what you want, you can simply shift or slow
+> down time a little for one of them, e.g. `slow 0.3 rand`.
 
 ### Removing or "Degrading" Pattern events
 

@@ -2,9 +2,13 @@
   title: Installation
   sections:
     - name: installation
-      title: Installing Tidal
-    - name: integration
-      title: Installing an Editor
+      title: Installing TidalCycles
+    - name: running
+      title: Running TidalCycles
+    - name: editors
+      title: Alternative editors
+    - name: synths
+      title: Alternative synths
 - name: patterns
   title: Creating Patterns
   sections:
@@ -54,6 +58,8 @@
       title: Transitions Between Patterns
     - name: samples
       title: Samples
+    - name: synths
+      title: Synths
 - name: functions
   title: Reference
   sections:
@@ -76,10 +82,10 @@
 - name: videos
   title: Videos
   sections:
-    - name: tutorials
-      title: Tutorials and demos
     - name: performances
       title: Performances
+    - name: tutorials
+      title: Tutorials and demos
 - name: howtos
   title: HowTos
   sections:
@@ -91,12 +97,12 @@
       title: "MIDI"
     - name: live
       title: Playing live
-- name: publications
-  title: Publications
+- name: credits
+  title: Credits
   sections:
-    - name: recent
-      title: Recent
-    - name: historic
-      title: Archive
+    - name: people
+      title: People
+    - name: publications
+      title: Publications
 - name: community
   title: Community

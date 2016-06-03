@@ -4,6 +4,10 @@ category: getting_started
 layout: default
 ---
 
-To get started with Tidal, first follow the instructions for your operating system to install it.
+The quickest way to get started is to install the TidalCycles pattern
+engine, the SuperDirt synthesiser and the Atom editor. You'll need all
+three, although there are alternatives to using SuperDirt and Atom -
+see later in the document for info.
 
-Make sure you have the following prerequisites. 
+All software is free of charge, and distributed according to free
+software/open source principles and licenses.

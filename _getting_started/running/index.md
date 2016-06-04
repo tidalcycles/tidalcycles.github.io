@@ -9,7 +9,7 @@ To start SuperDirt, paste the following code into a SuperCollider
 window, click on the code, hold down shift and press enter.
 
 ~~~~c
-SuperDirt.startup
+SuperDirt.start
 ~~~~
 
 To start TidalCycles, open a new window, save it with a filename than ends in `.tidal`, e.g. `test.tidal`, then try running a simple pattern:

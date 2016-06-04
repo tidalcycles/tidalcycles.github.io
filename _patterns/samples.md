@@ -3,8 +3,10 @@ category: samples
 layout: default
 ---
 
-All the samples can be found in the `samples` subfolder of the Dirt
-distribution.  Here's some you could try:
+If you're using SuperDirt, all the default samples can be found in the
+`Dirt-Samples` folder - find out where that is by running
+`Quarks.folder` in SuperCollider. If you're using classic dirt, look
+in its `samples` subfolder.  Here's some you could try:
 
 ~~~
 flick sid can metal future gabba sn mouth co gretsch mt arp h cp
@@ -21,4 +23,4 @@ file in the `bd` folder. If you ask for the ninth sample and there are
 only seven in the folder, it'll wrap around and play the second one.
 
 If you want to add your own samples, just create a new folder in the
-samples director, and put `wav` files in it.
+samples folder, and put `wav` files in it.

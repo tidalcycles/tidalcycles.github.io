@@ -51,6 +51,14 @@ include("SuperDirt")
 Run the code by clicking on it, to make sure the cursor is on this
 line, then hold down shift and press enter.
 
+It will download SuperDirt and 
+you will see it has completed when the Post Window displays:
+
+~~~~c
+... the class library may have to be recompiled.
+-> SuperDirt
+~~~~
+
 After it has completed, you will need to restart SuperCollider (or
 alternatively, recompile the class library via the "Language" menu).
 

@@ -12,7 +12,7 @@ window, click on the code, hold down shift and press enter.
 SuperDirt.start
 ~~~~
 
-To start TidalCycles, open a new window, save it with a filename than ends in `.tidal`, e.g. `test.tidal`, then try running a simple pattern:
+To start TidalCycles, go to Atom, create a new file and save it with a filename than ends in `.tidal`, e.g. `test.tidal`, then try running a simple pattern:
 
 ~~~~haskell
 d1 $ sound "bd sn"

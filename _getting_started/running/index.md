@@ -12,13 +12,11 @@ window, click on the code, hold down shift and press enter.
 SuperDirt.start
 ~~~~
 
-To start TidalCycles, open a new window, save it with a filename than ends in `.tidal`, e.g. `test.tidal`, then try running a simple pattern:
+To start TidalCycles, open a new document in Atom, save it with a filename that ends in `.tidal`, e.g. `test.tidal`, then try running a simple pattern:
 
 ~~~~haskell
 d1 $ sound “bd sn”
 ~~~~
-
-n.b. If you see an example starting with `d1` to `d9` change it to be e.g. `s1` instead. This is because you are using the new `SuperDirt` synth.
 
 **If you hear sound, congratulations!** Time to move on to [the tutorial](/patterns.html).
 

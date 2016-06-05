@@ -62,6 +62,16 @@ you will see it has completed when the Post Window displays:
 After it has completed, you will need to restart SuperCollider (or
 alternatively, recompile the class library via the "Language" menu).
 
+If you instead see a message like this:
+
+~~~~c
+  "ERROR: Quarks requires git to be installed"
+~~~~
+
+Then you will need install git from
+[https://git-scm.com/downloads](https://git-scm.com/downloads), and
+return to SuperCollider to run `include("SuperDirt")` again.
+
 ### 3. Install the TidalCycles Atom plugin
 
 Start Atom, and install the TidalCycles plugin. You can find it via

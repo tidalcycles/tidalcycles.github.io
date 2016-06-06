@@ -4,9 +4,10 @@ layout: default
 ---
 
 If you're using SuperDirt, all the default samples can be found in the
-`Dirt-Samples` folder - find out where that is by running
-`Quarks.folder` in SuperCollider. If you're using classic dirt, look
-in its `samples` subfolder.  Here's some you could try:
+`Dirt-Samples` folder - you can open it by running `Quarks.gui` in
+SuperCollider, clicking on "Dirt-Samples" and then "open folder". If
+you're using classic dirt, look in its `samples` subfolder.  Here's
+some you could try:
 
 ~~~
 flick sid can metal future gabba sn mouth co gretsch mt arp h cp

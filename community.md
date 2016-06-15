@@ -4,19 +4,21 @@ layout: default
 category: community
 ---
 
-## Github
+## TidalCycles q&a, forum and chat
 
-The source for [Tidal](https://github.com/tidalcycles/Tidal), [SuperDirt](https://github.com/musikinformatik/SuperDirt), [Dirt](https://github.com/tidalcycles/Dirt) and [this website](https://github.com/tidalcycles/tidalcycles.github.io) is accessible at [github.com/tidalcycles](https://github.com/tidalcycles/). 
+If you have questions about using or installing Tidal, then the [Ask TidalCycles](http://ask.tidalcycles.org/) q&a website is a good first port of call.
 
-## Tidal forum
+For live discussion and chat, there's an active `#tidal` channel (and also a `#tidal-innards` channel for those interested in meddling with tidal's internals) on the [TOPLAP slack](http://toplap.org/toplap-on-slack/). You can also chat with people using other live coding environments there on the `#general` and other channels.
 
-The official web forum is at [lurk.org/groups/tidal](http://lurk.org/groups/tidal/)
-
-For live discussion and chat, there's an active `tidal` channel (and also a `tidal-innards` channel for those interested in meddling with tidal's internals) on the [TOPLAP slack](http://toplap.org/toplap-on-slack/).
+For in-depth discussion about TidalCycles, the official forum is at [lurk.org/groups/tidal](http://lurk.org/groups/tidal/), which is accessible both as a web forum and over email.
 
 ## Antisocial
 
 Twitter: [@tidalcycles](https://twitter.com/tidalcycles)
+
+## Github
+
+The source for [Tidal](https://github.com/tidalcycles/Tidal), [SuperDirt](https://github.com/musikinformatik/SuperDirt), [Dirt](https://github.com/tidalcycles/Dirt) and [this website](https://github.com/tidalcycles/tidalcycles.github.io) is accessible at [github.com/tidalcycles](https://github.com/tidalcycles/). 
 
 ## Live coding
 

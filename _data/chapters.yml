@@ -95,6 +95,8 @@
       title: "Multi-laptop"
     - name: midi
       title: "MIDI"
+    - name: midi_debug
+      title: "MIDI debug"
     - name: live
       title: Playing live
 - name: credits

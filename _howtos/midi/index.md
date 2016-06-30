@@ -110,3 +110,10 @@ m1 $ every 4 (slow 1.5) $ slow 2 $ n (offadd 0.25 (7) "f3(3,8) g5*3")
   # lfo "0.1"
   # cutoff (slow 4 sine1)
 ~~~~
+
+{% capture midi_debug %}
+**Note:** If `tidal-midi` does not work as expected, head over to [our Q&A platform for further help on common issues](http://ask.tidalcycles.org/questions/scope:all/sort:activity-desc/tags:MIDI/page:1/). 
+{% endcapture %}
+{% include alert.html content=midi_debug %}
+
+

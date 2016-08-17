@@ -1,6 +1,6 @@
 ---
 title: nudge
-category: synth_transformers
+category: synth_parameters
 ---
 
 ~~~haskell

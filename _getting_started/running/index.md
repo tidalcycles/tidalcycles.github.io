@@ -12,10 +12,15 @@ window, click on the code, hold down shift and press enter.
 SuperDirt.start
 ~~~~
 
-To start TidalCycles, open a new document in Atom, save it with a filename that ends in `.tidal`, e.g. `test.tidal`, then try running a simple pattern:
+To start TidalCycles in Atom, first create a new document and save it with a filename
+that ends in `.tidal`, e.g. `test.tidal`. Then open the Packages menu and select TidalCycles -> Boot TidalCycles.
+A small window will open at the bottom of the window and display some text to tell you that the
+GHCi interpreter is running. Try running a simple pattern by typing in the code
+below and holding down shift and pressing enter to evaluate it (Holding
+  down control and pressing enter will also work, this evaluates multiple lines).
 
 ~~~~haskell
-d1 $ sound “bd sn”
+d1 $ sound "bd sn"
 ~~~~
 
 **If you hear sound, congratulations!** Time to move on to [the tutorial](/patterns.html).

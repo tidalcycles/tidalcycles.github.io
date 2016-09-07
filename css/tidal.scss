@@ -132,7 +132,7 @@ section {
 .tidal-hero {
     border: none;
     background-color: #fdfcfd;
-    background-image: url(../img/tidal-bg.png);
+    background-image: url(../img/tidalcycles-bg.png);
     background-repeat: no-repeat;
     background-position: 50% 0;
     background-size: cover;
@@ -140,9 +140,14 @@ section {
     margin-bottom: 0;
     padding-bottom: 0;
 
-    h1 {
-        font-size: 38px;
-        color: #fff;
+    img {
+    	width: 250px;
+	margin: 0;
+	padding: 0;
+    }
+
+h1 span {
+      display: none;
     }
 }
 
@@ -229,22 +234,20 @@ section {
 }
 
 @media (min-width: 768px) {
-    .tidal-hero h1 {
-        font-size: 80px;
-
-        padding-top: .3em;
+    .tidal-hero img {
+    	width: 300px;
     }
 }
 
 @media (min-width: 992px) {
-    .tidal-hero h1 {
-        font-size: 100px;
+    .tidal-hero img {
+    	width: 400px;
     }
 }
 
 @media (min-width: 1200px) {
-    .tidal-hero h1 {
-        font-size: 120px;
+    .tidal-hero img {
+    	width: 400px;
     }
 }
 

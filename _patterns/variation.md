@@ -14,7 +14,7 @@ d1 $ every 5 (|+| speed "0.5") $ every 4 (0.25 <~) $ every 3 (rev) $
 
 In addition to `every` you can also use the `whenmod` conditional function.
 `whenmod` takes two parameters; it executes a function when the remainder of
-the current loop number divided by the first parameter is less than the
+the current loop number divided by the first parameter is greater or equal than the
 second parameter.
 
 For example, the following will play a pattern normally for cycles 1-6, then

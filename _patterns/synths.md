@@ -3,6 +3,12 @@ category: synths
 layout: default
 ---
 
+For this section to work, you need to have installed the SuperCollider
+sc3-plugins. You can either install the latest version from
+[git](https://github.com/supercollider/sc3-plugins), or if you are
+using Linux, you may find it in your package manager.
+On Fedora the package is called `supercollider-sc3-plugins`.
+
 SuperDirt is created with SuperCollider, a fantastic synthesis engine
 and language with huge sonic possibilities. You can trigger custom
 SuperCollider synths from TidalCycles in much the same way as you
@@ -31,8 +37,9 @@ you can adjust this using the `sustain` parameter
 d1 $ n "c5 d5*2" # s "supersaw" # sustain "0.4 0.2"
 ~~~
 
-Many example synths can be found in the `default-synths.scd` file
-in the `SuperDirt/synths` folder. These include:
+Many example synths can be found in the `default-synths-extra.scd` file
+in the `SuperDirt/library` folder or in `default-synths.scd` and
+`tutorial-synths.scd` in the `SuperDirt/synths` folder. These include:
 
 * a series of tutorials: `tutorial1`, `tutorial2`, `tutorial3`, `tutorial4`, `tutorial5`
 * examples of modulating with the cursor or sound input: `pmsin`, `in`, `inr`

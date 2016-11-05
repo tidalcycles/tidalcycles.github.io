@@ -34,6 +34,16 @@ in SuperCollider.
 > manually create the `Extensions` directory. Restart SuperCollider so that it finds
 > the `SC3plugins` directory.
 
+> If you are installing on Linux or Mac you need the SuperCollider
+> sc3-plugins for using the synths included in SuperDirt. If you skip
+> this step you can only work with samples.
+> You can either install the latest version from
+> [git](https://github.com/supercollider/sc3-plugins) according to the
+> instructions there, or if you are using Linux, you may find it in
+> your package manager. On Fedora the package is called
+> `supercollider-sc3-plugins`.
+
+
 Once you have the above applications downloaded and installed, you
 will need to follow the following three steps to complete the
 installation:

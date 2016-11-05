@@ -36,7 +36,8 @@ in SuperCollider.
 
 > If you are installing on Linux or Mac you need the SuperCollider
 > sc3-plugins for using the synths included in SuperDirt. If you skip
-> this step you can only work with samples.
+> this step many of the synths included with SuperDirt and referenced
+> in documentation will not work.
 > You can either install the latest version from
 > [git](https://github.com/supercollider/sc3-plugins) according to the
 > instructions there, or if you are using Linux, you may find it in

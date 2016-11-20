@@ -13,7 +13,7 @@ To avoid fiddling with the existing Haskell REPL supplied by Sublime REPL simply
 
 ~~~bash
 cd ~/Library/Application Support/Sublime Text 3/Packages/SublimeREPL/config
-git clone https://gist.github.com/HaCk3Dq/0b670d220e395437ad6f032a7a0f6e63 Tidal
+git clone https://gist.github.com/lvm/e0943b0d42507af60eee174ed263adde Tidal
 ~~~
 
 > If you are using classic Dirt rather than the new SuperDirt, an older version of the config can be used:

@@ -33,4 +33,6 @@ Code by line evaluation is mapped to `ctrl+, l` by default but this can be custo
 { "keys": ["shift+enter"], "command": "repl_transfer_current", "args": {"scope": "lines"} }
 ~~~
 
+If you get the error `Cannot find REPL for 'plain'`, try renaming your file to .hs instead of .tidal, since we are using a modified version of a Haskell REPL.
+
 Of course you have to make sure dirt is already running when you can hear any sound.

@@ -10,7 +10,7 @@ You can use it using standard general MIDI, or use a synth-specific
 library - there currently exist libraries for the Volca Keys, Bass and
 Beats.
 
-# Install
+## Install
 
 To install TidalCycles MIDI support, just run this in a terminal window:
 
@@ -19,7 +19,7 @@ cabal update
 cabal install tidal-midi
 ~~~~
 
-# Load the MIDI modules
+## Load the MIDI modules
 
 Start up TidalCycles in your favourite editor, then the following line
 of code (with e.g. shift-enter):
@@ -28,7 +28,7 @@ of code (with e.g. shift-enter):
 import Sound.Tidal.MIDI.Context
 ~~~~
 
-# Talk MIDI from TidalCycles
+## Talk MIDI from TidalCycles
 
 Next, assuming you have a MIDI device attached, you need to get its
 device id. Run the following command (again in the editor, with
@@ -64,7 +64,7 @@ m1 $ midinote "40 52"
 ~~~~
 
 With MIDI notes, `60` stands for middle C note. If you use `n` rather
-than `midinote`, then you'll find that `0` is middle C. 
+than `midinote`, then you'll find that `0` is middle C.
 
 ~~~~haskell
 m1 $ n "0 4 -8"
@@ -77,7 +77,7 @@ in the fifth octave followed by a in the fourth octave:
 m1 $ n "cs5 a4"
 ~~~~
 
-# Making MIDI patterns
+## Making MIDI patterns
 
 You can create patterns of MIDI notes just like with Dirt:
 
@@ -88,10 +88,10 @@ m1 $ every 3 (density 2) $ every 4 (palindrome) $ n "{c a4 f3}%8"
 m1 $ n "c a" # dur (scale 0.1 0.4 sine1)
 ~~~~
 
-If you find your note names aren't coming out right, it's probably because you're 
+If you find your note names aren't coming out right, it's probably because you're
 trying to use them with `midinote`, instead of `n`.
 
-# Using synth-specific libraries
+## Using synth-specific libraries
 
 You can find a list of
 [available synths libraries here](https://hackage.haskell.org/package/tidal-midi). For example to use the Volca Keys library you first import it, then make its MIDI stream:
@@ -111,9 +111,11 @@ m1 $ every 4 (slow 1.5) $ slow 2 $ n (offadd 0.25 (7) "f3(3,8) g5*3")
   # cutoff (slow 4 sine1)
 ~~~~
 
-{% capture midi_debug %}
-**Note:** If `tidal-midi` does not work as expected, head over to [our Q&A platform for further help on common issues](http://ask.tidalcycles.org/questions/scope:all/sort:activity-desc/tags:MIDI/page:1/). 
-{% endcapture %}
-{% include alert.html content=midi_debug %}
+## Community questions
 
+Frequently asked questions by tidal-midi users:
 
+<iframe src="http://ask.tidalcycles.org/widgets/questions/1/"
+        class="tidal-faq-embed"></iframe>
+
+Still not happy? Check out [all tidal-midi questions on our Q&A platform](http://ask.tidalcycles.org/questions/scope:all/sort:activity-desc/tags:MIDI/page:1/)!

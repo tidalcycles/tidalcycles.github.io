@@ -4,6 +4,17 @@ layout: default
 weight: -9
 ---
 
+<div class="embed-responsive embed-responsive-16by9">
+  <iframe width="560"
+          height="315"
+          src="https://www.youtube.com/embed/videoseries?list=PLybSFICi4UliJ17GE1cIZym16VsFqsOfa"
+          frameborder="0"
+          allowfullscreen>
+  </iframe>
+</div>
+
+---
+
 The following installation instructions work for Linux, MacOS and
 Windows.
 

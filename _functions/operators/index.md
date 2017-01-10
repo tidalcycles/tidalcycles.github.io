@@ -9,62 +9,62 @@ The general rule for things that combine patterns is that they use the structure
 
 #### `|+|`, `|*|`, `-`, `/` 
 Operate on *ParamPatterns*, and perform the arithmetic operation if the two parameters are the same (such as `speed` and `speed`), or simply merge the parameters just as `#` would if the parameters are different.
-~~~haskell
+~~~~ haskell
 speed "1 2 3 4" |+| speed "2" 
-~~~
+~~~~
 is the same as
-~~~haskell
+~~~~ haskell
 speed "3 4 5 6"
-~~~  
+~~~~  
 
 #### `#`, `|=|`
 They mean the same thing: they merge *ParamPatterns* together
 
 #### `###`, `***`, `+++`, `///`
 These take a **list** of *ParamPatterns* as their second argument, and merge them all together with the relevant arithmetic operator.  Can simplify long expressions.
-~~~haskell
+~~~~ haskell
 s "bd sn" # "speed "1.2" *** [speed "2", crush "4"]
-~~~
+~~~~
 
 #### `<~`, `~>`
 These time-shift the pattern on the RHS by the number of cycles on the LHS.
-~~~haskell
+~~~~ haskell
 0.25 ~> "a b c d"
-~~~
+~~~~
 is the same as
-~~~haskell
+~~~~ haskell
 "d a b c"
-~~~
+~~~~
 
 #### `<~>`
 Pattern replacement: takes the elements of the second pattern and makes a new pattern using the structure of the first
-~~~haskell
+~~~~ haskell
 "x x x" <~> "bd sn"
-~~~
-~~~haskell
+~~~~
+~~~~ haskell
 "bd sn bd"
-~~~
+~~~~
 one cycle and
-~~~haskell
+~~~~ haskell
 "sn bd sn"
-~~~
+~~~~
 the next
 
 #### `<<~`, `~>>`
 Pattern rotation, these move the elements of the pattern without changing the structure of the pattern
-~~~haskell
+~~~~ haskell
 1 ~>> "a ~ b c"
-~~~
+~~~~
 is the same as
-~~~haskell
+~~~~ haskell
 "c ~ a b"
-~~~
+~~~~
 
 #### `!!!`
 List indexing with built-in modulo so you can't go past the end of the list
-~~~haskell
+~~~~ haskell
 [1 2 3 4]!!!5
-~~~
+~~~~
 returns `2`
 
 ### useful Haskell operators
@@ -74,13 +74,13 @@ A synonym for `fmap`, useful for mapping numerical functions so they work on pat
 
 #### `<*>`
 A synonym for `ap`, useful for promoting functions to work with patterns.
-~~~haskell
+~~~~ haskell
 (+2) <$> "1 2 3 4"
-~~~
+~~~~
 is the same as `"3 4 5 6"`
-~~~haskell
+~~~~ haskell
 (+) <$> "1 2 3 4" <*> "2"
-~~~
+~~~~
 is also the same
 
 #### `!!`

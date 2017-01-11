@@ -10,7 +10,11 @@ You can use it using standard general MIDI, or use a synth-specific
 library - there currently exist libraries for the Volca Keys, Bass and
 Beats.
 
-# Install
+## Prerequisites
+
+- [Haskell](https://www.haskell.org/platform/windows.html) (Windows users: make sure you get the **32bit** version!)
+
+## Install
 
 To install TidalCycles MIDI support, just run this in a terminal window:
 
@@ -19,7 +23,7 @@ cabal update
 cabal install tidal-midi
 ~~~~
 
-# Load the MIDI modules
+## Load the MIDI modules
 
 Start up TidalCycles in your favourite editor, then the following line
 of code (with e.g. shift-enter):
@@ -28,7 +32,7 @@ of code (with e.g. shift-enter):
 import Sound.Tidal.MIDI.Context
 ~~~~
 
-# Talk MIDI from TidalCycles
+## Talk MIDI from TidalCycles
 
 Next, assuming you have a MIDI device attached, you need to get its
 device id. Run the following command (again in the editor, with
@@ -77,7 +81,7 @@ in the fifth octave followed by a in the fourth octave:
 m1 $ n "cs5 a4"
 ~~~~
 
-# Making MIDI patterns
+## Making MIDI patterns
 
 You can create patterns of MIDI notes just like with Dirt:
 
@@ -91,7 +95,7 @@ m1 $ n "c a" # dur (scale 0.1 0.4 sine1)
 If you find your note names aren't coming out right, it's probably because you're 
 trying to use them with `midinote`, instead of `n`.
 
-# Using synth-specific libraries
+## Using synth-specific libraries
 
 You can find a list of
 [available synths libraries here](https://hackage.haskell.org/package/tidal-midi). For example to use the Volca Keys library you first import it, then make its MIDI stream:

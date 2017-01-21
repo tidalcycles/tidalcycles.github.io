@@ -113,4 +113,4 @@ Haskell's way of doing list indexing
 An alternative to parentheses, means "evaluate everything on the right first"
 
 #### `.`
-Function composition, needs functions that return the same type as their argument
+Function composition, needs functions with only a single argument unspecified

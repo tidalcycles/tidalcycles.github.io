@@ -1,0 +1,17 @@
+version: "2"
+volumes:
+  gem-cache:
+  bundle-cache:
+  sass-cache:
+services:
+  jekyll:
+    build: .
+    command: jekyll serve --watch
+    ports:
+        - 0.0.0.0:4000:4000
+    network_mode: host
+    volumes:
+        - .:/srv/jekyll
+        - gem-cache:/srv/jekyll/vendor
+        - bundle-cache:/srv/jekyll/.bundle
+        - sass-cache:/srv/jekyll/.sass-cache

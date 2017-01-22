@@ -68,7 +68,7 @@ m1 $ midinote "40 52"
 ~~~~
 
 With MIDI notes, `60` stands for middle C note. If you use `n` rather
-than `midinote`, then you'll find that `0` is middle C. 
+than `midinote`, then you'll find that `0` is middle C.
 
 ~~~~haskell
 m1 $ n "0 4 -8"
@@ -92,7 +92,7 @@ m1 $ every 3 (density 2) $ every 4 (palindrome) $ n "{c a4 f3}%8"
 m1 $ n "c a" # dur (scale 0.1 0.4 sine1)
 ~~~~
 
-If you find your note names aren't coming out right, it's probably because you're 
+If you find your note names aren't coming out right, it's probably because you're
 trying to use them with `midinote`, instead of `n`.
 
 ## Using synth-specific libraries
@@ -115,9 +115,11 @@ m1 $ every 4 (slow 1.5) $ slow 2 $ n (offadd 0.25 (7) "f3(3,8) g5*3")
   # cutoff (slow 4 sine1)
 ~~~~
 
-{% capture midi_debug %}
-**Note:** If `tidal-midi` does not work as expected, head over to [our Q&A platform for further help on common issues](http://ask.tidalcycles.org/questions/scope:all/sort:activity-desc/tags:MIDI/page:1/). 
-{% endcapture %}
-{% include alert.html content=midi_debug %}
+## Community questions
 
+Frequently asked questions by tidal-midi users:
 
+<iframe src="http://ask.tidalcycles.org/widgets/questions/1/"
+        class="tidal-faq-embed"></iframe>
+
+Still not happy? Check out [all tidal-midi questions on our Q&A platform](http://ask.tidalcycles.org/questions/scope:all/sort:activity-desc/tags:MIDI/page:1/)!

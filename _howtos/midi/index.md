@@ -10,6 +10,10 @@ You can use it using standard general MIDI, or use a synth-specific
 library - there currently exist libraries for the Volca Keys, Bass and
 Beats.
 
+## Prerequisites
+
+- [Haskell](https://www.haskell.org/platform/windows.html) (Windows users: make sure you get the **32bit** version!)
+
 ## Install
 
 To install TidalCycles MIDI support, just run this in a terminal window:

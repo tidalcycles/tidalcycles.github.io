@@ -22,5 +22,8 @@ often = sometimesBy 0.75
 rarely = sometimesBy 0.25
 almostNever = sometimesBy 0.1
 almostAlways = sometimesBy 0.9
+never = sometimesBy 0
+always = sometimesBy 1
 ~~~~
 
+(Technically, `never` and `always` use equivalent but different definitions internally for efficiency reasons.)

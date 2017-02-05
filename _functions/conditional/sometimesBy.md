@@ -25,5 +25,3 @@ almostAlways = sometimesBy 0.9
 never = sometimesBy 0
 always = sometimesBy 1
 ~~~~
-
-(Technically, `never` and `always` use equivalent but different definitions internally for efficiency reasons.)

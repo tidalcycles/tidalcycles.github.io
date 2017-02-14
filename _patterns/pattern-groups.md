@@ -3,7 +3,7 @@ category: pattern_groups
 layout: default
 ---
 
-Use Tidal's _square braces_ syntax to create a pattern grouping:
+You can use Tidal's _square braces_ syntax to create a pattern grouping:
 
 ~~~haskell
 d1 $ sound "[bd sn sn] cp"
@@ -31,6 +31,18 @@ patterns:
 d1 $ sound "[bd bd] [bd [sn [sn sn] sn] sn]"
 ~~~
 
+A shorthand for this kind of grouping is to place a period `.` between
+groups, rather than surrounding them in square brackets. We call this
+technique 'marking out feet'. For example these two patterns are equivalent:
+
+```
+d1 $ sound "bd bd . sn sn sn . bd sn"
+d1 $ sound "[bd bd] [sn sn sn] [bd sn]"
+```
+
+The former approach is often easier to type, but is a relatively new
+addition to TidalCycles, and so many examples will use the square brackets.
+
 ### Layering (Polyrhythms) Instead of Grouping
 
 You can also layer up several loops, by using commas to separate the
@@ -56,3 +68,15 @@ And of course you can use groupings inside of the layers:
 ~~~haskell
 d1 $ sound "[bd bd bd, [sn sn] cp, arpy [arpy [arpy arpy] arpy arpy], odx]"
 ~~~
+
+## Playing one step per cycle
+
+To specify a group where only one step is played per cycle, use angle
+brackets. For example:
+
+~~~haskell
+d1 $ sound "bd <arpy:1 arpy:2 arpy:3>"
+~~~
+
+The above will result in the sequence `bd arpy:1 bd arpy:2 bd arpy:3`,
+over three cycles.

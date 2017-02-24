@@ -13,4 +13,5 @@ Will play the first two sounds for 1/4 of a cycle, and the third for 1/2 of a cy
 multiply that duration.
 
 For softsynths, leaving `legato` unspecified causes SuperDirt to default to `legato "1"`.
+
 For samples, when leaving `legato` unspecified SuperDirt will play the sample for its full duration, whatever that might be.

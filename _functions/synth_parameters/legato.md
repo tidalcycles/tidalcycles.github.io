@@ -24,4 +24,6 @@ See also the [`sustain` parameter](sustain.md).
 
 &nbsp;
 
-[1]: SuperDirt normally receives messages from Tidal and calculates the inter-onset time automatically, but you can use the `delta` parameter to override this and control it directly.
+[1]: SuperDirt normally receives messages from Tidal and calculates the inter-onset time automatically, but you can 
+use the `delta` parameter to override this and control it directly.  The user-provided `delta` will then be multiplied
+by `legato` (if provided) as normal.

@@ -24,6 +24,6 @@ See also the [`sustain` parameter](sustain.md).
 
 &nbsp;
 
-[1]: [1] Tidal sends the inter-onset time (delta) to SuperDirt where it is used to calculate the sustain (total duration of a 
+[1]: Tidal sends the inter-onset time (delta) to SuperDirt where it is used to calculate the sustain (total duration of a 
 sound), but you can use the `delta` parameter to override this and control it directly.  The user-provided `delta` will then 
 be multiplied by `legato` (if provided) as normal.

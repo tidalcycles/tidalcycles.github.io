@@ -3,7 +3,7 @@ title: legato
 category: synth_parameters
 ---
 
-Controls the length of the sound relative to its "space" in the pattern - the time from the beginning of one
+Controls the length of the sound (called `sustain`) relative to its "space" in the pattern - the time from the beginning of one
 sound in the pattern to the beginning of the next - also known as the "inter-onset time"<sup>1</sup>.
 
 `legato "1"` means the sound will play for the duration of its "space" and then stop playing.  For example
@@ -24,6 +24,6 @@ See also the [`sustain` parameter](sustain.md).
 
 &nbsp;
 
-[1]: SuperDirt normally receives messages from Tidal and calculates the inter-onset time automatically, but you can 
-use the `delta` parameter to override this and control it directly.  The user-provided `delta` will then be multiplied
-by `legato` (if provided) as normal.
+[1]: [1] Tidal sends the inter-onset time (delta) to SuperDirt where it is used to calculate the sustain (total duration of a 
+sound), but you can use the `delta` parameter to override this and control it directly.  The user-provided `delta` will then 
+be multiplied by `legato` (if provided) as normal.

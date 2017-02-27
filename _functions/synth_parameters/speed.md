@@ -15,4 +15,4 @@ d1 $ s "arpy*4" # up "0 4 7 0"
 will play the "arpy" sample at the orginal speed, then up 4 semitones (a third), then up 7 semitones (a fifth), 
 then once more at the original speed.
 
-The behavior of `speed` can be changed by the [`unit` parameter](unit).
+The behavior of `speed` can also be changed by the [`unit` parameter](unit).

@@ -77,6 +77,8 @@
       title: Synth Parameters
     - name: combining_parameters
       title: Combining Parameters
+    - name: operators
+      title: Operators
     - name: utility
       title: Utility
 - name: videos

@@ -8,11 +8,10 @@ TidalCycles (or Tidal for short) is a language for
 [live coding](http://toplap.org/) pattern. It allows you to make
 musical patterns with text, describing sequences and ways of
 transforming and combining them, exploring complex interactions
-between simple parts.
+between simple parts. Here's a playlist of performances with Tidal
+from our youtube channel:
 
-To see and hear Tidal in action, check out
-[some videos](http://tidal.lurk.org/videos.html) of performances and
-demos.
+<iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?list=PLybSFICi4UliK17U6rxPneXAyxvmGAe5T" frameborder="0" allowfullscreen></iframe>
 
 Tidal allows you to express music with very flexible timing, providing
 a little language for describing patterns as step sequences (which

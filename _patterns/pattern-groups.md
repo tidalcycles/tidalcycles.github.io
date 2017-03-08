@@ -3,13 +3,13 @@ category: pattern_groups
 layout: default
 ---
 
-You can use Tidal's _square braces_ syntax to create a pattern grouping:
+You can use Tidal's _square brackets_ syntax to create a pattern grouping:
 
 ~~~haskell
 d1 $ sound "[bd sn sn] cp"
 ~~~
 
-Square braces allow several events to be played inside of a single
+Square brackets allow several events to be played inside of a single
 step. You can think of the above pattern as having two steps, with the
 first step broken down into a subpattern, which has three
 steps. Practically, this means you can create denser sub-divisions of

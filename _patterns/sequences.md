@@ -15,7 +15,7 @@ d1 $ sound "bd"
 ~~~
 
 > Evaluate the above code in the Atom (or Emacs) editor by pressing
-> `Ctrl+Enter`
+> `Ctrl+Enter`. 
 
 In the code above, `sound` tells us we're making a pattern of sound
 samples, and `"bd"` is a pattern that contains a single sound. `bd` is

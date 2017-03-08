@@ -24,6 +24,8 @@
       title: Modifying Sequences With Functions
     - name: effects
       title: Using Effects
+    - name: shorthand
+      title: Shorthand for numerical patterns
     - name: speed
       title: Sample Playback Speed (and Pitch)
     - name: bjorklund

@@ -4,24 +4,19 @@ layout: default
 weight: -9
 ---
 
-<div class="embed-responsive embed-responsive-16by9">
-  <iframe width="560"
-          height="315"
-          src="https://www.youtube.com/embed/videoseries?list=PLybSFICi4UliJ17GE1cIZym16VsFqsOfa"
-          frameborder="0"
-          allowfullscreen>
-  </iframe>
-</div>
-
----
-
 The following installation instructions work for Linux, MacOS and
 Windows.
+
+There is an <a
+href="https://davidgranstrom.github.io/tidal-bootstrap/">automated
+script for MacOS X users</a>, along with a <a
+href="https://www.youtube.com/watch?v=dJTfGv2sT-w&t=2s">helpful
+walkthrough video</a>, as an alternative to the below.
 
 ### Pre-requisites
 
 You first need to install the following four pieces of software,
-Haskell, Atom, SuperCollider, and Git. You can download them from their
+Haskell, Atom, and SuperCollider. You can download them from their
 websites - click on each of the below:
 
 * [Haskell](https://www.haskell.org/platform/)
@@ -46,15 +41,14 @@ in SuperCollider.
 > the `SC3plugins` directory.
 
 > If you are installing on Linux or Mac you need the SuperCollider
-> sc3-plugins for using the synths included in SuperDirt. If you skip
-> this step many of the synths included with SuperDirt and referenced
-> in documentation will not work.
-> You can either install the latest version from
-> [git](https://github.com/supercollider/sc3-plugins) according to the
-> instructions there, or if you are using Linux, you may find it in
-> your package manager. On Fedora the package is called
+> sc3-plugins for using many of the synths included in SuperDirt. Most
+> of the examples in the documentation will still work, so you could
+> skip this step and return to it later. You can either install the
+> latest version from
+> [github](https://github.com/supercollider/sc3-plugins) according to
+> the instructions there, or if you are using Linux, you may find it
+> in your package manager. On Fedora the package is called
 > `supercollider-sc3-plugins`.
-
 
 Once you have the above applications downloaded and installed, you
 will need to follow the following three steps to complete the

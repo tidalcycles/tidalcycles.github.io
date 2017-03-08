@@ -9,7 +9,7 @@ TidalCycles (or Tidal for short) is a language for
 musical patterns with text, describing sequences and ways of
 transforming and combining them, exploring complex interactions
 between simple parts. Here's a playlist of performances with Tidal
-from our youtube channel:
+from <a href="http://youtube.com/c/tidalcycles">our youtube channel</a>:
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?list=PLybSFICi4UliK17U6rxPneXAyxvmGAe5T" frameborder="0" allowfullscreen></iframe>
 

@@ -13,7 +13,7 @@ Square braces allow several events to be played inside of a single
 step. You can think of the above pattern as having two steps, with the
 first step broken down into a subpattern, which has three
 steps. Practically, this means you can create denser sub-divisions of
-samples:
+cycles:
 
 ~~~haskell
 d1 $ sound "bd [sn sn]"
@@ -24,8 +24,8 @@ d1 $ sound "[bd bd bd] [sn sn]"
 d1 $ sound "[bd bd bd bd] [sn]"
 ~~~
 
-You can even nest groups inside groups to create very dense and complex
-patterns:
+You can even nest groups inside groups to create increasingly dense
+and complex patterns:
 
 ~~~haskell
 d1 $ sound "[bd bd] [bd [sn [sn sn] sn] sn]"
@@ -57,7 +57,8 @@ cp`.  Note that the first sequence only has three events, and the
 second one has four.  Because tidal ensures both loops fit inside the
 same cyclic duration, you end up with a polyrhythm.
 
-You can layer any number of patterns to create many polyrhythms:
+You can layer any number of these subpatterns to create many
+polyrhythms:
 
 ~~~haskell
 d1 $ sound "[bd bd bd, sn cp sn cp, arpy arpy, odx]"

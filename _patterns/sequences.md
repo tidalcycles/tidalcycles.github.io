@@ -19,18 +19,20 @@ d1 $ sound "bd"
 
 In the code above, `sound` tells us we're making a pattern of sound
 samples, and `"bd"` is a pattern that contains a single sound. `bd` is
-a sample of a bass drum.  Samples live inside the `/samples` folder
-which came with SuperDirt, and each sub-folder under `/samples`
+a sample of a bass drum.  Samples live inside the `Dirt-Samples`
+folder which came with SuperDirt, and each sub-folder under that
 corresponds to a sample name (like `bd`).
 
-> To find the SuperDirt samples on your system, run the command
-> `Quarks.folder` in SuperCollider (paste it in, press shift-enter),
-> and the 'quark' plugin path will be shown in the postwindow on the
-> right. You'll find the samples in the Dirt-Samples subfolder.
+> To find the SuperDirt samples on your system, in the SuperCollider
+> IDE select the `File > Open User Support Directory` menu item. From
+> there, open `downloaded-quarks` and finally `Dirt-Samples` in
+> there. You should find a lot of folders, each one is a sample bank
+> containing standard `wav` files. Feel free to make new folders and
+> add your own sounds to it.
 
-We can pick a different sample in the `bd` folder by adding a colon (`:`) then
-a number. For example this picks the fourth bass drum (it counts from zero,
-so `:3` gives you the fourth sound in the folder):
+We can pick a different sample in the `bd` folder by adding a colon
+(`:`) then a number. For example, this picks the fourth bass drum (it
+counts from zero, so `:3` gives you the fourth sound in the folder):
 
 ~~~haskell
 d1 $ sound "bd:3"
@@ -52,9 +54,6 @@ d1 $ sound "bd sn"
 
 When you run the code above, you are replacing the previous pattern with another
 one on-the-fly. Congratulations, you're live coding.
-
-> You can find (and if you like, add to) the samples in the samples folder
-> inside the Dirt folder. They're in 'wav' format.
 
 ### Playing More Than One Sequence
 
@@ -79,8 +78,8 @@ d3 $ sound "arpy"
 
 A cycle is the main "loop" of time in Tidal. The cycle repeats forever
 in the background, even when you've stopped samples from playing. The
-cycle's duration always stays the same unless you modify it with `cps`
-or `bps`, we'll cover this later.
+cycle's duration always stays the same unless you modify it with
+`cps`, we'll cover this later.
 
 > Note that this omniprescent cyclic looping doesn't necessary
 > constrain you, for example it's common to stretch a pattern outside

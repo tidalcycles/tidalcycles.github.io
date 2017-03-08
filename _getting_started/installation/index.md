@@ -15,14 +15,14 @@ walkthrough video</a>, as an alternative to the below.
 
 ### Pre-requisites
 
-You first need to install the following four pieces of software,
+You first need to install the following three pieces of software,
 Haskell, Atom, and SuperCollider. You can download them from their
 websites - click on each of the below:
 
 * [Haskell](https://www.haskell.org/platform/)
 * [Atom](https://atom.io/)
 * [SuperCollider](http://supercollider.github.io/download) (version 3.7 or later)
-* [Git](https://git-scm.com/)
+* You may also need to install [Git](https://git-scm.com/)
 
 For the curious: Haskell is the programming language that TidalCycles
 is written in, Atom is a programmers' editor that you will use to

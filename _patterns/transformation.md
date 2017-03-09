@@ -79,5 +79,6 @@ There are many types of functions that help you change patterns. Some of them
 re-order sequences, some alter time, some provide conditional logic, and some
 can help compose more complex patterns.
 
-All of the functions available in Tidal can be found on the
+We'll introduce many of the core functions in this introduction, and a
+more complete list of functions available in Tidal can be found on the
 [Reference page](/functions.html).

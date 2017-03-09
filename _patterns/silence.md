@@ -3,8 +3,9 @@ category: silence
 layout: default
 ---
 
-An empty pattern is defined as `silence`, so if you want to 'switch
-off' a pattern, you can just set it to that:
+At this point you probably want to know how to *stop* the patterns you
+started. An empty pattern is defined as `silence`, so if you want to
+'switch off' a pattern, you can just set it to that:
 
 ~~~~ haskell
 d1 silence

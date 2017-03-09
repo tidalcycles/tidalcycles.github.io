@@ -2,4 +2,4 @@
 title: bandq
 category: synth_parameters
 ---
-a pattern of numbers from 0 to 1. Sets the q-factor of the band-pass filter.
+a pattern of numbers that set the q-factor of the band-pass filter.  Higher values (larger than 1) narrow the band-pass. Has the shorthand `bpq`.

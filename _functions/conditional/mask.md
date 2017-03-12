@@ -14,7 +14,7 @@ Consider this, kind of messy rhythm without any rests.
 ~~~haskell
 d1 $ sound (slowcat ["sn*8", "[cp*4 bd*4, hc*5]"]) # n (run 8)
 ~~~
-{: .render-lines }
+{: .render }
 
 If we apply a mask to it
 
@@ -23,7 +23,7 @@ d1 $ s (mask ("1 1 1 ~ 1 1 ~ 1" :: Pattern Bool)
   (slowcat ["sn*8", "[cp*4 bd*4, bass*5]"] ))
   # n (run 8) 
 ~~~
-{: .render-block }
+{: .render }
 
 Due to the use of `slowcat` here, the same mask is first applied to `"sn*8"` and in the next cycle to `"[cp*4 bd*4, hc*5]".
 
@@ -34,7 +34,7 @@ d1 $ s (mask ("1 ~ 1 ~ 1 1 ~ 1" :: Pattern Bool)
   (slowcat ["can*8", "[cp*4 sn*4, jvbass*16]"] ))
   # n (run 8) 
 ~~~
-{: .render-block }
+{: .render }
 
 Detail: It is currently needed to explicitly _tell_ Tidal that the mask itself is a `Pattern Bool` as it cannot infer this by itself, otherwise it will complain as it does not know how to interpret your input.
 

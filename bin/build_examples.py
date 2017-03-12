@@ -11,6 +11,7 @@ root = "/home/alex/tidalcycles.github.io/_site/"
 dnmatcher = re.compile(r'^\s*d[0-9]\s*(\$\s*)?')
 crmatcherpre = re.compile(r'^[\s\n\r]*')
 crmatcherpost = re.compile(r'[\s\n\r]*$')
+sizematcher = re.compile(r'\bsize\b')
 
 outpath = "../patterns/"
 
@@ -26,6 +27,7 @@ for fn in glob.glob(os.path.join(root, "*.html")):
             code = crmatcherpost.sub('', code)
             print ">>" + code + "<<"
             digest = hashlib.md5(code).hexdigest()
+            code = sizematcher.sub('Sound.Tidal.Context.size', code)
             print "digest:" + digest
             outfn = outpath + digest + ".mp3"
             print "outfn: " + outfn

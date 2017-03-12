@@ -13,6 +13,7 @@ from the parts. This could also be called "sampling with replacement".  For exam
 ~~~~ haskell
 d1 $ sound $ scramble 3 "bd sn hh"
 ~~~~
+{: .render }
 
 will sometimes play `"sn bd hh"` or `"hh sn bd"`, but can also play `"bd sn bd"` or `"hh hh hh"`, because it can make
 any random combination of the three parts.

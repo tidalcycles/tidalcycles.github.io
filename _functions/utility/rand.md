@@ -8,3 +8,4 @@ category: utility
 ~~~~haskell
 d1 $ sound "bd*8" # pan rand
 ~~~~
+{: .render }

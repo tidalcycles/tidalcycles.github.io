@@ -14,7 +14,12 @@ Example:
 
 ~~~~ haskell
 d1 $ foldEvery [3, 4, 5] (density 2) $ sound "bd sn kurt"
+~~~
+{: .render}
 
--- this is equal to:
+this is equal to:
+
+~~~haskell
 d1 $ every 3 (density 2) $ every 4 (density 2) $ every 5 (density 2) $ sound "bd sn kurt"
 ~~~~
+{: .render}

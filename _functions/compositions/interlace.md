@@ -18,3 +18,4 @@ Example:
 ~~~~ haskell
 d1 $ interlace (sound  "bd sn kurt") (every 3 rev $ sound  "bd sn:2")
 ~~~~
+{: .render}

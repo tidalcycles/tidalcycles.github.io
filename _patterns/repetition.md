@@ -13,6 +13,7 @@ as you'd like:
 ~~~haskell
 d1 $ sound "bd*2"
 ~~~
+{: .render}
 
 > This is the same as doing `d1 $ sound "bd bd"`
 
@@ -24,6 +25,7 @@ less often:
 ~~~haskell
 d1 $ sound "bd/2"
 ~~~
+{: .render}
 
 The code above uses `/2` to make a sample play half as often, or once every
 2nd cycle.
@@ -32,8 +34,12 @@ Using different numbers works as you'd expect:
 
 ~~~haskell
 d1 $ sound "bd*3" -- plays the bd sample three times each cycle
+~~~
+{: .render}
+~~~haskell
 d1 $ sound "bd/3" -- plays the bd samples only once each third cycle
 ~~~
+{: .render}
 
 ### Using * and / on Groups
 
@@ -41,16 +47,30 @@ You can apply the `*` and `/` symbols on groups of patterns:
 
 ~~~haskell
 d1 $ sound "[bd sn]*2 cp"
+~~~
+{: .render}
+~~~haskell
 d1 $ sound "[bd sn] cp/2"
+~~~
+{: .render}
+~~~haskell
 d1 $ sound "[[bd sn] cp]*2" -- speeds up the entire pattern by 2
+~~~
+{: .render}
+~~~haskell
 d1 $ sound "[[bd sn] cp]/2" -- slows down the entire pattern by 2
 ~~~
+{: .render}
 
 You can also use the symbols on nested groups to create more complex
 rhythms:
 
 ~~~haskell
 d1 $ sound "[bd sn sn*3]/2 [bd sn*3 bd*4]/3"
+~~~
+{: .render}
+~~~haskell
 d1 $ sound "[bd [sn sn]*2]/2 [bd [sn bd]/2]*2"
 ~~~
+{: .render}
 

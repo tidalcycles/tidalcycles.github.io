@@ -14,12 +14,14 @@ Taking a simple high hat loop as an example:
 ~~~~ haskell
 d1 $ sound "ho ho:2 ho:3 hc"
 ~~~~
+{: .render }
 
 We can slow it down by different amounts, such as by a half:
 
 ~~~~ haskell
 d1 $ slow 2 $ sound "ho ho:2 ho:3 hc"
 ~~~~
+{: .render }
 
 Or by four thirds (i.e. speeding it up by a third; `4%3` means four over
 three):
@@ -27,6 +29,7 @@ three):
 ~~~~ haskell
 d1 $ slow (4%3) $ sound "ho ho:2 ho:3 hc"
 ~~~~
+{: .render }
 
 But if we use `spread`, we can make a pattern which alternates between
 the two speeds:
@@ -34,6 +37,7 @@ the two speeds:
 ~~~~ haskell
 d1 $ spread slow [2,4%3] $ sound "ho ho:2 ho:3 hc"
 ~~~~
+{: .render }
 
 There is a nice trick you can use here -- if you pass ($) as the
 function to spread values over, you can put functions in the list
@@ -43,6 +47,7 @@ instead of values. For example:
 d1 $ spread ($) [density 2, rev, slow 2, striate 3, (# speed "0.8")]
     $ sound "[bd*2 [~ bd]] [sn future]*2 cp jvbass*4"
 ~~~~
+{: .render }
 
 Above, the pattern will have these transforms applied to it, one at a time, per cycle:
 
@@ -71,19 +76,22 @@ Taking a simple high hat loop as an example:
 ~~~~ haskell
 d1 $ sound "ho ho:2 ho:3 hc"
 ~~~~
+{: .render }
 
 We can slow it down by different amounts, such as by a half:
 
 ~~~~ haskell
-  d1 $ slow 2 $ sound "ho ho:2 ho:3 hc"
+d1 $ slow 2 $ sound "ho ho:2 ho:3 hc"
 ~~~~
+{: .render }
 
 Or by four thirds (i.e. speeding it up by a third; `4%3` means four over
 three):
 
 ~~~~ haskell
-  d1 $ slow (4%3) $ sound "ho ho:2 ho:3 hc"
+d1 $ slow (4%3) $ sound "ho ho:2 ho:3 hc"
 ~~~~
+{: .render }
 
 But if we use `spread`, we can make a pattern which alternates between
 the two speeds:
@@ -91,12 +99,14 @@ the two speeds:
 ~~~~ haskell
 d1 $ spread slow [2,4%3] $ sound "ho ho:2 ho:3 hc"
 ~~~~
+{: .render }
 
 There's a version of this function, `spread'` (pronounced "spread prime"), which takes a *pattern* of parameters, instead of a list:
 
 ~~~~ haskell
 d1 $ spread' slow "2 4%3" $ sound "ho ho:2 ho:3 hc"
 ~~~~
+{: .render }
 
 This is quite a messy area of Tidal - due to a slight difference of
 implementation this sounds quite different! One advantage of
@@ -105,11 +115,13 @@ using `spread'` though is that you can provide polyphonic parameters, e.g.:
 ~~~~ haskell
 d1 $ spread' slow "[2 4%3, 3]" $ sound "ho ho:2 ho:3 hc"
 ~~~~
+{: .render }
 
 There's another version of `spread` called `fastspread`. True to its name, the result is faster, because it squeezes all the variations into one cycle. As the following gives two parameters to `slow`, it goes twice as fast as if you'd used `spread`:
 
 ~~~~ haskell
 d1 $ fastspread slow [2,4%3] $ sound "ho ho:2 ho:3 hc"
 ~~~~
+{: .render }
 
 In previous versions of Tidal, `spread` was actually the same as `fastspread`. Now, `slowspread` is an alias of `spread`, but you may as well type the latter, as it's shorter!

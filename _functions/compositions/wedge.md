@@ -15,3 +15,4 @@ remainder of the pattern cycle.
 ~~~~haskell
 d1 $ wedge (1/4) (sound "bd*2 arpy*3 cp sn*2") (sound "odx [feel future]*2 hh hh")
 ~~~~
+{: .render}

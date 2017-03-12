@@ -15,5 +15,6 @@ cycle), and the vowel pattern three times as fast:
 d1 $ sound (density 2 "bd sn kurt")
    # density 3 (vowel "a e o")
 ~~~~
+{: .render }
 
 Also, see `slow`.

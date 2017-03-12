@@ -10,6 +10,7 @@ example, the following reverses the pattern on the righthand side:
 ~~~~ haskell
 d1 $ slow 32 $ jux (rev) $ striate' 32 (1/16) $ sound "bev"
 ~~~~
+{: .render }
 
 When passing pattern transforms to functions like `jux` and `every`,
 it's possible to chain multiple transforms together with `.`, for
@@ -19,6 +20,7 @@ pattern in the righthand channel:
 ~~~~ haskell
 d1 $ slow 32 $ jux ((# speed "0.5") . rev) $ striate' 32 (1/16) $ sound "bev"
 ~~~~
+{: .render }
 
 With `jux`, the original and effected versions of the pattern are
 panned hard left and right (i.e., panned at 0 and 1). This can be a
@@ -29,6 +31,7 @@ centre. For example:
 ~~~~ haskell
 d1 $ juxBy 0.5 (density 2) $ sound "bd sn:1"
 ~~~~
+{: .render }
 
 In the above, the two versions of the pattern would be panned at 0.25
 and 0.75, rather than 0 and 1.

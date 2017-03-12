@@ -12,4 +12,4 @@ spin :: Int n -> Pattern a -> Pattern a
 ~~~~haskell
 d1 $ slow 3 $ spin 4 $ sound "drum*3 tabla:4 [arpy:2 ~ arpy] [can:2 can:3]"
 ~~~~
-
+{: .render}

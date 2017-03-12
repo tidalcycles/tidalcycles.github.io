@@ -8,6 +8,7 @@ Ok, remember when we started adding effects:
 ~~~haskell
 d1 $ sound "bd sn drum arpy" # pan "0 1 0.25 0.75"
 ~~~
+{: .render}
 
 What we're actually doing in the code above is
 _combining two patterns together_: the `sound` pattern, and the `pan` pattern.
@@ -19,6 +20,7 @@ We can actually swap sides and it sounds the same:
 ~~~haskell
 d1 $ pan "0 1 0.25 0.75" # sound "bd sn drum arpy"
 ~~~
+{: .render}
 
 As we touched on earlier, the main thing to know when combining
 patterns like this is that the left-most pattern determines the
@@ -29,6 +31,7 @@ played:
 ~~~haskell
 d1 $ pan "0 1 0.25" # sound "bd sn drum arpy"
 ~~~
+{: .render}
 
 In the code above, the `pan` pattern determines the rhythm because it is the
 left-most pattern. The `sound` pattern now only determines what samples are
@@ -58,6 +61,7 @@ unique things:
 ~~~haskell
 d1 $ up "0 0*2 0*4 1" # sound "[arpy, bass2, bd]"
 ~~~
+{: .render}
 
 Above, the `sound` pattern is merely specifying three samples to play
 on every note.  Both the rhythm and pitch of these notes is defined by

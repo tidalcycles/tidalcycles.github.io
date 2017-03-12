@@ -10,5 +10,6 @@ if you want a rest, or gap of silence, in your pattern? You can use the
 ~~~haskell
 d1 $ sound "bd bd ~ bd"
 ~~~
+{: .render}
 
 Think of the `~` as an 'empty' step in a sequence, that just produces silence.

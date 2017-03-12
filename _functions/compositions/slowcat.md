@@ -12,6 +12,13 @@ original duration. `slowcat` is similar to `cat`, except that pattern lengths ar
 
 ~~~~haskell
 d1 $ slowcat [sound "bd*2 sn", sound "arpy jvbass*2"]
+~~~
+{: .render}
+~~~haskell
 d1 $ slowcat [sound "bd*2 sn", sound "arpy jvbass*2", sound "drum*2"]
+~~~
+{: .render}
+~~~haskell
 d1 $ slowcat [sound "bd*2 sn", sound "jvbass*3", sound "drum*2", sound "ht mt"]
 ~~~~
+{: .render}

@@ -13,6 +13,7 @@ every cycle:
 ~~~haskell
 d1 $ sound "bd"
 ~~~
+{: .render}
 
 > Evaluate the above code in the Atom (or Emacs) editor by pressing
 > `Ctrl+Enter`. 
@@ -37,6 +38,7 @@ counts from zero, so `:3` gives you the fourth sound in the folder):
 ~~~haskell
 d1 $ sound "bd:3"
 ~~~
+{: .render}
 
 If you specify a number greater than the number of samples in a
 folder, then Tidal just "wraps" around back to the first sample again
@@ -51,6 +53,7 @@ gives you a pattern of bass drum then snare:
 ~~~haskell
 d1 $ sound "bd sn"
 ~~~
+{: .render}
 
 When you run the code above, you are replacing the previous pattern with another
 one on-the-fly. Congratulations, you're live coding.
@@ -62,11 +65,16 @@ two or more connections to the synthesizer:
 
 ~~~haskell
 d1 $ sound "bd sn"
-
+~~~
+{: .render}
+~~~haskell
 d2 $ sound "hh hh hh hh"
-
+~~~
+{: .render}
+~~~haskell
 d3 $ sound "arpy"
 ~~~
+{: .render}
 
 > NOTE: each connection must be evaluated separately in your text
 > editor.  That is, you must press `Ctrl+Enter` three times, once for
@@ -91,10 +99,16 @@ The patterns below all loop over the same amount of time:
 
 ~~~haskell
 d1 $ sound "bd sn"
+~~~
+{: .render}
+~~~haskell
 d1 $ sound "bd sn hh cp mt arpy drum"
+~~~
+{: .render}
+~~~haskell
 d1 $ sound "bd sn hh cp mt arpy drum odx bd arpy bass2 feel future"
 ~~~
-{: .render-lines}
+{: .render}
 
 Note how the more steps you add to the pattern, the faster it goes to
 fit them all in. No matter how many samples you put in a pattern in

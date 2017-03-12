@@ -17,6 +17,7 @@ d1 $ cat [sound "bd sn:2" # vowel "[a o]/2",
           sound "casio casio:1 casio:2*2"
          ]
 ~~~
+{: .render}
 
 The `cat` function squeezes all the patterns into the space of one.
 The more patterns you add to the list, the faster each pattern will be played so
@@ -28,6 +29,7 @@ d1 $ cat [sound "bd sn:2" # vowel "[a o]/2",
           sound "drum drum:2 drum:3 drum:4*2"
          ]
 ~~~
+{: .render}
 
 `slowcat` will maintain the original playback speed of the patterns:
 
@@ -37,6 +39,7 @@ d1 $ slowcat [sound "bd sn:2" # vowel "[a o]/2",
               sound "drum drum:2 drum:3 drum:4*2"
              ]
 ~~~
+{: .render}
 
 `slowcat` is a great way to create a linear sequence of patterns (a sequence
 of sequences), giving a larger form to multiple patterns.
@@ -55,6 +58,7 @@ d1 $ stack [
   sound (samples "arpy*8" (run 16))
 ]
 ~~~
+{: .render}
 
 This is useful if you want to apply functions or effects on the entire stack:
 
@@ -65,3 +69,4 @@ d1 $ every 4 (slow 2) $ whenmod 5 3 (# speed "0.75 1.5") $ stack [
   sound (samples "arpy*8" (run 16))
 ] # speed "[[1 0.8], [1.5 2]*2]/3"
 ~~~
+{: .render}

@@ -16,3 +16,4 @@ d1 $ seqP [
   (16, 128, sound (samples "arpy*8" (run 16)))
 ]
 ~~~~
+{: .render}

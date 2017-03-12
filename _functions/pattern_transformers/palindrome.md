@@ -11,3 +11,4 @@ Example:
 ~~~~ haskell
 d1 $ palindrome $ sound "hh*2 [sn cp] cp future*4"
 ~~~~
+{: .render }

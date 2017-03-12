@@ -8,6 +8,7 @@ So far we've only been working with *discrete* patterns, by which we mean patter
 ~~~haskell
 d1 $ sound "bd*16" # pan sine1
 ~~~
+{: .render}
 
 The code above uses the `sine1` function to generate a sine
 wave oscillation of values between 0 and 1 for the `pan` values, so the bass drum moves smoothly between the left and right speakers.
@@ -26,16 +27,27 @@ Just like discrete patterns, you can control the speed of continuous patterns wi
 
 ~~~haskell
 d1 $ sound "bd*16" # pan (slow 8 $ saw1)
+~~~
+{: .render}
+~~~haskell
 d1 $ sound "bd*8 sn*8" # pan (density 1.75 $ tri1)
+~~~
+{: .render}
+~~~haskell
 d1 $ sound "bd*8 sn*8" # speed (density 2 $ tri)
 ~~~
+{: .render}
 
 You can also combine them in different ways:
 
 ~~~haskell
 d1 $ sound "bd*16" # pan (slowcat [sine1, saw1, square1, tri1])
+~~~
+{: .render}
+~~~haskell
 d1 $ sound "sn:2*16" # (speed $ scale 0.5 3 sine1) |*| (speed $ slow 4 saw1)
 ~~~
+{: .render}
 
 ### Scaling Oscillation
 
@@ -44,8 +56,12 @@ between two values:
 
 ~~~haskell
 d1 $ sound "bd*8 sn*8" # speed (scale 1 3 $ tri1)
+~~~
+{: .render}
+~~~haskell
 d1 $ sound "bd*8 sn*8" # speed (slow 4 $ scale 1 3 $ tri1)
 ~~~
+{: .render}
 
 You can also scale to negative values, but make sure to wrap negative values in
 parens (otherwise the interpreter thinks you're trying to subtract `2` from something):
@@ -53,13 +69,18 @@ parens (otherwise the interpreter thinks you're trying to subtract `2` from some
 ~~~haskell
 d1 $ sound "bd*8 sn*8" # speed (scale (-2) 3 $ tri1)
 ~~~
+{: .render}
 
 This technique works well for a slow low-pass filter cutoff:
 
 ~~~haskell
 d1 $ sound "hh*32" # cutoff (scale 300 1000 $ slow 4 $ sine1) # resonance "0.4"
+~~~
+{: .render}
+~~~haskell
 d1 $ sound "hh*32" # cutoff (scale 0.001 0.1 $ slow 4 $ sine1) # resonance "0.1"
 ~~~
+{: .render}
 
 > NOTE 1: If you're using SuperDirt to produce sound (the default install choice), 
 > `cutoff` is specified in Hertz, as in the first example above. 

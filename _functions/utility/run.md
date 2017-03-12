@@ -8,3 +8,4 @@ category: utility
 ~~~~haskell
 d1 $ sound (samples "drum*4" (run 5))
 ~~~~
+{: .render }

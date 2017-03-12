@@ -8,3 +8,4 @@ category: utility
 ~~~~haskell
 d1 $ sound "arpy" # up "5 3"
 ~~~~
+{: .render }

@@ -18,3 +18,4 @@ as dense:
 ~~~~ haskell
 d1 $ whenmod 8 4 (density 2) (sound "bd sn kurt")
 ~~~~
+{: .render }

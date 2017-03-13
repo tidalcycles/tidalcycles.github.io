@@ -65,7 +65,7 @@
     <div class="jumbotron tidal-teaser">
         <div class="container">
             <div class="row">
-                <div class="col-lg-7 col-md-6 col-sm-8 col-xs-10">
+              <div class="col-lg-7 col-md-6 col-sm-8 col-xs-10">
                     {{ content }}
 
                     <p>
@@ -86,6 +86,7 @@
                 <div class="page-header">
                     <h1>{{ page.title }}</h1>
                 </div>
+		<p style="border: 0.25em solid red; padding: 0.5em 2em;"><strong>This is the development server - the below may be incorrect or refer to a future version of Tidal!</strong></p>
 
                 {{ content }} {% for section_meta in sections %} {% assign section = grps | where: "name", section_meta.name | first %} {% assign docs = section.items | sort: "title" | sort: "weight", "last" %}
                 <section>

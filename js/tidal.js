@@ -247,38 +247,44 @@ var MD5 = function (string) {
 }
 
 $(function() {
+    var audioElements = [];
    $(".render").each(function() {
-      var code = $(this).text();
-      code = code.replace(/^[\r\n\s]*/g, "");
-      code = code.replace(/[\r\n\s]*$/g, "");
-	  var digest = MD5(code);
-      console.log(">> " + code + "<<");
-      console.log("digest: " + digest);
-      var h = '<button class="play btn btn-default" id="play-' + digest + '">play</button>';
-      $(this).prepend(h);
+       var code = $(this).text();
+       code = code.replace(/^[\r\n\s]*/g, "");
+       code = code.replace(/[\r\n\s]*$/g, "");
+       var digest = MD5(code);
+       console.log(">> " + code + "<<");
+       console.log("digest: " + digest);
+       var h = '<button class="play btn btn-default" id="play-' + digest + '">play</button>';
+       $(this).prepend(h);
 
-      var audioElement = document.createElement('audio');
-      audioElement.setAttribute('src', '/patterns/' + digest + ".mp3");
+       var audioElement = document.createElement('audio');
+       audioElements.push(audioElement);
+       audioElement.setAttribute('src', '/patterns/' + digest + ".mp3");
 
-    audioElement.addEventListener('ended', function() {
-        $('#play-'+digest).text("play");
-    }, false);
-    audioElement.on("play", function() { $('#play-'+digest).text("stop"); });
-    audioElement.on("pause", function() { $('#play-'+digest).text("play"); });
+       audioElement.addEventListener('ended', function() {
+           $('#play-'+digest).text("play");
+       }, false);
+       audioElement.addEventListener('play', function() {
+           $('#play-'+digest).text("stop");
+       });
+       audioElement.addEventListener('pause', function() {
+           $('#play-'+digest).text("play");
+       });
 
-    $('#play-'+digest).click(function() {
-      $("audio").each(function(){ this.pause(); });
-      console.log("play " + '/patterns/' + digest + ".mp3")
-	  if (audioElement.paused) {
-  	    console.log("play");
-            audioElement.play();	
-	  }
-	  else {
-	    console.log("pause");
-	    audioElement.pause();
-	  }
-    });
-  });
+       $('#play-'+digest).click(function() {
+          audioElements.forEach(function(audio){ audioElement != audio && audio.pause(); });
+           console.log("play " + '/patterns/' + digest + ".mp3");
+	   if (audioElement.paused) {
+  	       console.log("play");
+               audioElement.play();
+	   }
+	   else {
+	       console.log("pause");
+	       audioElement.pause();
+	   }
+       });
+   });
 });
 
 

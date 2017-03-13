@@ -254,7 +254,7 @@ $(function() {
 	  var digest = MD5(code);
       console.log(">> " + code + "<<");
       console.log("digest: " + digest);
-      var h = '<button class="play" id="play-' + digest + '">play</button>';
+      var h = '<button class="play btn btn-default" id="play-' + digest + '">play</button>';
       $(this).prepend(h);
 
       var audioElement = document.createElement('audio');
@@ -263,18 +263,19 @@ $(function() {
     audioElement.addEventListener('ended', function() {
         $('#play-'+digest).text("play");
     }, false);
+    audioElement.on("play", function() { $('#play-'+digest).text("stop"); });
+    audioElement.on("pause", function() { $('#play-'+digest).text("play"); });
 
     $('#play-'+digest).click(function() {
+      $("audio").each(function(){ this.pause(); });
       console.log("play " + '/patterns/' + digest + ".mp3")
 	  if (audioElement.paused) {
   	    console.log("play");
-        audioElement.play();
-		$('#play-'+digest).text("stop");
+            audioElement.play();	
 	  }
 	  else {
 	    console.log("pause");
-		audioElement.pause();
-		$('#play-'+digest).text("play");
+	    audioElement.pause();
 	  }
     });
   });

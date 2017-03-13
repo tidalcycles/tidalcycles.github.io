@@ -65,16 +65,11 @@ two or more connections to the synthesizer:
 
 ~~~haskell
 d1 $ sound "bd sn"
-~~~
-{: .render}
-~~~haskell
+
 d2 $ sound "hh hh hh hh"
-~~~
-{: .render}
-~~~haskell
+
 d3 $ sound "arpy"
 ~~~
-{: .render}
 
 > NOTE: each connection must be evaluated separately in your text
 > editor.  That is, you must press `Ctrl+Enter` three times, once for

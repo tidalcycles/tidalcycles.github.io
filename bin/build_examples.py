@@ -25,14 +25,14 @@ for fn in glob.glob(os.path.join(root, "*.html")):
             code = pattern.get_text()
             code = crmatcherpre.sub('', code)
             code = crmatcherpost.sub('', code)
-            print ">>" + code + "<<"
             digest = hashlib.md5(code).hexdigest()
             code = sizematcher.sub('Sound.Tidal.Context.size', code)
-            print "digest:" + digest
             outfn = outpath + digest + ".mp3"
-            print "outfn: " + outfn
 
             if (not os.path.exists(outfn)):
+                print "building outfn: " + outfn
+                print "digest:" + digest
+                print "code >>" + code + "<<"
                 code = dnmatcher.sub('', code)
             
                 p = Popen(["./runpattern", outfn], stdout=PIPE, stdin=PIPE, stderr=STDOUT)

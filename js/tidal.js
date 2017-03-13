@@ -244,47 +244,74 @@ var MD5 = function (string) {
    	var temp = WordToHex(a)+WordToHex(b)+WordToHex(c)+WordToHex(d);
 
    	return temp.toLowerCase();
-}
+};
 
-$(function() {
-    var audioElements = [];
+var hashExample = function(code) {
+    var digest;
+    code = code
+        .replace(/^[\r\n\s]*/g, "")
+        .replace(/[\r\n\s]*$/g, "");
+    digest = MD5(code);
+    console.log(">> " + code + "<<");
+    console.log("digest: " + digest);
+    return digest;
+};
+
+$(document).ready(function() {
+    var audioElement = document.createElement('audio'),
+        $audioElement = $(audioElement),
+        currentButton;
+    audioElement.addEventListener('ended', function() {
+        currentButton.innerHTML = "play";
+        currentButton = null;
+    }, false);
+    audioElement.addEventListener('loading', function() {
+        currentButton.innerHTML = "loading";
+    });
+    audioElement.addEventListener('error', function() {
+        var $alert =
+            $('<div class="alert alert-danger fade in">'
+              + '<button type="button" class="close" data-dismiss="alert" aria-label="Close">'
+              + '<span aria-hidden="true">&times;</span>'
+              + '</button>'
+              + '<p>Could not load example audio, sorry.<br>'
+              + 'Please try another one!</p>'
+              + '</div>');
+        setTimeout(function() {
+            $alert.fadeOut('fast');
+        },5000);
+        $alert.appendTo("#messages");
+        currentButton.innerHTML = "retry";
+    });
+
+    $("body").on('click', '.play', function() {
+        var digest = $(this).data('audioId'), isPaused = audioElement.paused;
+        audioElement.setAttribute('src', '/patterns/' + digest + ".mp3");
+        console.log("play " + '/patterns/' + digest + ".mp3");
+        currentButton = currentButton ? currentButton : this;
+        currentButton.innerHTML = "play";
+	if (isPaused || currentButton != this) {
+            currentButton = this;
+  	    console.log("play");
+            currentButton.innerHTML = "stop";
+            audioElement.play();
+	}
+	else {
+	    console.log("pause");
+            currentButton.innerHTML = "play";
+	    audioElement.pause();
+	}
+    });
+
    $(".render").each(function() {
-       var code = $(this).text();
-       code = code.replace(/^[\r\n\s]*/g, "");
-       code = code.replace(/[\r\n\s]*$/g, "");
-       var digest = MD5(code);
-       console.log(">> " + code + "<<");
-       console.log("digest: " + digest);
-       var h = '<button class="play btn btn-default" id="play-' + digest + '">play</button>';
+       var code = $(this).text(),
+           digest = hashExample(code),
+           h = '<button class="play btn btn-default" data-audio-id="'
+           + digest
+           + '">play</button>';
        $(this).prepend(h);
-
-       var audioElement = document.createElement('audio');
-       audioElements.push(audioElement);
-       audioElement.setAttribute('src', '/patterns/' + digest + ".mp3");
-
-       audioElement.addEventListener('ended', function() {
-           $('#play-'+digest).text("play");
-       }, false);
-       audioElement.addEventListener('play', function() {
-           $('#play-'+digest).text("stop");
-       });
-       audioElement.addEventListener('pause', function() {
-           $('#play-'+digest).text("play");
-       });
-
-       $('#play-'+digest).click(function() {
-          audioElements.forEach(function(audio){ audioElement != audio && audio.pause(); });
-           console.log("play " + '/patterns/' + digest + ".mp3");
-	   if (audioElement.paused) {
-  	       console.log("play");
-               audioElement.play();
-	   }
-	   else {
-	       console.log("pause");
-	       audioElement.pause();
-	   }
-       });
    });
+
 });
 
 

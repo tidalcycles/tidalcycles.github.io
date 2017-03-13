@@ -52,6 +52,11 @@
             </div>
         </div>
     </nav>
+    <div id="messages-wrap">
+      <div class="container" id="messages">
+
+      </div>
+    </div>
     {% assign grps = site[page.category] | group_by: "category" %} {% assign chapter = site.data.chapters | where: "name", page.category | first %} {% assign sections = chapter.sections %} {% if page.category == "homepage" %}
     <div class="jumbotron main-content tidal-hero">
         <div class="container">

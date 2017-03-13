@@ -128,6 +128,13 @@ section {
     font-family: $headings-font-family;
 }
 
+#messages-wrap {
+    left: 0;
+    right: 0;
+    z-index: $zindex-modal;
+    position: fixed;
+    top: $navbar-height + $padding-base-vertical;
+}
 
 .tidal-hero {
     border: none;

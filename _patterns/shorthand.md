@@ -24,7 +24,7 @@ However, if you wanted more than one value in that `gain` pattern,
 you'd have to put the quotes in:
 
 ~~~haskell
-d1 $ sound "arpy*4" # gain "0.5"
+d1 $ sound "arpy*4" # gain "0.5 0.8"
 ~~~
 {: .render}
 

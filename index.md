@@ -4,20 +4,28 @@ layout: default
 category: homepage
 ---
 
+<p class="lead">
 TidalCycles (or Tidal for short) is a language for
-[live coding](http://toplap.org/) pattern. It allows you to make
+<a href="http://toplap.org">live coding</a> patterns. It allows you to make
 musical patterns with text, describing sequences and ways of
 transforming and combining them, exploring complex interactions
-between simple parts. Here's a playlist of performances with Tidal
-from <a href="http://youtube.com/c/tidalcycles">our youtube channel</a>:
+between simple parts.
+</p>
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?list=PLybSFICi4UliK17U6rxPneXAyxvmGAe5T" frameborder="0" allowfullscreen></iframe>
+<div class="well well-sm pull-right">
+  <p>Here's a playlist of performances with Tidal
+    from <a href="http://youtube.com/c/tidalcycles">our youtube channel</a>:
+  </p>
+  <div class="embed-responsive embed-responsive-16by9">
+    <iframe class="embed-responsive-item" width="560" height="315" src="https://www.youtube.com/embed/videoseries?list=PLybSFICi4UliK17U6rxPneXAyxvmGAe5T" frameborder="0" allowfullscreen></iframe>
+  </div>
+</div>
 
 Tidal allows you to express music with very flexible timing, providing
 a little language for describing patterns as step sequences (which
 can be polyphonic and polymetric), some generators of continuous
 patterns (e.g. sinewaves, sawtooths) and a wide range of pattern
-transformations. Tidal is highly 'composable' in that pattern
+transformations. Tidal is highly <em>composable</em> in that pattern
 transformations can be easily combined together, allowing you to
 quickly create complex patterns from simple ingredients.
 

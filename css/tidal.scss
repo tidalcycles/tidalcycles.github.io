@@ -177,18 +177,14 @@ section {
     border: none;
     background-color: #fdfcfd;
     @include gradient-angled-horizontal-three-colors(45deg, $deep-blue, $turquoise, 50%, $deep-magenta);
-    // background-image: url(../img/tidalcycles-bg.png);
-    // background-repeat: no-repeat;
-    // background-position: 50% 0;
-    // background-size: cover;
     box-shadow: none;
     margin-bottom: 1em;
-    // padding-bottom: 0;
 
     img {
-    	width: 300px;
+    	width: auto;
+        max-width: 100%;
 	margin: 0;
-	padding: (90px / 3) 0 (90px /2) 0;
+	padding: (90px / 3) ($grid-gutter-width / 2)  (90px /2) ($grid-gutter-width / 2);
     }
 
     h1 {
@@ -263,6 +259,10 @@ section {
 
         content: '»';
     }
+
+    .affix {
+        position: relative;
+    }
 }
 
 .tidal-toc-heading:before {
@@ -279,9 +279,21 @@ section {
     width: 0;
 }
 
+@media (min-width: 480px) {
+    .tidal-hero img {
+        max-width: 66.6667%;
+    }
+}
+
 @media (min-width: 768px) {
     .tidal-hero img {
-    	width: 300px;
+    	width: 350px;
+    }
+}
+
+@media (min-width: 992px) {
+    .tidal-sidebar .affix {
+        position: fixed;
     }
 }
 
@@ -305,6 +317,10 @@ section {
 
 .tidal-synth-example-wrapper {
   margin-bottom: 73px;
+}
+
+blockquote {
+    overflow-x: auto;
 }
 
 .tidal-faq-embed {

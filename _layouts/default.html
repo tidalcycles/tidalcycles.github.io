@@ -58,9 +58,7 @@
         <div class="tidal-hero">
           <div class="container">
           <div class="row">
-            <div class="col-lg-7 col-md-6 col-sm-8 col-xs-10">
-              <img src="/img/id-mono.png" alt="TidalCycles" /><h1 id="headlogo"><span>TidalCycles</span></h1>
-            </div>
+            <img src="/img/id-mono.png" alt="TidalCycles" /><h1 id="headlogo"><span>TidalCycles</span></h1>
           </div>
           </div>
         </div>
@@ -71,8 +69,8 @@
                 <strong>may be incorrect</strong> or refer to a future version of Tidal!</p>
             </div>
             <div class="row">
+              {{ content }}
               <div class="col-sm-12 col-xs-12">
-                {{ content }}
                 <p>
                   <a class="btn btn-lg btn-primary" href="{{ site.baseurl }}/getting_started.html">Get started!</a>
                   &nbsp;or&nbsp;
@@ -139,7 +137,6 @@
             </div>
           </div>
         </div>
-
       </div>
       <!-- main end -->
       {% endif %}

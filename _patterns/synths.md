@@ -25,7 +25,7 @@ The above plays note 60 and 62 of the MIDI scale, using the `midinote` parameter
 d1 $ n "c5 d5*2" # s "supersaw"
 ~~~
 
-> For half tones you add the susfixes "f" or "s" (flat or sharp) to the note in question. Example: Fm chord (f af c).
+> For half tones you add the suffixes "f" or "s" (flat or sharp) to the note in question. Example: Fm chord (f af c).
 
 {: .render}
 

@@ -24,6 +24,9 @@ The above plays note 60 and 62 of the MIDI scale, using the `midinote` parameter
 ~~~haskell
 d1 $ n "c5 d5*2" # s "supersaw"
 ~~~
+
+> For half tones you add the susfixes "f" or "s" (flat or sharp) to the note in question. Example: Fm chord (f af c).
+
 {: .render}
 
 You can also specify note numbers with `n`, but where `0` is middle c (rather than `60` with `midinote`).

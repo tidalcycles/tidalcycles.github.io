@@ -1,5 +1,6 @@
 - name: getting_started
   title: Installation
+  footer: false
   sections:
     - name: installation
       title: Installing TidalCycles
@@ -11,6 +12,7 @@
       title: Alternative synths
 - name: patterns
   title: Creating Patterns
+  footer: false
   sections:
     - name: sequences
       title: Creating Rhythmic Sequences
@@ -64,6 +66,7 @@
       title: Synths
 - name: functions
   title: Reference
+  footer: false
   sections:
     - name: pattern_transformers
       title: Pattern Transformers
@@ -84,7 +87,8 @@
     - name: utility
       title: Utility
 - name: videos
-  title: Videos
+  title: Video
+  footer: false
   sections:
     - name: performances
       title: Performances
@@ -92,6 +96,7 @@
       title: Tutorials and demos
 - name: howtos
   title: HowTos
+  footer: false
   sections:
     - name: multi_channel
       title: "Multi-channel"
@@ -103,10 +108,12 @@
       title: Playing live
 - name: credits
   title: Credits
+  footer: true
   sections:
     - name: people
       title: People
     - name: publications
       title: Publications
 - name: community
+  footer: false
   title: Community

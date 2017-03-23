@@ -19,14 +19,21 @@ $gray:                   lighten($gray-base, 33.5%) !default; // #555
 $gray-light:             lighten($gray-base, 46.7%) !default; // #777
 $gray-lighter:           lighten($gray-base, 93.5%) !default; // #eee
 
-$tidal-darker:          #69a2be;
-$tidal-dark:            #7DAFC7;
-$tidal:                 #8EBACE;
-$tidal-light:           #A3C7D8;
-$tidal-lighter:         #B3D1DF;
+
+$deep-blue: rgb(3,13,79);
+$turquoise: rgb(0, 185, 189);
+$deep-magenta: rgb(198, 0, 82);
 
 
-$brand-primary:         $tidal-darker;
+$tidal:               $turquoise;
+
+$tidal-dark:          darken($tidal, 10%); // #7DAFC7;
+$tidal-darker:         darken($tidal, 20%); //#69a2be;
+$tidal-light:           mix($tidal, #fff, 75%);// #A3C7D8;
+$tidal-lighter:         mix($tidal, #fff, 2%); // #B3D1DF;
+
+
+$brand-primary:         $tidal;
 $brand-success:         #5cb85c !default;
 $brand-info:            #5bc0de !default;
 $brand-warning:         #f0ad4e !default;
@@ -53,7 +60,7 @@ $link-hover-decoration: underline !default;
 //
 //## Font, line-height, and color for body text, headings, and more.
 
-$font-family-sans-serif:  "Helvetica Neue", Helvetica, Arial, sans-serif;
+$font-family-sans-serif:  "Roboto Condensed", Helvetica, Arial, sans-serif;
 $font-family-serif:       "Linux Biolinum", Georgia, "Times New Roman", Times, serif !default;
 //** Default monospace fonts for `<code>`, `<kbd>`, and `<pre>`.
 $font-family-monospace:   "Source Code Pro", Menlo, Monaco, Consolas, "Courier New", monospace !default;
@@ -76,7 +83,7 @@ $line-height-base:        1.428571429 !default; // 20/14
 $line-height-computed:    floor(($font-size-base * $line-height-base)) !default; // ~20px
 
 //** By default, this inherits from the `<body>`.
-$headings-font-family:    $font-family-serif;
+$headings-font-family:    $font-family-sans-serif;
 $headings-font-weight:    500 !default;
 $headings-line-height:    1.1 !default;
 $headings-color:          inherit !default;
@@ -369,15 +376,17 @@ $navbar-padding-vertical:          (($navbar-height - $line-height-computed) / 2
 $navbar-collapse-max-height:       340px !default;
 
 $navbar-default-color:             #777 !default;
-$navbar-default-bg:                lighten($tidal-lighter, 17%);
-$navbar-default-border:            darken($navbar-default-bg, 6.5%) !default;
+$navbar-default-bg:                #fff; //fade-out(#fff, 0.6);
+$navbar-default-border:            fade-out(#fff, 0.6);
+
+$navbar-bg: $deep-magenta;
 
 // Navbar links
-$navbar-default-link-color:                #777 !default;
-$navbar-default-link-hover-color:          #333 !default;
-$navbar-default-link-hover-bg:             darken($navbar-default-bg, 3.5%);
-$navbar-default-link-active-color:         #555 !default;
-$navbar-default-link-active-bg:            darken($navbar-default-bg, 6.5%);
+$navbar-default-link-color:                #555 !default;
+$navbar-default-link-hover-color:          #ddd !default;
+$navbar-default-link-hover-bg:             mix(#000, $navbar-bg, 3.5%);
+$navbar-default-link-active-color:         #eee !default;
+$navbar-default-link-active-bg:            mix(#000, $navbar-bg, 6.5%);
 $navbar-default-link-disabled-color:       #ccc !default;
 $navbar-default-link-disabled-bg:          transparent !default;
 
@@ -395,13 +404,13 @@ $navbar-default-toggle-border-color:       #ddd !default;
 // Inverted navbar
 // Reset inverted navbar basics
 $navbar-inverse-color:                      lighten($gray-light, 15%) !default;
-$navbar-inverse-bg:                         #222 !default;
-$navbar-inverse-border:                     darken($navbar-inverse-bg, 10%) !default;
+$navbar-inverse-bg:                         mix(#fff, $deep-blue, 10%) !default;
+$navbar-inverse-border:                     mix(#000, $navbar-inverse-bg, 40%) !default;
 
 // Inverted navbar links
 $navbar-inverse-link-color:                 lighten($gray-light, 15%) !default;
 $navbar-inverse-link-hover-color:           #fff !default;
-$navbar-inverse-link-hover-bg:              transparent !default;
+$navbar-inverse-link-hover-bg:              darken($navbar-inverse-bg, 6%) !default;
 $navbar-inverse-link-active-color:          $navbar-inverse-link-hover-color !default;
 $navbar-inverse-link-active-bg:             darken($navbar-inverse-bg, 10%) !default;
 $navbar-inverse-link-disabled-color:        #444 !default;
@@ -505,7 +514,7 @@ $state-success-text:             #3c763d !default;
 $state-success-bg:               #dff0d8 !default;
 $state-success-border:           darken(adjust-hue($state-success-bg, -10), 5%) !default;
 
-$state-info-text:                darken(change-color($brand-primary, $hue: 55), 25%);// #31708f !default;
+$state-info-text:                mix(#fff, $deep-blue, 25%);// #31708f !default;
 $state-info-bg:                  lighten($state-info-text, 60%);//#d9edf7 !default;
 $state-info-border:              darken(adjust-hue($state-info-bg, -10), 7%) !default;
 
@@ -835,7 +844,7 @@ $close-text-shadow:           0 1px 0 #fff !default;
 //##
 
 $code-color:                  $gray;
-$code-bg:                     lighten($tidal-lighter, 19.5%);
+$code-bg:                     $tidal-lighter;
 
 $kbd-color:                   #fff !default;
 $kbd-bg:                      #333 !default;

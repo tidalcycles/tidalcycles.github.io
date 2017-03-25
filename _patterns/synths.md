@@ -38,7 +38,7 @@ Above is a two chord progression A7 D7. Notice `cs5` and `fs5` as C5# and F5#, r
 d2 $ every 4 (rev) $ n "<[g5 df5 e5 a5] [gf5 d5 c5 g5]*3>" # s "supersaw"
 ~~~
 
-Now the same chords (A7 D7) this time played as ascending and descending arpeggios and `cs5` written as `df5`and `fs5` as `gf5`. 
+Now the same chords (A7 D7) this time played as ascending and descending arpeggios and `cs5` written as `df5`and `fs5` as `gf5`. Play both examples together for more fun!
 
 You can also specify note numbers with `n`, but where `0` is middle c (rather than `60` with `midinote`).
 

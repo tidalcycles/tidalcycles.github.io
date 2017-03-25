@@ -32,7 +32,7 @@ d1 $ n "<[a5,cs5,e5,g5]*3 [d5,fs5,g5,c5]>" # s "supersquare" # gain "0.7"
 ~~~
 {: .render}
 
-Above is a two chord progression A7 D7. Notice `cs5` and `fs5` as C5# and F5#, respectively.
+Above is a two chord progression A7 D7. Notice `cs5` and `fs5` as C#5 and F#5, respectively.
 
 ~~~haskell
 d2 $ every 4 (rev) $ n "<[g5 df5 e5 a5] [gf5 d5 c5 g5]*3>" # s "supersaw"

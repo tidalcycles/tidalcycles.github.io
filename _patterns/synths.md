@@ -25,9 +25,20 @@ The above plays note 60 and 62 of the MIDI scale, using the `midinote` parameter
 d1 $ n "c5 d5*2" # s "supersaw"
 ~~~
 
-> For half tones you add the suffixes "f" or "s" (flat or sharp) to the note in question. Example: Fm chord (f af c).
+For half tones you add the suffixes "f" or "s" (flat or sharp) to the note in question. 
 
+~~~haskell
+d1 $ n "<[a5,cs5,e5,g5]*3 [d5,fs5,g5,c5]>" # s "supersquare" # gain "0.7"
+~~~
 {: .render}
+
+Above is a two chord progression A7 D7. Notice `cs5` and `fs5` as C5# and F5#, respectively.
+
+~~~haskell
+d2 $ every 4 (rev) $ n "<[g5 df5 e5 a5] [gf5 d5 c5 g5]*3>" # s "supersaw"
+~~~
+
+Now the same chords (A7 D7) this time played as ascending and descending arpeggios and `cs5` written as `df5`and `fs5` as `gf5`. 
 
 You can also specify note numbers with `n`, but where `0` is middle c (rather than `60` with `midinote`).
 

@@ -14,7 +14,10 @@ when a new sample is triggered.
 Consider the following example where we have a pattern of "arpy" sounds,
 played at a low speed, so there is a lot of bleed into each sample:
 
-`d1 $ sound (samples "arpy*8" (run 8)) # speed "0.25"`
+~~~haskell
+d1 $ sound (samples "arpy*8" (run 8)) # speed "0.25"
+~~~
+{: .render}
 
 We can stop this bleed by using `cut` and assigning the pattern a cut group of
 "1":
@@ -35,11 +38,10 @@ each other:
 ~~~haskell
 d1 $ sound (samples "arpy*8" (run 8)) # speed "0.25" # cut "1"
 ~~~
-{: .render}
+
 ~~~haskell
 d2 $ sound (samples "bass2*6" (run 6)) # speed "0.5" # cut "2"
 ~~~
-{: .render}
 
 This also works in a `stack`:
 

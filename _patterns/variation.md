@@ -23,6 +23,6 @@ play it in reverse for cycles 7-8. Then normally again for six cycles, then
 in reverse for two, and so on:
 
 ~~~haskell
-d1 $ whenmod 8 6 (rev) $ sound "bd*2 arpy*2 cp hh*22"
+d1 $ whenmod 8 6 (rev) $ sound "bd*2 arpy*2 cp hh*4"
 ~~~
 {: .render}

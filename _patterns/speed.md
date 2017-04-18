@@ -19,10 +19,12 @@ You can set a sample's speed by using the `speed` effect with a number.
 d1 $ sound "arpy" # speed "1"
 ~~~
 {: .render}
+
 ~~~haskell
 d1 $ sound "arpy" # speed "0.5"
 ~~~
 {: .render}
+
 ~~~haskell
 d1 $ sound "arpy" # speed "2"
 ~~~
@@ -31,14 +33,14 @@ d1 $ sound "arpy" # speed "2"
 Just like other effects, you can specify a pattern for speed:
 
 ~~~haskell
-d1 $ sound "arpy*4" # speed "1 0.5 2 1.5"
+d1 $ speed "1 0.5 2 1.5" # sound "arpy" 
 ~~~
 {: .render}
 
 You can also reverse a sample by specifying negative values:
 
 ~~~haskell
-d1 $ sound "arpy*4" # speed "-1 -0.5 -2 -1.5"
+d1 $ speed "-1 -0.5 -2 -1.5" # sound "arpy"
 ~~~
 {: .render}
 
@@ -51,8 +53,9 @@ a sample back at multiple speeds at the same time:
 d1 $ sound "arpy" # speed "[1, 1.5]"
 ~~~
 {: .render}
+
 ~~~haskell
-d1 $ sound "arpy*4" # speed "[1 0.5, 1.5 2 3 4]"
+d1 $ speed "[1 0.5, 1.5 2 3 4]" # sound "arpy"
 ~~~
 {: .render}
 
@@ -63,10 +66,10 @@ effect that matches speeds to half steps on a 12-tone scale. For example, the
 following plays a chromatic scale:
 
 ~~~haskell
-d1 $ sound "arpy*12" # up "0 1 2 3 4 5 6 7 8 9 10 11"
+d1 $ up "0 1 2 3 4 5 6 7 8 9 10 11" # sound "arpy"
 ~~~
 {: .render}
 
 > You can also use the `run` function to create an incrementing pattern of
-> integers: `d1 $ sound "arpy*12" # up (run 12)`. The `run` function will be
+> integers: `d1 $ up (run 12) # sound "arpy"`. The `run` function will be
 > discussed later.

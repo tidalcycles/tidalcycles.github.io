@@ -11,22 +11,21 @@ You use an effect by adding the `#` operator between your sound pattern and
 the effect:
 
 ~~~haskell
-d1 $ sound "bd*4" # gain "0.5"
+d1 $ sound "bd*4" # crush "4"
 ~~~
 {: .render}
 
-The above code decreases the volume of the "bd" sample by 50%.
+The above code adds a bitcrushing effect with a value of 4 (which means, really grungy).
 
 You can chain multiple effects together, separating them again with the `#`
 operator:
 
 ~~~haskell
-d1 $ sound "bd*4" # gain "0.5" # delay "0.5"
+d1 $ sound "bd*4" # crush "4" # speed "2"
 ~~~
 {: .render}
 
-The code above decreases the volume by 50% and also applies a "delay" effect
-at a level of 0.5.
+The code above both bitcrushes and speeds up sample playback (which increases the 'pitch').
 
 ### Effects are patterns too
 
@@ -38,7 +37,7 @@ d1 $ sound "bd*4" # gain "1 0.8 0.5 0.7"
 ~~~
 {: .render}
 
-Effect patterns follow all the same grouping rules as sound patterns:
+The above `gain` effect changes how loud the sample is, good for patterns of emphasis as above. Effect patterns follow all the same grouping rules as sound patterns:
 
 ~~~haskell
 d1 $ sound "bd*4 sn*4" # gain "[[1 0.8]*2 [0.5 0.7]]/2"

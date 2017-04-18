@@ -11,13 +11,11 @@ do exactly the same:
 d1 $ sound "arpy:0 arpy:2 arpy:3"
 ~~~
 {: .render}
+
 ~~~haskell
 d1 $ n "0 2 3" # s "arpy"
 ~~~
 {: .render}
-
-
-
 
 It's possible to break the `sound` parameter into two different patterns, 
 namely `s` that gives the name of the sample set, and `n` which gives the 
@@ -28,6 +26,7 @@ are the same:
 d1 $ sound "arpy:0 arpy:2 arpy:3"
 ~~~
 {: .render}
+
 ~~~haskell
 d1 $ n "0 2 3" # s "arpy"
 ~~~
@@ -61,6 +60,7 @@ of a folder:
 d1 $ n (run 4) # s "drum"
 ~~~
 {: .render}
+
 ~~~haskell
 d1 $ sound $ samples "drum*4" (run 4) -- or with samples
 ~~~

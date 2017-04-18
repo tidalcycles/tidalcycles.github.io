@@ -54,11 +54,11 @@ shorthand `?` symbol if you want to give an event a 50/50 chance of happening
 or not on every cycle:
 
 ~~~haskell
-d1 $ sound "bd?"
+d1 $ sound "bd? sd? sd? sd?"
 ~~~
 {: .render}
 
-In the code above, the "bd" sample has a 50% chance of being played on every
+In the code above, each `bd` and `sd` sample has a 50% chance of being played on every
 cycle.
 
 You can add the `?` after the completion of any event or group in a pattern:
@@ -67,10 +67,12 @@ You can add the `?` after the completion of any event or group in a pattern:
 d1 $ sound "bd*16?"
 ~~~
 {: .render}
+
 ~~~haskell
 d1 $ sound "bd sn? cp hh?"
 ~~~
 {: .render}
+
 ~~~haskell
 d1 $ sound "[bd sn cp hh]?"
 ~~~
@@ -83,6 +85,7 @@ are equivalent:
 d1 $ sound "bd*16?"
 ~~~
 {: .render}
+
 ~~~haskell
 d1 $ degrade $ sound "bd*16"
 ~~~
@@ -98,12 +101,11 @@ d1 $ degradeBy 0.25 $ sound "bd*16"
 There is also `sometimesBy`, which executes a function based on a probability:
 
 ~~~haskell
-d1 $ sometimesBy 0.75 (slow 2) $ sound "bd*16"
+d1 $ sometimesBy 0.75 (# crush 4) $ sound "bd arpy sn ~"
 ~~~
 {: .render}
 
-The code above has a 75% chance of calling `slow 2` on every event in the
-pattern.
+The code above has a 75% chance of applying the bitcrush effect pattern `# crush 4` on every event in the sound pattern.
 
 There are other aliases for `sometimesBy`:
 
@@ -118,6 +120,6 @@ almostAlways = sometimesBy 0.9
 e.g.:
 
 ~~~haskell
-d1 $ rarely (density 2) $ sound "bd*8"
+d1 $ rarely (# crush 4) $ sound "bd*8"
 ~~~
 {: .render}

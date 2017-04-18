@@ -23,11 +23,11 @@ d1 $ slow 2 $ sound "ho ho:2 ho:3 hc"
 ~~~~
 {: .render }
 
-Or by four thirds (i.e. speeding it up by a third; `4%3` means four over
+Or by four thirds (i.e. speeding it up by a third; `4/3` means four over
 three):
 
 ~~~~ haskell
-d1 $ slow (4%3) $ sound "ho ho:2 ho:3 hc"
+d1 $ slow (4/3) $ sound "ho ho:2 ho:3 hc"
 ~~~~
 {: .render }
 
@@ -35,7 +35,7 @@ But if we use `spread`, we can make a pattern which alternates between
 the two speeds:
 
 ~~~~ haskell
-d1 $ spread slow [2,4%3] $ sound "ho ho:2 ho:3 hc"
+d1 $ spread slow [2,4/3] $ sound "ho ho:2 ho:3 hc"
 ~~~~
 {: .render }
 
@@ -85,7 +85,7 @@ d1 $ slow 2 $ sound "ho ho:2 ho:3 hc"
 ~~~~
 {: .render }
 
-Or by four thirds (i.e. speeding it up by a third; `4%3` means four over
+Or by four thirds (i.e. speeding it up by a third; `4/3` means four over
 three):
 
 ~~~~ haskell
@@ -120,7 +120,7 @@ This is quite experimental and might not work with all functions yet.
 There's another version of `spread` called `fastspread`. True to its name, the result is faster, because it squeezes all the variations into one cycle. As the following gives two parameters to `slow`, it goes twice as fast as if you'd used `spread`:
 
 ~~~~ haskell
-d1 $ fastspread slow [2,4%3] $ sound "ho ho:2 ho:3 hc"
+d1 $ fastspread slow [2,4/3] $ sound "ho ho:2 ho:3 hc"
 ~~~~
 {: .render }
 

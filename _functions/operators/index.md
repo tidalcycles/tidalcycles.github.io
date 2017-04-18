@@ -27,7 +27,7 @@ They mean the same thing: they merge *ParamPatterns* together
 These take a **list** of *ParamPatterns* as their second argument, and merge them all together with the relevant arithmetic operator.  Can simplify long expressions.
 
 ~~~~ haskell
-s "bd sn" # "speed "1.2" *** [speed "2", crush "4"]
+d1 $ s "bd sn" # speed "1.2" *** [speed "2", crush "4"]
 ~~~~
 {: .render }
 

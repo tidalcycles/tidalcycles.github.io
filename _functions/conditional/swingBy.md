@@ -13,11 +13,11 @@ half the "note" duration, and `1` will wrap around to doing nothing again.
 The end result is a shuffle or swing-like rhythm.  For example
 
 ~~~~haskell
-d1 $ swingBy (1%3) 4 $ sound "hh*8"
+d1 $ swingBy (1/3) 4 $ sound "hh*8"
 ~~~~
 {: .render }
 
 will delay every other `"hh"` 1/3 of the way to the next `"hh"`.
 
-`swing` is an alias for `swingBy (1%3)`
+`swing` is an alias for `swingBy (1/3)`
 

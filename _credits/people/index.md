@@ -37,11 +37,8 @@ Development during 2016 is partly supported by a residency at the
 
 Development was also partly supported by contributors to Yaxu's
 [Spicule](http://www.pledgemusic.com/projects/spicule/) crowdfund,
-including the following who paid extra to claim a function dedicated to them:
-
-* Aneurin Barker-Snook (`whenmod`)
-* Joel Gethin Lewis (`loop`)
-* Nik Gaffney (`randcat` and `superimpose`)
-* RJP (`mortal`)
-* Sam Aaron
-* Scott Fradkin (`stack`)
+including the following fine people who gave extra and in return each
+have a function dedicated to them: *Aneurin Barker-Snook* (`whenmod`),
+*Joel Gethin Lewis* (`loop`), *Nik Gaffney* (`randcat` and
+`superimpose`), *RJP* (`mortal`), Sam Aaron*, *Scott Fradkin*
+(`stack`).

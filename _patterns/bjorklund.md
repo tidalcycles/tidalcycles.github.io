@@ -10,6 +10,7 @@ steps:
 ~~~haskell
 d1 $ sound "bd(5,8)"
 ~~~
+{: .render}
 
 You can also use the `e` function to do this. `e` takes the same two arguments
 as what is used in the parenthesis above:
@@ -17,13 +18,19 @@ as what is used in the parenthesis above:
 ~~~haskell
 d1 $ e 5 8 $ sound "bd"
 ~~~
+{: .render}
 
 You can use the parenthesis notation within a single element of a pattern:
 
 ~~~haskell
 d1 $ sound "bd(3,8) sn*2"
+~~~
+{: .render}
+
+~~~haskell
 d1 $ sound "bd(3,8) sn(5,8)"
 ~~~
+{: .render}
 
 You can also add a third parameter, which 'rotates' the pattern so it starts on 
 a different step:
@@ -31,6 +38,7 @@ a different step:
 ~~~haskell
 d1 $ sound "bd(5,8,2)"
 ~~~
+{: .render}
 
 You can also use the `e` function to apply a Euclidean algorithm over a
 complex pattern, although the structure of that pattern will be lost:
@@ -38,6 +46,7 @@ complex pattern, although the structure of that pattern will be lost:
 ~~~haskell
 d1 $ e 3 8 $ sound "bd*2 [sn cp]"
 ~~~
+{: .render}
 
 In the above, three sounds are picked from the pattern on the right according 
 to the structure given by the `e 3 8`. It ends up picking two `bd` sounds, a 
@@ -48,6 +57,7 @@ As a bonus, it is possible to pattern the parameters within the parenthesis, for
 ~~~haskell
 d1 $ sound "bd([5 3]/2,8)"
 ~~~
+{: .render}
 
 These types of sequences use "Bjorklund's algorithm", which wasn't made for
 music but for an application in nuclear physics, which is exciting. More

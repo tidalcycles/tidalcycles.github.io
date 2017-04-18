@@ -15,6 +15,7 @@ Example:
 d1 $ sound (slow 2 "bd sn kurt")
    # slow 3 (vowel "a e o")
 ~~~~
+{: .render }
 
 Slow also accepts numbers between 0 and 1, which causes the pattern to speed up:
 
@@ -22,5 +23,6 @@ Slow also accepts numbers between 0 and 1, which causes the pattern to speed up:
 d1 $ sound (slow 0.5 "bd sn kurt")
    # slow 0.75 (vowel "a e o")
 ~~~~
+{: .render }
 
 Also, see `density`.

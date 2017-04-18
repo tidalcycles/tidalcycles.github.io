@@ -9,4 +9,4 @@ samples from a folder:
 ~~~~haskell
 d1 $ sound (samples "drum*4" (irand 5))
 ~~~~
-
+{: .render }

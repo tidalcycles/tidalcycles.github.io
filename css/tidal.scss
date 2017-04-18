@@ -1,6 +1,8 @@
 ---
 ---
 
+@import url('https://fonts.googleapis.com/css?family=Roboto+Condensed');
+
 @font-face {
     font-family: 'Linux Biolinum';
 
@@ -85,15 +87,42 @@
 
 @import "pygments/solarized-light.css";
 
+html, body {
+    height: 100%;
+    margin: 0;
+}
+.wrapper {
+    display: table;
+    table-layout: fixed;
+    height: 100%;
+    width: 100%;
+}
+.main-content {
+  display: table-row;
+  /* height is dynamic, and will expand... */
+  height: 100%;
+  /* ...as content is added (won't scroll) */
+}
+footer.navbar {
+  display: table-row;
+}
+
+
 
 body {
     position: relative;
-
-    padding-top: 44px;
+    padding-top: $navbar-height;
 }
 
-.main-content {
-  margin-bottom: 5em;
+.navbar-default.navbar .navbar-wrap {
+    background-color: #fff;
+
+    @media (min-width: $screen-sm) {
+        > .container {
+            padding-left: 0;
+            padding-right: 0;
+        }
+    }
 }
 
 section {
@@ -128,28 +157,41 @@ section {
     font-family: $headings-font-family;
 }
 
+#messages-wrap {
+    left: 0;
+    right: 0;
+    z-index: $zindex-modal;
+    position: fixed;
+    top: $navbar-height + $padding-base-vertical;
+}
+
+@mixin gradient-angled-horizontal-three-colors($angle, $start-color: #00b3ee, $mid-color: #7a43b6, $color-stop: 50%, $end-color: #c3325f) {
+  background-image: -webkit-linear-gradient($angle, $start-color, $mid-color $color-stop, $end-color);
+  background-image: -o-linear-gradient($angle, $start-color, $mid-color $color-stop, $end-color);
+  background-image: linear-gradient($angle, $start-color, $mid-color $color-stop, $end-color);
+  background-repeat: no-repeat;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#{ie-hex-str($start-color)}', endColorstr='#{ie-hex-str($end-color)}', GradientType=1); // IE9 and down, gets no color-stop at all for proper fallback
+}
 
 .tidal-hero {
     border: none;
     background-color: #fdfcfd;
-    background-image: url(../img/tidalcycles-bg.png);
-    background-repeat: no-repeat;
-    background-position: 50% 0;
-    background-size: cover;
+    @include gradient-angled-horizontal-three-colors(45deg, $deep-blue, $turquoise, 50%, $deep-magenta);
     box-shadow: none;
-    margin-bottom: 0;
-    padding-bottom: 0;
+    margin-bottom: 1em;
 
     img {
-    	width: 250px;
+    	width: auto;
+        max-width: 100%;
 	margin: 0;
-	padding: 0;
+	padding: (90px / 3) ($grid-gutter-width / 2)  (90px /2) ($grid-gutter-width / 2);
     }
 
-h1 span {
+    h1 {
       display: none;
     }
 }
+
 
 .tidal-teaser {
     border: none;
@@ -169,7 +211,7 @@ h1 span {
         color: $navbar-default-link-color;
 
         &:hover, &:active, &:focus {
-            color: $navbar-default-link-hover-color;
+            color: darken($navbar-default-link-color, 10%);
         }
     }
 
@@ -188,7 +230,7 @@ h1 span {
 
     li.active {
         > a {
-            color: $navbar-default-link-hover-color;
+            color: darken($navbar-default-link-color, 10%);
             position: relative;
 
             &::before {
@@ -217,6 +259,10 @@ h1 span {
 
         content: '»';
     }
+
+    .affix {
+        position: relative;
+    }
 }
 
 .tidal-toc-heading:before {
@@ -233,9 +279,21 @@ h1 span {
     width: 0;
 }
 
+@media (min-width: 480px) {
+    .tidal-hero img {
+        max-width: 66.6667%;
+    }
+}
+
 @media (min-width: 768px) {
     .tidal-hero img {
-    	width: 300px;
+    	width: 350px;
+    }
+}
+
+@media (min-width: 992px) {
+    .tidal-sidebar .affix {
+        position: fixed;
     }
 }
 
@@ -261,10 +319,39 @@ h1 span {
   margin-bottom: 73px;
 }
 
+blockquote {
+    overflow-x: auto;
+}
+
 .tidal-faq-embed {
   width: 100%;
   height: 288px;
   padding: 0;
   margin: 0 0 1em 0;
   border: none;
+}
+
+button.play {
+  float:right;
+}
+.navbar-static-bottom {
+  @extend .navbar-fixed-bottom;
+  position: relative;
+  border-width: 1px 1px 0;
+}
+
+.navbar-default {
+    background-color: transparent;
+}
+
+footer.navbar {
+    background-color: transparent;
+}
+
+footer.navbar > .container {
+    background-color: $navbar-default-bg;
+}
+
+footer.navbar, footer .navbar-nav > li > a {
+    line-height: $line-height-base * 2;
 }

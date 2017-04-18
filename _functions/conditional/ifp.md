@@ -15,7 +15,7 @@ d1 $ ifp ((== 0).(flip mod 2))
   (# coarse "24 48") $
   sound "hh hc"
 ~~~
-{: render-block }
+{: .render}
 
 This will apply `striate 4` for every _even_ cycle and aply `# coarse "24 48"` for every _odd_.
 

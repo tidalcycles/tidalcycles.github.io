@@ -13,6 +13,7 @@ random permutation of those parts. This could also be called "sampling without r
 ~~~~ haskell
 d1 $ sound $ shuffle 3 "bd sn hh"
 ~~~~
+{: .render }
 
 will sometimes play `"sn bd hh"` or `"hh sn bd"` or `"hh bd sn"`.  But it can **never** play `"hh hh hh"`, because that isn't
 a permutation of the three parts.

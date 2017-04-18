@@ -9,11 +9,13 @@ do exactly the same:
 
 ~~~haskell
 d1 $ sound "arpy:0 arpy:2 arpy:3"
+~~~
+{: .render}
+
+~~~haskell
 d1 $ n "0 2 3" # s "arpy"
 ~~~
-
-
-
+{: .render}
 
 It's possible to break the `sound` parameter into two different patterns, 
 namely `s` that gives the name of the sample set, and `n` which gives the 
@@ -22,8 +24,13 @@ are the same:
 
 ~~~haskell
 d1 $ sound "arpy:0 arpy:2 arpy:3"
+~~~
+{: .render}
+
+~~~haskell
 d1 $ n "0 2 3" # s "arpy"
 ~~~
+{: .render}
 
 This allows us to separate the sample folder name from the index inside the
 folder, possibly with surprising results!
@@ -32,10 +39,15 @@ There is also special function called `samples` that lets you do the same using 
 
 ~~~haskell
 d1 $ sound $ samples "drum*4" "0 1 2 3"
+~~~
+{: .render}
 
--- the code above equals this:
+the code above is the same as this:
+
+~~~haskell
 d1 $ sound "drum:0 drum:1 drum:2 drum:3"
 ~~~
+{: .render}
 
 Whether you use `n` and `s` together, or `sound` with `samples` is up to you, although 
 you might find the former to be more flexible.
@@ -46,20 +58,27 @@ of a folder:
 
 ~~~haskell
 d1 $ n (run 4) # s "drum"
+~~~
+{: .render}
+
+~~~haskell
 d1 $ sound $ samples "drum*4" (run 4) -- or with samples
 ~~~
+{: .render}
 
 And of course you can specify a different pattern of sample names:
 
 ~~~haskell
 d1 $ s "drum arpy cp hh" # n (run 10)
 ~~~
+{: .render}
 
 Again, by swapping the order of the `s` and `n` parameters, you can hear the difference between taking the structure from one or the other:
 
 ~~~haskell
 d1 $ n (run 10) # s "drum arpy cp hh"
 ~~~ 
+{: .render}
 
 > NOTE: if you specify a run value that is greater than the number of
 > samples in a folder, then the higher number index will "wrap" to the
@@ -70,3 +89,4 @@ You might sometimes see the samples function wrapped in parenthesis:
 ~~~haskell
 d1 $ sound (samples "drum arpy cp hh" (run 10))
 ~~~
+{: .render}

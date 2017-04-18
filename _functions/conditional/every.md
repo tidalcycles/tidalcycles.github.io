@@ -14,6 +14,7 @@ Example:
 ~~~~ haskell
 d1 $ every 3 (density 2) $ sound "bd sn kurt"
 ~~~~
+{: .render}
 
 There is a primed variant with an offset
 

@@ -17,3 +17,4 @@ Example:
 ~~~~ haskell
 d1 $ sound (brak "bd sn kurt")
 ~~~~
+{: .render }

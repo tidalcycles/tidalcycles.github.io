@@ -17,6 +17,7 @@ d1 $ stack [
   sound (samples "arpy*8" (run 16))
 ]
 ~~~~
+{: .render}
 
 This is useful if you want to use a transform or synth parameter on the entire 
 stack:
@@ -28,3 +29,4 @@ d1 $ whenmod 5 3 (striate 3) $ stack [
   sound (samples "arpy*8" (run 16))
 ] # speed "[[1 0.8], [1.5 2]*2]/3"
 ~~~~
+{: .render}

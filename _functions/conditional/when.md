@@ -14,6 +14,6 @@ d1 $ when ((elem '4').show)
   (striate 4)
   $ sound "hh hc"
 ~~~
-{: render-block }
+{: .render }
 
 The above will only apply `striate 4` to the pattern if the current cycle number contains the number 4. So the fourth cycle will be striated and the fourteenth and so on. Expect lots of striates after cycle number 399.

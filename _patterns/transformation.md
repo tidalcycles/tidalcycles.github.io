@@ -9,7 +9,7 @@ transform the patterns in various ways.
 For example, `rev` reverses a pattern:
 
 ~~~haskell
-d1 $ rev (sound "[bd bd] [bd [sn [sn sn] sn] sn]")
+d1 $ rev (sound "bd*2 [bd [sn sn*2 sn] sn]")
 ~~~
 {: .render}
 
@@ -44,21 +44,21 @@ d1 $ slow 4 $ sound "bd*2 [bd [sn sn*2 sn] sn]"
 And this four times the speed:
 
 ~~~haskell
-d1 $ density 4 $ sound "bd*2 [bd [sn sn*2 sn] sn]"
+d1 $ fast 4 $ sound "bd*2 [bd [sn sn*2 sn] sn]"
 ~~~
 {: .render}
 
-> Note that `slow 0.25` would do exactly the same as `density 4`.
+> Note that `slow 0.25` would do exactly the same as `fast 4`.
 
 Again, this can be applied selectively:
 
 ~~~haskell
-d1 $ every 4 (density 4) $ sound "bd*2 [bd [sn sn*2 sn] sn]"
+d1 $ every 4 (fast 4) $ sound "bd*2 [bd [sn sn*2 sn] sn]"
 ~~~
 {: .render}
 
-> Note again the use of parenthesis, around `density 4`. This is
-> needed, to group together the function `density` with its parameter
+> Note again the use of parenthesis, around `fast 4`. This is
+> needed, to group together the function `fast` with its parameter
 > 4, before being passed as a parameter to the function `every`.
 
 In the examples above, the `sound` function takes a pattern of sample
@@ -69,9 +69,11 @@ that you can operate on the inner pattern of sample names, instead of
 the outer pattern of synthesiser triggers that `sound` gives you:
 
 ~~~haskell
-d1 $ sound (every 4 (density 4) "bd*2 [bd [sn sn*2 sn] sn]")
+d1 $ sound (every 4 (fast 4) "bd*2 [bd [sn sn*2 sn] sn]")
 ~~~
 {: .render}
+
+The `fast` function is also known as `density`, which is actually the older name, so a lot of examples will use it instead of the (slightly quicker to type) `fast`. They do exactly the same thing.
 
 ### Where are all the functions?
 

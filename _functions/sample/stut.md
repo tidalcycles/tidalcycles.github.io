@@ -15,6 +15,7 @@ and the others floating point. This adds a bit of echo:
 ~~~~ haskell
 d1 $ stut 4 0.5 0.2 $ sound "bd sn"
 ~~~~
+{: .render }
 
 The above results in 4 echos, each one 50% quieter than the last, 
 with 1/5th of a cycle between them. It is possible to reverse the echo:
@@ -22,6 +23,7 @@ with 1/5th of a cycle between them. It is possible to reverse the echo:
 ~~~~ haskell
 d1 $ stut 4 0.5 (-0.2) $ sound "bd sn"
 ~~~~
+{: .render }
 
 ### stut'
 
@@ -32,8 +34,8 @@ stut' :: Integer -> Time -> (ParamPattern -> ParamPattern) -> ParamPattern -> Pa
 Instead of just decreasing volume to produce echoes, `stut'` allows to apply a function for each step and overlays the result delayed by the given time.
 
 ~~~haskell
-d1 $ stut' 2 (1%3) (# vowel "{a e i o u}%2") $ sound "bd sn"
+d1 $ stut' 2 (1/3) (# vowel "{a e i o u}%2") $ sound "bd sn"
 ~~~
-{: render-lines }
+{: .render }
 
 In this case there are two _overlays_ delayed by 1/3 of a cycle, where each has the `vowel` filter applied.

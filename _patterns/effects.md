@@ -11,20 +11,21 @@ You use an effect by adding the `#` operator between your sound pattern and
 the effect:
 
 ~~~haskell
-d1 $ sound "bd*4" # gain "0.5"
+d1 $ sound "bd*4" # crush "4"
 ~~~
+{: .render}
 
-The above code decreases the volume of the "bd" sample by 50%.
+The above code adds a bitcrushing effect with a value of 4 (which means, really grungy).
 
 You can chain multiple effects together, separating them again with the `#`
 operator:
 
 ~~~haskell
-d1 $ sound "bd*4" # gain "0.5" # delay "0.5"
+d1 $ sound "bd*4" # crush "4" # speed "2"
 ~~~
+{: .render}
 
-The code above decreases the volume by 50% and also applies a "delay" effect
-at a level of 0.5.
+The code above both bitcrushes and speeds up sample playback (which increases the 'pitch').
 
 ### Effects are patterns too
 
@@ -34,18 +35,21 @@ quotes. This means that you can pattern the effect values too:
 ~~~haskell
 d1 $ sound "bd*4" # gain "1 0.8 0.5 0.7"
 ~~~
+{: .render}
 
-Effect patterns follow all the same grouping rules as sound patterns:
+The above `gain` effect changes how loud the sample is, good for patterns of emphasis as above. Effect patterns follow all the same grouping rules as sound patterns:
 
 ~~~haskell
 d1 $ sound "bd*4 sn*4" # gain "[[1 0.8]*2 [0.5 0.7]]/2"
 ~~~
+{: .render}
 
 And you can also apply functions to effect patterns:
 
 ~~~haskell
 d1 $ sound "bd*4" # gain (every 3 (rev) $ "1 0.8 0.5 0.7")
 ~~~
+{: .render}
 
 > Like with the `sound` example earlier, you must use parenthesis after `gain`
 > in order to specify a function on the `gain` pattern.
@@ -57,6 +61,7 @@ You can specify the effect before the sound pattern:
 ~~~haskell
 d1 $ gain "1 0.8 0.5 0.7" # sound "bd"
 ~~~
+{: .render}
 
 The order that you put things matters; the structure of the pattern is given by 
 the pattern on the left of the `#`. In this case, only one `bd` sound is given, 
@@ -74,6 +79,7 @@ However, you can also change an effect value on the other side of a pattern:
 ~~~haskell
 d1 $ (|=| speed "2") $ sound "arpy*4" |=| speed "1"
 ~~~
+{: .render}
 
 In the code above, the left-most effect overrides the original effect
 that was specified on the right. In this case, `speed` will always equal 2.
@@ -83,6 +89,7 @@ You can do this conditionally:
 ~~~haskell
 d1 $ every 2 (|=| speed "2") $ sound "arpy*4" |=| speed "1"
 ~~~
+{: .render}
 
 There are other types of operators that allow you to perform arithmetic:
 
@@ -99,6 +106,7 @@ an original value:
 ~~~haskell
 d1 $ every 2 (|+| speed "1") $ sound "arpy*4" |=| speed "1"
 ~~~
+{: .render}
 
 > The code above results in a speed of "2" every other cycle.
 
@@ -107,12 +115,14 @@ The following will multiply values:
 ~~~haskell
 d1 $ every 2 (|*| speed "1.5") $ sound "arpy*4" |=| speed "1"
 ~~~
+{: .render}
 
 More complex patterns and chaining can be done, and with any effect, of course:
 
 ~~~haskell
 d1 $ every 3 (|-| up "3") $ every 2 (|+| up "5") $ sound "arpy*4" |=| up "0 2 4 5"
 ~~~
+{: .render}
 
 ### Some Common Effects
 

@@ -16,6 +16,7 @@ Example:
 ~~~~ haskell
 d1 $ iter 4 $ sound "bd hh sn cp"
 ~~~~
+{: .render }
 
 This will produce the following over four cycles:
 

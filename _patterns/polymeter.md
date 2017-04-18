@@ -12,6 +12,7 @@ You use curly brace syntax to create a polymeter rhythm:
 ~~~haskell
 d1 $ sound "{bd hh sn cp, arpy bass2 drum notes can}"
 ~~~
+{: .render}
 
 The code above results in a five-note rhythm being played at the pulse of
 a four-note rhythm. If you switch the groups around, it results in a
@@ -20,6 +21,7 @@ four-note rhythm over a five-note rhythm:
 ~~~haskell
 d1 $ sound "{arpy bass2 drum notes can, bd hh sn cp}"
 ~~~
+{: .render}
 
 Sometimes you might want to create an odd polymeter rhythm without having to
 explicitly create a base rhythm. You _could_ do this with rests:
@@ -27,16 +29,22 @@ explicitly create a base rhythm. You _could_ do this with rests:
 ~~~haskell
 d1 $ sound "{~ ~ ~ ~, arpy bass2 drum notes can}"
 ~~~
+{: .render}
 
 But a more efficient way is to use the `%` symbol after the closing curly
 brace to specify the number of notes in the base pulse:
 
 ~~~haskell
 d1 $ sound "{arpy bass2 drum notes can}%4"
+~~~
+{: .render}
 
--- the above is the same as this:
+the above is the same as this:
+
+~~~haskell
 d1 $ sound "{~ ~ ~ ~, arpy bass2 drum notes can}"
 ~~~
+{: .render}
 
 If "polymeter" sounds a bit confusing, there's a good explanation here:
 [http://music.stackexchange.com/questions/10488/polymeter-vs-polyrhythm](http://music.stackexchange.com/questions/10488/polymeter-vs-polyrhythm)

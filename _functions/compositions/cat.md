@@ -13,12 +13,14 @@ will be played so that all patterns can fit into a single cycle. Examples:
 
 ~~~~haskell
 d1 $ cat [sound "bd*2 sn", sound "arpy jvbass*2"]
-~~~
+~~~~
 {: .render}
-~~~haskell
+
+~~~~haskell
 d1 $ cat [sound "bd*2 sn", sound "arpy jvbass*2", sound "drum*2"]
-~~~
+~~~~
 {: .render}
+
 ~~~haskell
 d1 $ cat [sound "bd*2 sn", sound "jvbass*3", sound "drum*2", sound "ht mt"]
 ~~~~

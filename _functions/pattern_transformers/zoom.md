@@ -21,3 +21,10 @@ In the pattern above, `zoom` is used with an arc from 25% to 75%. It is equivale
 d1 $ sound "hh*3 [sn bd]*2"
 ~~~~
 {: .render }
+
+Here's an example of it being used with a conditional:
+
+~~~~ haskell
+d1 $ every 4 (zoom (0.25, 0.75)) $ sound "bd*2 hh*3 [sn bd]*2 drum"
+~~~~
+{: .render }

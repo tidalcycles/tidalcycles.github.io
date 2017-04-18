@@ -35,6 +35,13 @@ Development during 2016 is partly supported by a residency at the
 [Open Data Institute](http://theodi.org/), funded by
 [Sound and Music](http://soundandmusic.org/).
 
-Development is also partly supported by contributors to Yaxu's
-[Spicule](http://www.pledgemusic.com/projects/spicule/) crowdfund
-(target pending).
+Development was also partly supported by contributors to Yaxu's
+[Spicule](http://www.pledgemusic.com/projects/spicule/) crowdfund,
+including the following who paid extra to claim a function dedicated to them:
+
+* Aneurin Barker-Snook (`whenmod`)
+* Joel Gethin Lewis (`loop`)
+* Nik Gaffney (`randcat` and `superimpose`)
+* RJP (`mortal`)
+* Sam Aaron
+* Scott Fradkin (`stack`)

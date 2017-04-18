@@ -4,6 +4,10 @@ layout: default
 category: community
 ---
 
+## Contributors
+
+See the [credits](credits.html) page.
+
 ## TidalCycles q&a, forum and chat
 
 If you have questions about using or installing Tidal, then the [Ask TidalCycles](http://ask.tidalcycles.org/) q&a website is a good first port of call.

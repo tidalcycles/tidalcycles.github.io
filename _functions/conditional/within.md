@@ -8,10 +8,10 @@ within :: Arc -> (Pattern a -> Pattern a) -> Pattern a -> Pattern a
 ~~~~
 
 Use `within` to apply a function to only a part of a pattern. For example, to
-apply `density 2` to only the first half of a pattern:
+apply `fast 2` to only the first half of a pattern:
 
 ~~~~haskell
-d1 $ within (0, 0.5) (density 2) $ sound "bd*2 sn lt mt hh hh hh hh"
+d1 $ within (0, 0.5) (fast 2) $ sound "bd*2 sn lt mt hh hh hh hh"
 ~~~~
 {: .render }
 

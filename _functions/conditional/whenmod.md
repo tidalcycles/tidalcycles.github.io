@@ -16,6 +16,6 @@ For example the following makes every other block of four loops twice
 as dense:
 
 ~~~~ haskell
-d1 $ whenmod 8 4 (density 2) (sound "bd sn kurt")
+d1 $ whenmod 8 4 (fast 2) (sound "bd sn kurt")
 ~~~~
 {: .render }

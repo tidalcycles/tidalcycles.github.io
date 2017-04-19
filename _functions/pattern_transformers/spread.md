@@ -3,7 +3,6 @@ title: spread
 category: pattern_transformers
 ---
 
-
 The `spread` function allows you to take a pattern transformation
 which takes a parameter, such as `slow`, and provide several
 parameters which are switched between. In other words it 'spreads' a
@@ -44,20 +43,20 @@ function to spread values over, you can put functions in the list
 instead of values. For example:
 
 ~~~~ haskell
-d1 $ spread ($) [density 2, rev, slow 2, striate 3, (# speed "0.8")]
+d1 $ spread ($) [fast 2, rev, slow 2, striate 3, (# speed "0.8")]
     $ sound "[bd*2 [~ bd]] [sn future]*2 cp jvbass*4"
 ~~~~
 {: .render }
 
 Above, the pattern will have these transforms applied to it, one at a time, per cycle:
 
-* cycle 1: `density 2` - pattern will increase in speed
+* cycle 1: `fast 2` - pattern will increase in speed
 * cycle 2: `rev` - pattern will be reversed
 * cycle 3: `slow 2` - pattern will decrease in speed
 * cycle 4: `striate 3` - pattern will be granualized
 * cycle 5: `(# speed "0.8")` - pattern samples will be played back more slowly
 
-After `(# speed "0.8")`, the transforms will repeat and start at `density 2` again.
+After `(# speed "0.8")`, the transforms will repeat and start at `fast 2` again.
 
 ~~~~ haskell
 spread :: (a -> t -> Pattern b) -> [a] -> t -> Pattern b

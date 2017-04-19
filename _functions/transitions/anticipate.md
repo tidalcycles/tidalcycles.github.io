@@ -4,7 +4,7 @@ category: transitions
 ---
 
 ~~~haskell
-anticipate :: Time -> [OscPattern] -> OscPattern
+anticipate :: Time -> [ParamPattern] -> ParamPattern
 ~~~
 
 Build up some tension, culminating in a _drop_ to the new pattern after 8 cycles.
@@ -12,7 +12,7 @@ Build up some tension, culminating in a _drop_ to the new pattern after 8 cycles
 ### anticipateIn
 
 ~~~haskell
-anticipateIn :: Time -> Time -> [OscPattern] -> OscPattern
+anticipateIn :: Time -> Time -> [ParamPattern] -> ParamPattern
 ~~~
 
 same as `anticipate` though it allows you to specify the number of cycles until dropping to the new pattern, e.g.:

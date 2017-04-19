@@ -4,7 +4,7 @@ category: pattern_transformers
 ---
 
 ~~~~ haskell
-slow :: Time -> Pattern a -> Pattern a
+slow :: Pattern Time -> Pattern a -> Pattern a
 ~~~~
 
 Slow down a pattern.
@@ -25,4 +25,4 @@ d1 $ sound (slow 0.5 "bd sn kurt")
 ~~~~
 {: .render }
 
-Also, see `density`.
+Also, see [fast](#fast).

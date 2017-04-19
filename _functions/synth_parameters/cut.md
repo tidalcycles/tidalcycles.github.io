@@ -4,7 +4,7 @@ category: synth_parameters
 ---
 
 ~~~haskell
-cut :: Pattern Int -> OscPattern
+cut :: Pattern Int -> ParamPattern
 ~~~
 
 In the style of classic drum-machines, `cut` will stop a playing sample as soon as another samples with in same cutgroup is to be played.

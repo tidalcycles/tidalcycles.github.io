@@ -4,7 +4,7 @@ category: synth_parameters
 ---
 
 ~~~haskell
-nudge :: Pattern Double -> OscPattern
+nudge :: Pattern Double -> ParamPattern
 ~~~
 
 Pushes things forward (or backwards within built-in latency) in time. Allows for nice things like _swing_ feeling:

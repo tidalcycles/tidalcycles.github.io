@@ -9,6 +9,6 @@ the pattern alternates between forwards and backwards.
 Example:
 
 ~~~~ haskell
-d1 $ palindrome $ sound "hh*2 [sn cp] cp future*4"
+d1 $ palindrome $ sound "arpy:0 arpy:1 arpy:2 arpy:3"
 ~~~~
 {: .render }

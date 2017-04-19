@@ -4,7 +4,7 @@ category: sample
 ---
 
 ~~~~ haskell
-striate :: Int -> OscPattern -> OscPattern
+striate :: Int -> ParamPattern -> ParamPattern
 ~~~~
 
 Striate is a kind of granulator, for example:

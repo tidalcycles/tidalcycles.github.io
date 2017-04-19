@@ -4,7 +4,7 @@ category: pattern_transformers
 ---
 
 ~~~~ haskell
-smash :: Int -> [Time] -> OscPattern -> OscPattern
+smash :: Int -> [Time] -> ParamPattern -> ParamPattern
 ~~~~
 
 Smash is a combination of `spread` and `striate` - it cuts the samples

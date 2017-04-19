@@ -4,11 +4,11 @@ category: compositions
 ---
 
 ~~~~ haskell
-interlace :: OscPattern -> OscPattern -> OscPattern
+interlace :: ParamPattern -> ParamPattern -> ParamPattern
 ~~~~
 
-(A function that takes two OscPatterns, and blends them together into
-a new OscPattern. An OscPattern is basically a pattern of messages to
+(A function that takes two ParamPatterns, and blends them together into
+a new ParamPattern. A ParamPattern is basically a pattern of messages to
 a synthesiser.)
 
 Shifts between the two given patterns, using distortion.

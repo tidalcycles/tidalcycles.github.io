@@ -4,7 +4,7 @@ category: sample
 ---
 
 ~~~~ haskell
-striateL :: Int -> Int -> OscPattern -> OscPattern
+striateL :: Int -> Int -> ParamPattern -> ParamPattern
 ~~~~
 
 Just like `striate`, but also loops each sample chunk a number of times specified in the second argument.

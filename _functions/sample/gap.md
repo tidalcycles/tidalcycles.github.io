@@ -4,7 +4,7 @@ category: sample
 ---
 
 ~~~~ haskell
-gap :: Int -> OscPattern -> OscPattern
+gap :: Int -> ParamPattern -> ParamPattern
 ~~~~
 
 `gap` is similar to `chop` in that it granualizes every sample in place as it is played, 

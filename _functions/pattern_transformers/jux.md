@@ -29,7 +29,7 @@ has an additional parameter, which brings the channel closer to the
 centre. For example:
 
 ~~~~ haskell
-d1 $ juxBy 0.5 (density 2) $ sound "bd sn:1"
+d1 $ juxBy 0.5 (fast 2) $ sound "bd sn:1"
 ~~~~
 {: .render }
 

@@ -4,7 +4,7 @@ category: transitions
 ---
 
 ~~~haskell
-xfade :: Time -> [OscPattern] -> OscPattern
+xfade :: Time -> [ParamPattern] -> ParamPattern
 ~~~
 
 Crossfade between old and new pattern over the next two cycles.
@@ -20,7 +20,7 @@ t1 xfade $ sound "can*3"
 ### xfadeIn
 
 ~~~haskell
-xfadeIn :: Time -> Time -> [OscPattern] -> OscPattern
+xfadeIn :: Time -> Time -> [ParamPattern] -> ParamPattern
 ~~~
 
 crossfades between old and new pattern over given number of cycles, e.g.:

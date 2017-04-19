@@ -11,10 +11,10 @@ Similar to `sometimesBy`, but applies/doesn't apply a function on a cycle-by-cyc
 basis instead of event by event.
 Use `someCyclesBy` to apply a given function for some cycles, but not for others. 
 For example, the 
-following code results in `density 2` being applied for about 25% of all cycles:
+following code results in `fast 2` being applied for about 25% of all cycles:
 
 ~~~~ haskell
-d1 $ someCyclesBy 0.25 (density 2) $ sound "bd*8"
+d1 $ someCyclesBy 0.25 (fast 2) $ sound "bd*8"
 ~~~~
 {: .render }
 

@@ -3,9 +3,8 @@ title: stut
 category: sample
 ---
 
-
 ~~~~ haskell
-stut :: Integer -> Double -> Rational -> OscPattern -> OscPattern
+stut :: Integer -> Double -> Rational -> ParamPattern -> ParamPattern
 ~~~~
 
 Stut applies a type of delay to a pattern. It has three parameters, 

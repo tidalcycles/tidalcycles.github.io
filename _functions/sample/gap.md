@@ -13,5 +13,14 @@ each sample is chopped into:
 
 ~~~~ haskell
 d1 $ gap 8 $ sound "jvbass"
+~~~~
+
+~~~~ haskell
 d1 $ gap 16 $ sound "[jvbass drum:4]"
+~~~~
+
+You can also provide a pattern here:
+
+~~~~ haskell
+d1 $ gap "<32 16 8 4>" $ sound "rave"
 ~~~~

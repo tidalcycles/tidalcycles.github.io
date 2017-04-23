@@ -7,9 +7,14 @@ category: pattern_transformers
 rev :: Pattern a -> Pattern a
 ~~~~
 
-Reverse a pattern
+Reverse every cycle of a pattern. For example:
 
-Examples:
+~~~~ haskell
+d1 $ slow 2 $ rev $ n "0 1 2 3" # sound "numbers"
+~~~~
+{: .render }
+
+Or in a conditional:
 
 ~~~~ haskell
 d1 $ slow 2 $ every 3 (rev) $ n "0 1 2 3" # sound "numbers"

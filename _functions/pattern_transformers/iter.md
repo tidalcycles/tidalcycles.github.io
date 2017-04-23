@@ -4,7 +4,7 @@ category: pattern_transformers
 ---
 
 ~~~~ haskell
-iter :: Int -> Pattern a -> Pattern a
+iter :: Pattern Int -> Pattern a -> Pattern a
 ~~~~
 
 Divides a pattern into a given number of subdivisions, plays the subdivisions

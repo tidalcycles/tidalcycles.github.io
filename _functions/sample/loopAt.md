@@ -20,9 +20,9 @@ d1 $ loopAt 4 $ chop 32 $ sound "breaks125"
 ~~~~
 {: .render }
 
-Like all tidal samples, you can mess about with this considerably:
+Like all tidal functions, you can mess about with this considerably. The below example shows how you can supply a pattern of cycle counts to loopAt:
 
 ~~~~ haskell
-d1 $ juxBy 0.6 (|*| speed "2") $ spread (loopAt) [4,6,2,3] $ chop 12 $ sound "fm:14"
+d1 $ juxBy 0.6 (|*| speed "2") $ loopAt "<4 6 2 3>" $ chop 12 $ sound "fm:14"
 ~~~~
 {: .render }

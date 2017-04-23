@@ -24,11 +24,3 @@ Is a bit like this:
 d1 $ slow "<2 3 4>" $ striate 3 $ sound "ho ho:2 ho:3 hc"
 ~~~~
 {: .render }
-
-This is quite dancehall:
-
-~~~~ haskell
-d1 $ (slow "1%4 2 1 3" $ spread (striate) [2,3,4,1] $ sound "sn:2 sid:3 cp sid:4")
-  # speed "[1 2 1 1]/2"
-~~~~
-{: .render }

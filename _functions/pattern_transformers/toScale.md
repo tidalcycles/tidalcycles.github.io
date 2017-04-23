@@ -11,8 +11,9 @@ The `toScale` function lets you turn a pattern of notes within a scale (expresse
 list) to note numbers.  For example 
 
 ~~~~ haskell
-toScale [0, 4, 7] "0 1 2 3"
+d1 $ n (toScale [0, 4, 7] "0 1 2 3") # sound "supermandolin"
 ~~~~
+{: .render }
 
 will turn the pattern `"0 1 2 3"` into the pattern `"0 4 7 12"` by "picking" those notes out of the provided
 scale `[0, 4, 7]`.

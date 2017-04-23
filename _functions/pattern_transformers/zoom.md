@@ -7,7 +7,7 @@ category: pattern_transformers
 zoom :: Arc -> Pattern a -> Pattern a
 ~~~~
 
-Plays a portion of a pattern, specified by a beginning and end arc of time. 
+Plays a portion of a pattern, specified by the beginning and end of a time span (known as an 'arc'). 
 The new resulting pattern is played over the time period of the original pattern:
 
 ~~~~ haskell

@@ -4,13 +4,13 @@ category: sample
 ---
 
 ~~~~ haskell
-striate :: Int -> ParamPattern -> ParamPattern
+striate :: Pattern Int -> ParamPattern -> ParamPattern
 ~~~~
 
-Striate is a kind of granulator, for example:
+Striate is a kind of granulator, cutting samples into bits in a similar to (chop)[#chop], but the resulting bits are organised differently. For example:
 
 ~~~~ haskell
-d1 $ striate 3 $ sound "ho ho:2 ho:3 hc"
+d1 $ slow 4 $ striate 16 $ sound "numbers:0 numbers:1 numbers:2 numbers:3"
 ~~~~
 
 This plays the loop the given number of times, but triggering
@@ -20,14 +20,16 @@ then the second time playing the second third of each sample, etc..
 With the highhat samples in the above example it sounds a bit like
 reverb, but it isn't really.
 
-You can also use striate with very long samples, to cut it into short
-chunks and pattern those chunks. This is where things get towards
-granular synthesis. The following cuts a sample into 128 parts, plays
-it over 8 cycles and manipulates those parts by reversing and rotating
-the loops.
+Compare this with `chop`:
 
 ~~~~ haskell
-d1 $  slow 8 $ striate 128 $ sound "bev"
+d1 $ slow 4 $ chop 16 $ sound "numbers:0 numbers:1 numbers:2 numbers:3"
+~~~~
+
+You can hear that the `striate` version interlaces the cut up bits of samples together, whereas the `chop` version plays each chopped up sample in turn. Here's the samples without any granulation, in case that helps understand what's happening in the above:
+
+~~~~ haskell
+d1 $ slow 4 $ sound "numbers:0 numbers:1 numbers:2 numbers:3"
 ~~~~
 
 The `striate'` function is a variant of `striate` with an extra

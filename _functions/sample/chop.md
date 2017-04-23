@@ -39,3 +39,22 @@ d1 $ chop 16 $ sound (samples "arpy*8" (run 16))
 d1 $ chop 32 $ sound (samples "arpy*8" (run 16))
 d1 $ chop 256 $ sound "bd*4 [sn cp] [hh future]*2 [cp feel]"
 ~~~~
+
+You can also use chop (or (striate)[#striate]) with very long samples, to cut it into short
+chunks and pattern those chunks. The following cuts a sample into 32 parts, and plays
+it over 8 cycles:
+
+~~~~ haskell
+d1 $ loopAt 8 $ chop 32 $ sound "bev"
+~~~~
+
+The `loopAt` takes care of changing the speed of sample playback so
+that the sample fits in the given number of cycles.
+
+You can't hear that the sample has been cut into bits in the above. This becomes more apparent when you do further manipulations of the pattern, for example `rev` to reverse the order of the cut up bits:
+
+~~~~ haskell
+d1 $ loopAt 8 $ rev $ chop 32 $ sound "bev"
+~~~~
+
+See also [striate](#striate).

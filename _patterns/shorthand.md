@@ -48,3 +48,17 @@ d1 $ n (off 0.125 (+12) $ off 0.25 (+7) $ slow 2 $ "0(3,8) [5 7]") # sound "supe
 
 This is still quite new to everyone, so you will not see it used much
 in the documentation yet.
+
+You can also now specify increasing or decreasing numbers with a range, for example this:
+
+~~~haskell
+d1 $ n "0-7 3-1" # sound "supergong"
+~~~
+{: .render}
+
+.. is shorthand for:
+
+~~~haskell
+d1 $ n "[0 1 2 3 4 5 6] [3 2 1]" # sound "supergong"
+~~~
+

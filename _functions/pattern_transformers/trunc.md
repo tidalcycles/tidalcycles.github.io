@@ -21,3 +21,5 @@ You can also pattern the first parameter, for example to cycle through three val
 d1 $ trunc "<0.75 0.25 1>" $ sound "bd sn:2 [mt rs] hc"
 ~~~~
 {: .render }
+
+See also [linger](#linger).

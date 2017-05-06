@@ -355,3 +355,10 @@ footer.navbar > .container {
 footer.navbar, footer .navbar-nav > li > a {
     line-height: $line-height-base * 2;
 }
+
+.affix {
+    position: fixed;
+    overflow: scroll;
+    height: 100%;
+    padding-bottom: 100px;
+}

@@ -10,15 +10,16 @@ See the [credits](credits.html) page.
 
 ## TidalCycles q&a, forum and chat
 
-If you have questions about using or installing Tidal, then the [Ask TidalCycles](http://ask.tidalcycles.org/) q&a website is a good first port of call.
-
-For live discussion and chat, there's an active `#tidal` channel (and also a `#tidal-innards` channel for those interested in meddling with tidal's internals) on the [TOPLAP slack](http://toplap.org/toplap-on-slack/). You can also chat with people using other live coding environments there on the `#general` and other channels.
+For live discussion and chat, and probably the quickest route to a solution, there's an active `#tidal` channel (and also a `#tidal-innards` channel for those interested in meddling with tidal's internals) on the [TOPLAP slack](http://toplap.org/toplap-on-slack/). You can also chat with people using other live coding environments there on the `#general` and other channels.
 
 For in-depth discussion about TidalCycles, the official forum is at [lurk.org/groups/tidal](http://lurk.org/groups/tidal/), which is accessible both as a web forum and over email.
 
-## Antisocial
+There is also the [Ask TidalCycles](http://ask.tidalcycles.org/) q&a website. Due to persistent spam, it is now readonly, but there is still much useful information there.
+
+## Social network things
 
 Twitter: [@tidalcycles](https://twitter.com/tidalcycles)
+Facebook: [/tidalcycles](https://www.facebook.com/tidalcycles/)
 
 ## Github
 

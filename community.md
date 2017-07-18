@@ -10,7 +10,7 @@ See the [credits](credits.html) page.
 
 ## TidalCycles q&a, forum and chat
 
-For live discussion and chat, and probably the quickest route to a solution, there's an active `#tidal` channel (and also a `#tidal-innards` channel for those interested in meddling with tidal's internals) on the [TOPLAP slack](http://toplap.org/toplap-on-slack/). You can also chat with people using other live coding environments there on the `#general` and other channels.
+For live discussion and chat, and probably the quickest route to a solution, there's an active `#tidal` channel (and also e.g. a `#tidal-innards` channel for those interested in meddling with tidal's internals and `#tidal-doc` for things interested in helping document tidal) on the [TOPLAP slack](http://toplap.org/toplap-on-slack/). You can also chat with people using other live coding environments there on the `#general` and other channels.
 
 For in-depth discussion about TidalCycles, the official forum is at [lurk.org/groups/tidal](http://lurk.org/groups/tidal/), which is accessible both as a web forum and over email.
 

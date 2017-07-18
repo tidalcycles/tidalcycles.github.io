@@ -18,8 +18,8 @@ There is also the [Ask TidalCycles](http://ask.tidalcycles.org/) q&a website. Du
 
 ## Social network things
 
-Twitter: [@tidalcycles](https://twitter.com/tidalcycles)
-Facebook: [/tidalcycles](https://www.facebook.com/tidalcycles/)
+* Twitter: [@tidalcycles](https://twitter.com/tidalcycles)
+* Facebook: [/tidalcycles](https://www.facebook.com/tidalcycles/)
 
 ## Github
 

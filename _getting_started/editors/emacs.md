@@ -28,7 +28,7 @@ exist, create it. Then, add the following, replacing
 (require 'tidal)
 ~~~~
 
-If tidal.el did not come with this document, you can grab it here: <https://raw.github.com/yaxu/Tidal/master/tidal.el>
+If tidal.el did not come with this document, you can grab it here: <https://raw.github.com/tidalcycles/Tidal/master/tidal.el>
 
 Now see under 'Testing, testing' below to check everything is
 working.

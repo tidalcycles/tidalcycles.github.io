@@ -101,7 +101,7 @@ You can find a list of
 [available synths libraries here](https://hackage.haskell.org/package/tidal-midi). For example to use the Volca Keys library you first import it, then make its MIDI stream:
 
 ~~~~haskell
-import Sound.Tidal.VolcaKeys
+import Sound.Tidal.MIDI.VolcaKeys
 
 m2 <- midiStream devices "USB Midi Cable MIDI 1" 1 keysController
 ~~~~

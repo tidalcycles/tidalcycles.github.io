@@ -59,9 +59,7 @@ devices <- midiDevices
 m1 <- midiStream devices "USB Midi Cable MIDI" 1 synthController
 ~~~~
 
-The number `1` there specifies the MIDI channel your synth is
-listening to. Now you are ready to play some MIDI notes. Type and
-evaluate the following to play MIDI note #40 and #52:
+The number `1` there specifies the MIDI channel your synth is listening to, in this case the first one (we start counting from 1 here, a gotcha as some software starts counting from 0). Now you are ready to play some MIDI notes. Type and evaluate the following to play MIDI note #40 and #52:
 
 ~~~~haskell
 m1 $ midinote "40 52"

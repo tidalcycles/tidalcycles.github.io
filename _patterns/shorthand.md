@@ -52,7 +52,7 @@ in the documentation yet.
 You can also now specify increasing or decreasing numbers with a range, for example this:
 
 ~~~haskell
-d1 $ n "0..7 3..1" # sound "supergong"
+d1 $ n "[0..7] [3..1]" # sound "supergong"
 ~~~
 {: .render}
 

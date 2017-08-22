@@ -59,6 +59,6 @@ d1 $ n "[0..7] [3..1]" # sound "supergong"
 .. is shorthand for:
 
 ~~~haskell
-d1 $ n "[0 1 2 3 4 5 6] [3 2 1]" # sound "supergong"
+d1 $ n "[0 1 2 3 4 5 6 7] [3 2 1]" # sound "supergong"
 ~~~
 

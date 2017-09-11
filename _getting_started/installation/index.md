@@ -13,6 +13,25 @@ script for MacOS X users</a>, along with a <a
 href="https://www.youtube.com/watch?v=dJTfGv2sT-w&t=2s">helpful
 walkthrough video</a>, as an alternative to the below.
 
+## If you have install issues
+
+There appears to be an issue with Cabal that is affecting installation.  If you are unable to install TidalCycles with the directions below, please try these alternate installation instructions.
+
+From a terminal window, run this:
+
+~~~~bash
+stack setup
+stack install tidal
+~~~~
+
+Once that's done, you'll also need to change a configuration setting
+in Atom. Find the package settings for TidalCycles (```preferences >
+tidalcycles > settings```). Change the ```'ghci path'``` option to this:
+
+```stack ghc -- --interactive -XOverloadedStrings```
+
+Restart Atom and it should be able to start TidalCycles.
+
 ### Pre-requisites
 
 You first need to install the following three pieces of software,

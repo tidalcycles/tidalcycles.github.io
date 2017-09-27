@@ -3,7 +3,8 @@ category: running
 weight: -9
 ---
 
-There are two steps to starting TidalCycles each time, first starting SuperDirt inside SuperCollider, and then starting TidalCycles inside Atom.
+There are two steps to starting TidalCycles each time, first starting SuperDirt 
+inside SuperCollider, and then starting TidalCycles inside Atom.
 
 To start SuperDirt, paste the following code into a SuperCollider
 window, click on the code, hold down shift and press enter.
@@ -11,6 +12,12 @@ window, click on the code, hold down shift and press enter.
 ~~~~c
 SuperDirt.start
 ~~~~
+
+>If you want SuperDirt to start automatically when you open SuperCollider, add the above
+>line to the SuperCollider startup file. You can edit the SuperCollider startup file
+>from within SuperCollider itself by choosing _File -> Open Startup File_ from the top menu.
+>If you wish to use a more comprehensive SuperDirt startup file with more options,
+>[refer to this example](https://github.com/musikinformatik/SuperDirt/blob/master/superdirt_startup.scd).
 
 To start TidalCycles in Atom, first create a new document and save it with a filename
 that ends in `.tidal`, e.g. `test.tidal`. Then open the Packages menu and select TidalCycles -> Boot TidalCycles.

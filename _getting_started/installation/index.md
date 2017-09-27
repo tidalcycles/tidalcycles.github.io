@@ -57,6 +57,8 @@ the instructions there.
 
 >Restart Atom and it should be able to start TidalCycles.
 
+>**Skip ahead to MacOS Step #3 (Install the SuperDirt synth) if you used this method**
+
 #### Standard MacOS Instructions:
 
 Open a Terminal window and type in the following command, to install

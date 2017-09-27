@@ -53,7 +53,7 @@ the instructions there.
 >in Atom. Find the package settings for TidalCycles (*preferences >
 >tidalcycles > settings*). Change the ```'ghci path'``` option to this:
 
->```stack ghc```
+>```stack ghci```
 
 >Restart Atom and it should be able to start TidalCycles.
 

@@ -72,6 +72,7 @@ d1 $ ur' 4 "[[bd1, sn1] bd1 [bd1, sn1] sn1:double]"
    ("sn1", n "~ 1 ~ 1" # s "sn")]
   [("double", fast 2)]
 ~~~~
+{: .render}
 
 In this example, both the bass drum and snare will play in the first cycle, just the bass
 drum in the second, both again in the third, and then a sped up snare drum in the fourth

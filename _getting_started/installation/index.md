@@ -196,24 +196,24 @@ into the search box. Once that's installed, restart atom.
 
 ### 1. Prerequisites
 
-You first need to install the following three pieces of software,
-Haskell, Atom, and SuperCollider. You can download them from their
-websites - click on each of the below:
+You need to have four pieces of software,
+[Haskell Stack](https://www.haskellstack.org/),
+[Atom](https://atom.io/),
+[SuperCollider](http://supercollider.github.io/download) and
+[Git](https://git-scm.com/).
 
-* [Haskell](https://www.haskell.org/platform/)
-* [Atom](https://atom.io/)
-* [SuperCollider](http://supercollider.github.io/download) (version 3.7 or later)
-* You may also need to install [Git](https://git-scm.com/)
+Hopefully your Linux distribution makes these easily available to you
+via a package manager. For example, if you are using recent version of
+Ubuntu or similar, you can install supercollider and haskell with the
+following command in a terminal window:
 
-You need the SuperCollider
-sc3-plugins for using many of the synths included in SuperDirt. Most
-of the examples in the documentation will still work, so you could
-skip this step and return to it later. You can either install the
-latest version from
-[github](https://github.com/supercollider/sc3-plugins) according to
-the instructions there, or you may find it
-in your package manager. On Fedora the package is called
-`supercollider-sc3-plugins`.
+```
+sudo apt-get install supercollider sc3-plugins haskell-stack git
+```
+
+Make sure the supercollider version is 3.7 or later. If it isn't
+available in your Linux distribution, then you may have to compile a
+newer version yourself, or upgrade your distribution.
 
 ### 2. Install the TidalCycles pattern engine
 
@@ -221,7 +221,7 @@ Open a Terminal window and type in the following command, to install
 TidalCycles:
 
 ~~~~bash
-cabal install tidal
+stack install tidal
 ~~~~
 
 > If you're unsure how to open a terminal window in Linux,
@@ -230,7 +230,9 @@ cabal install tidal
 
 ### 3. Install the SuperDirt synth
 
-Start SuperCollider, and in the editor window paste in the following line of code:
+Start SuperCollider (e.g. by typing `scide` in a terminal window, or
+finding it in your menus), and in the editor window paste in the
+following line of code:
 
 ~~~~c
 include("SuperDirt")
@@ -239,8 +241,9 @@ include("SuperDirt")
 Run the code by clicking on it, to make sure the cursor is on this
 line, then hold down shift and press enter.
 
-It will download SuperDirt and
-you will see it has completed when the Post Window displays:
+It will download SuperDirt and a fairly large bank of default samples,
+so might take quite a while. You will see it has completed when the
+Post Window displays:
 
 ~~~~c
 ... the class library may have to be recompiled.
@@ -256,16 +259,20 @@ If you instead see a message like this:
   "ERROR: Quarks requires git to be installed"
 ~~~~
 
-Then you will need install git from
-[https://git-scm.com/downloads](https://git-scm.com/downloads), and
-return to SuperCollider to run `include("SuperDirt")` again.
+Then you will need install 'git', which you should be able to do via
+your linux distribution's package manager.
 
 ### 4. Install the TidalCycles Atom plugin
 
 Start Atom, and install the TidalCycles plugin. You can find it via
 the menus under `edit > settings > install`, then typing “tidalcycles”
-into the search box. Once that's installed, restart atom.
+into the search box.
 
+There is one configuration option that you will need to change. Go to
+`edit -> preferences`, then `packages` and find the settings for
+tidalcycles. Change the 'Ghci path' setting to read: `stack ghci`.
+
+Once that's done, restart atom.
 
 **That's it!** You're now ready to start TidalCycles and SuperDirt for
   the first time.

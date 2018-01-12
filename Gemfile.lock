@@ -125,8 +125,6 @@ PLATFORMS
 
 DEPENDENCIES
   github-pages
-  jekyll
-  sass (= 3.4.5)
 
 BUNDLED WITH
-   1.12.4
+   1.13.6

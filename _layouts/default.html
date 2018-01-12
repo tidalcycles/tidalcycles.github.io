@@ -37,12 +37,14 @@
             </div>
             <div class="navbar-collapse collapse" id="tidal-navbar-collapse-1">
               <ul class="nav navbar-nav">
+		<li><a href="http://blog.tidalcycles.org">News</a></li>
                 {% assign chapters = site.data.chapters | where: "footer", false %}
                 {% for chapter in chapters %}
                 <li {% if page.category == chapter.name %}class="active" {% endif %}>
                   <a href="{{site.baseurl}}/{{chapter.name}}.html">{{ chapter.title }}</a>
                 </li>
                 {% endfor %}
+		<li><a href="http://blog.tidalcycles.org/faq/">FAQ</a></li>
               </ul>
             </div>
           </div>
@@ -64,10 +66,6 @@
         </div>
         <div class="tidal-teaser">
           <div class="container">
-            <div class="alert alert-danger">
-	      <p>This is the development server - the below
-                <strong>may be incorrect</strong> or refer to a future version of Tidal!</p>
-            </div>
             <div class="row">
               {{ content }}
               <div class="col-sm-12 col-xs-12">
@@ -89,10 +87,6 @@
             <div class="col-md-9">
               <div class="page-header">
                 <h1>{{ page.title }}</h1>
-              </div>
-              <div class="alert alert-danger">
-	        <p>This is the development server - the below
-                  <strong>may be incorrect</strong> or refer to a future version of Tidal!</p>
               </div>
               {{ content }} {% for section_meta in sections %} {% assign section = grps | where: "name", section_meta.name | first %} {% assign docs = section.items | sort: "title" | sort: "weight", "last" %}
               <section>
@@ -143,7 +137,7 @@
       <footer class="navbar navbar-default navbar-static-bottom">
         <div class="container">
           <p class="navbar-text">
-            Docs updated March 2017, TidalCycles version <strong>0.9</strong>
+            Docs updated Jan 2018, TidalCycles version <strong>0.9.6</strong>
           </p>
           <ul class="nav navbar-nav">
             {% assign chapters = site.data.chapters | where: "footer", true %}

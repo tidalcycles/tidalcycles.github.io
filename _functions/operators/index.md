@@ -7,7 +7,7 @@ weight: -8
 
 The general rule for things that combine patterns is that they use the structure of the pattern on the *left*.
 
-#### `|+|`, `|*|`, `-`, `/` 
+#### `|+|`, `|*|`, `|-|`, `|/|` 
 Operate on *ParamPatterns*, and perform the arithmetic operation if the two parameters are the same (such as `speed` and `speed`), or simply merge the parameters just as `#` would if the parameters are different.
 
 ~~~~ haskell

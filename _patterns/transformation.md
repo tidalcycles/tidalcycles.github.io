@@ -15,7 +15,7 @@ d1 $ rev (sound "bd*2 [bd [sn sn*2 sn] sn]")
 
 That's not so exciting, but things get more interesting when this is
 used in combination with another function. For example `every` takes
-two parameters: a number, a function and a pattern to apply the
+three parameters: a number, a function and a pattern to apply the
 function to. The number specifies how often the function is applied to
 the pattern. For example, the following reverses the pattern every
 fourth repetition:

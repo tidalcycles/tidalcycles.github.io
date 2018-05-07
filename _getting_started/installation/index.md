@@ -20,11 +20,34 @@ below for your specific operating system.
 
 ## Mac OS 
 
+There are two ways to install Tidal on a Mac - tidal-bootstrap, which
+automates as much as possible, and a step-by-step, manual process.
+
+### Tidal-bootstrap - automated install on a mac
+
+You can download <a
+href="https://davidgranstrom.github.io/tidal-bootstrap/
+">tidal-bootstrap here</a>.
+
+Here's a video demonstrating the tidal-bootstrap install process:
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/dJTfGv2sT-w" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+
+Once that's done, it's time to
+  [start TidalCycles and SuperDirt for the first time](#running).
+
+
+### Mac OS - manual install
+
+If tidal-bootstrap doesn't work for you, or you prefer a hands-on
+approach, you can install all the components of a tidalcycles system
+manually. 
+
 ### 1. Prerequisites
 
-You first need to install the following three pieces of software,
-Haskell, Atom, and SuperCollider. You can download them from their
-websites - click on each of the below:
+You first need to install the following three pieces of
+software, Haskell, Atom, and SuperCollider. You can download them from
+their websites - click on each of the below:
 
 * [Haskell](https://www.haskell.org/platform/)
 * [Atom](https://atom.io/)
@@ -109,13 +132,44 @@ return to SuperCollider to run `include("SuperDirt")` again.
 
 Start Atom, and install the TidalCycles plugin. You can find it via
 the menus under `edit > settings > install`, then typing “tidalcycles”
-into the search box. Once that's installed, restart atom.
-
+into the search box. Once that's installed, restart atom, and you should be ready to [start TidalCycles and
+  SuperDirt for the first time](#running).
 
 <a id="windows">&nbsp;</a>
 <hr class="marker">
 
 ## Windows 
+
+There are two ways to install Tidal on Windows; an automated install
+with 'chocolatey', and a step-by-step, manual process. The Chocolatey
+approach is easier, but is still experimental.
+
+### Chocolatey - automated install under windows
+
+This is an easy way to install tidal, but is not well tested, so..
+
+Step 1. Back up your system - always a good idea!
+
+Step 2. Download and install the Chocolatey package management system,
+  from
+  [https://chocolatey.org/install](https://chocolatey.org/install).
+
+Step 3. Run a [command prompt with admin privleges](https://www.howtogeek.com/194041/how-to-open-the-command-prompt-as-administrator-in-windows-8.1/), and then execute this command:
+
+```
+choco install tidalcycles
+```
+
+This will take some time to download and install everything.
+
+**That's it!** You're now ready to [start TidalCycles and
+  SuperDirt for the first time](#running).
+
+### Windows - Manual install
+
+If the chocolatey install doesn't work for you, or you prefer a
+hands-on approach, you can install all the components of a tidalcycles
+system manually.
 
 ### 1. Prerequisites
 
@@ -187,7 +241,8 @@ return to SuperCollider to run `include("SuperDirt")` again.
 
 Start Atom, and install the TidalCycles plugin. You can find it via
 the menus under `edit > settings > install`, then typing “tidalcycles”
-into the search box. Once that's installed, restart atom.
+into the search box. Once that's installed, restart atom, and you should be ready to [start TidalCycles and
+  SuperDirt for the first time](#running)
 
 <a id="linux">&nbsp;</a>
 <hr class="marker">

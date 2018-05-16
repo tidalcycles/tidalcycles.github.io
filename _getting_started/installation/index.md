@@ -26,8 +26,13 @@ automates as much as possible, and a step-by-step, manual process.
 ### Tidal-bootstrap - automated install on a mac
 
 You can download <a
-href="https://davidgranstrom.github.io/tidal-bootstrap/
-">tidal-bootstrap here</a>.
+href="https://tidalcycles.github.io/tidal-bootstrap/">tidal-bootstrap here</a>.
+
+***Please note:*** There are several reports that tidal-bootstrap currently only
+works if you install the 'core' version of the haskell platform
+first. You can <a
+href="https://www.haskell.org/platform/mac.html#osx-none">download
+that here</a>.
 
 Here's a video demonstrating the tidal-bootstrap install process:
 
@@ -61,28 +66,6 @@ skip this step and return to it later. You can install the latest version from
 the instructions there.
 
 ### 2. Install the TidalCycles pattern engine
-
->**NOTE** As of September 26 2017, There appears to be an issue with Cabal that is 
->affecting installation on MacOS.  
->If you are unable to install TidalCycles with the directions below, please try 
->these alternate installation instructions. From a terminal window, run this:
-
->~~~~bash
->stack setup
->stack install tidal
->~~~~
-
->Once that's done, you'll also need to change a configuration setting
->in Atom. Find the package settings for TidalCycles (*preferences >
->tidalcycles > settings*). Change the ```'ghci path'``` option to this:
-
->```stack ghci```
-
->Restart Atom and it should be able to start TidalCycles.
-
->**Skip ahead to MacOS Step #3 (Install the SuperDirt synth) if you used this method**
-
-#### Standard MacOS Instructions:
 
 Open a Terminal window and type in the following command, to install
 TidalCycles:
@@ -182,11 +165,8 @@ websites - click on each of the below:
 * [SuperCollider](http://supercollider.github.io/download) (version 3.7 or later)
 * You may also need to install [Git](https://git-scm.com/)
 
-**Important:** Make sure you follow Step 2 of the Haskell 
-installation [instructions](https://www.haskell.org/platform/#windows). 
-
 **Important:** When installing SuperCollider, you must also download the `sc3-plugins`
-zip file. Run SuperCollider once in order to create user directories. Then open
+zip file, or otherwise superdirt's built-in synths won't work. Run SuperCollider once in order to create user directories. Then open
 the zip file and extract the `SC3plugins` directory to
 `C:\Users\<username>\AppData\Local\SuperCollider\Extensions`. You may have to
 manually create the `Extensions` directory. Restart SuperCollider so that it finds
@@ -252,7 +232,7 @@ into the search box. Once that's installed, restart atom, and you should be read
 ### 1. Prerequisites
 
 You need to have four pieces of software,
-[Haskell Stack](https://www.haskellstack.org/),
+[Haskell](https://www.haskell.org/),
 [Atom](https://atom.io/),
 [SuperCollider](http://supercollider.github.io/download) and
 [Git](https://git-scm.com/).
@@ -263,7 +243,7 @@ Ubuntu or similar, you can install supercollider and haskell with the
 following command in a terminal window:
 
 ```
-sudo apt-get install supercollider sc3-plugins haskell-stack git
+sudo apt-get install supercollider sc3-plugins cabal-install git
 ```
 
 Make sure the supercollider version is 3.7 or later. If it isn't
@@ -276,7 +256,7 @@ Open a Terminal window and type in the following command, to install
 TidalCycles:
 
 ~~~~bash
-stack install tidal
+cabal install tidal
 ~~~~
 
 > If you're unsure how to open a terminal window in Linux,
@@ -322,10 +302,6 @@ your linux distribution's package manager.
 Start Atom, and install the TidalCycles plugin. You can find it via
 the menus under `edit > settings > install`, then typing “tidalcycles”
 into the search box.
-
-There is one configuration option that you will need to change. Go to
-`edit -> preferences`, then `packages` and find the settings for
-tidalcycles. Change the 'Ghci path' setting to read: `stack ghci`.
 
 Once that's done, restart atom.
 

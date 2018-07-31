@@ -3,7 +3,7 @@ category: shifting_time
 layout: default
 ---
 
-You can use the `~>` and `<-` functions to shift patterns forwards or backwards in time, respectively. With each of these functions, you can specify an amount, in cycle units.
+You can use the `~>` and `<~` functions to shift patterns forwards or backwards in time, respectively. With each of these functions, you can specify an amount, in cycle units.
 
 ~~~haskell
 d1 $ (0.25 <~) $ sound "bd*2 cp*2 hh sn"
@@ -47,7 +47,7 @@ d1 $ every 3 (1000.125 ~>) $ sound "bd*2 cp*2 hh sn"
 ~~~
 {: .render}
 
-However, in the above case every cycle is the same, so you won't here a difference between shifting it `1` or `1000` cycles.
+However, in the above case every cycle is the same, so you won't hear a difference between shifting it `1` or `1000` cycles.
 
 You can also specify a pattern for the shift amount:
 

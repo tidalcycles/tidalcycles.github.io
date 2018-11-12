@@ -27,7 +27,6 @@ d1 $ every 3 (0.25 <~) $ sound "bd*2 cp*2 hh sn"
 ~~~haskell
 d1 $ every 3 (0.25 ~>) $ sound "bd*2 cp*2 hh sn"
 ~~~
-
 {: .render}
 
 You can shift patterns as little or as much as you'd like:

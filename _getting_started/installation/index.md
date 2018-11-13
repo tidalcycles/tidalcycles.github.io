@@ -123,37 +123,6 @@ into the search box. Once that's installed, restart atom, and you should be read
 
 ## Windows 
 
-There are two ways to install Tidal on Windows; an automated install
-with 'chocolatey', and a step-by-step, manual process. The Chocolatey
-approach is easier, but is still experimental.
-
-### Chocolatey - automated install under windows
-
-This is an easy way to install tidal, but is not well tested, so..
-
-Step 1. Back up your system - always a good idea!
-
-Step 2. Download and install the Chocolatey package management system,
-  from
-  [https://chocolatey.org/install](https://chocolatey.org/install).
-
-Step 3. Run a [command prompt with admin privleges](https://www.howtogeek.com/194041/how-to-open-the-command-prompt-as-administrator-in-windows-8.1/), and then execute this command:
-
-```
-choco install tidalcycles
-```
-
-This will take some time to download and install everything.
-
-**That's it!** You're now ready to [start TidalCycles and
-  SuperDirt for the first time](#running).
-
-### Windows - Manual install
-
-If the chocolatey install doesn't work for you, or you prefer a
-hands-on approach, you can install all the components of a tidalcycles
-system manually.
-
 ### 1. Prerequisites
 
 You first need to install the following three pieces of software,

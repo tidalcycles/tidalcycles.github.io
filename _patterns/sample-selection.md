@@ -17,21 +17,6 @@ d1 $ n "0 2 3" # s "arpy"
 ~~~
 {: .render}
 
-It's possible to break the `sound` parameter into two different patterns, 
-namely `s` that gives the name of the sample set, and `n` which gives the 
-index of the sample within that set. For example, the following two patterns 
-are the same:
-
-~~~haskell
-d1 $ sound "arpy:0 arpy:2 arpy:3"
-~~~
-{: .render}
-
-~~~haskell
-d1 $ n "0 2 3" # s "arpy"
-~~~
-{: .render}
-
 This allows us to separate the sample folder name from the index inside the
 folder, possibly with surprising results!
 

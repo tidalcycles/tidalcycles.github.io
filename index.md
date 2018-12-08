@@ -4,6 +4,7 @@ layout: default
 category: homepage
 ---
 
+<!-- master -->
 <div class="col-xs-12">
 <p class="lead">
 TidalCycles (or Tidal for short) is a language for
